@@ -5,6 +5,9 @@ aylık FAALİYET / kategori / kalem kırılımlı gelir tablosu) aynı görünü
 formatta gösteren, "Güncelle" butonuyla veriyi FastAPI backend'inizden
 (satzeka / Logo entegrasyonu) yeniden çeken bir Next.js uygulaması.
 
+**Canlı:** https://finszeka.com (Vercel — sadece `ALLOWED_EMAILS` listesindeki
+Google hesapları girebilir).
+
 ## Çalıştırma
 
 ```bash
