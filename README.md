@@ -16,6 +16,53 @@ Tarayıcıda `http://localhost:3000` adresini açın. `FASTAPI_BASE_URL`
 tanımlanmadığı sürece uygulama, tabloyu göstermek için örnek (mock) veri
 kullanır — ekranın sağ üstünde "○ Örnek Veri" rozeti bunu belirtir.
 
+Not: uygulama artık Google ile giriş gerektiriyor (aşağıya bakın) —
+`AUTH_GOOGLE_ID`/`AUTH_GOOGLE_SECRET` doldurulmadan hiçbir sayfa açılmaz.
+
+## Google ile giriş (erişim kısıtlama)
+
+Site artık herkese açık değil — sadece `.env.local`'daki `ALLOWED_EMAILS`
+listesinde olan Google hesapları giriş yapabilir. Şu an listede
+`sansel@nutramol.com` ve `agunes@nutramol.com` var; kendi hesabınızı ya da
+başkalarını eklemek isterseniz aynı satıra virgülle ekleyin:
+
+```
+ALLOWED_EMAILS=sansel@nutramol.com,agunes@nutramol.com,siz@nutramol.com
+```
+
+### Google Cloud Console tarafında yapılacaklar (bir kereye mahsus)
+
+1. https://console.cloud.google.com/apis/credentials adresine gidin (gerekirse
+   önce bir proje oluşturun).
+2. "OAuth consent screen" (OAuth izin ekranı) ayarlayın — User type "Internal"
+   (sadece nutramol.com Workspace hesapları) ya da "External" seçebilirsiniz;
+   External seçerseniz test kullanıcıları kısmına yukarıdaki 2 e-postayı da
+   ekleyin (yoksa Google onaylanmamış uygulama uyarısı verir).
+3. "Create Credentials" → "OAuth client ID" → Application type: **Web
+   application**.
+4. **Authorized redirect URIs** kısmına şunları ekleyin:
+   - `http://localhost:3000/api/auth/callback/google` (yerel geliştirme)
+   - `https://<vercel-domaininiz>/api/auth/callback/google` (canlı — Vercel
+     domainini öğrendikten sonra buraya ekleyip kaydedin)
+5. Oluşan **Client ID** ve **Client Secret**'ı kopyalayıp `.env.local`'a
+   (yerel için) ve Vercel projesinin Environment Variables kısmına (canlı
+   için) `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` olarak girin.
+
+### Vercel'de ayarlanması gereken ortam değişkenleri
+
+```
+AUTH_GOOGLE_ID=...
+AUTH_GOOGLE_SECRET=...
+AUTH_SECRET=...          # openssl rand -base64 32
+ALLOWED_EMAILS=sansel@nutramol.com,agunes@nutramol.com
+AUTH_TRUST_HOST=true    # Vercel gibi proxy arkasında zorunlu
+FASTAPI_BASE_URL=https://api.nutramolai.com
+```
+
+Redirect URI'yi Vercel domaininiz netleşince (ör. `ciro-dashboard.vercel.app`
+ya da kendi domaininiz) Google Cloud Console'daki adıma geri dönüp
+eklemeyi unutmayın — aksi halde giriş "redirect_uri_mismatch" hatası verir.
+
 ## Gerçek FastAPI backend'ini bağlama
 
 `satzeka` sisteminiz zaten Logo'dan veri çekiyor; bu Next.js uygulaması o

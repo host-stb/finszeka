@@ -1,0 +1,8 @@
+// Bu dosya artık KULLANILMIYOR — Next.js 16'da "middleware.ts" konvansiyonu
+// "proxy.ts" ile değiştirildi (bkz. src/proxy.ts). Bu dosyayı normalde
+// silmemiz gerekirdi ama bulunduğu senkronize klasör (iCloud/Desktop) bu
+// ortamdan dosya silmeye izin vermiyor; bu yüzden içeriği kasıtlı olarak
+// boşaltıldı ve hiçbir şey export etmiyor, dolayısıyla Next.js tarafından
+// aktif middleware olarak algılanmıyor. Elinizden gelirse Finder'dan elle
+// silebilirsiniz, ama kalması zararsızdır.
+export {};
