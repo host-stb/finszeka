@@ -152,6 +152,21 @@ tek yapmanız gereken `finance-mock.ts`'i gerçek bir API çağrısıyla
 `FinanceOverview.tsx` bileşeni aynı `FinanceMetric[]` tipini beklediği
 için arayüzde değişiklik gerekmez.
 
+**İstisna — Tahsilatlar:** Danışman SQL Server'da `VW_100_TAHSILATLAR`
+görünümünü paylaştı ve 03.08.2026 tarihinde bu view'den 2026 Ocak-Ağustos
+aylık toplamlarını sorguladı. `src/lib/finance-mock.ts` içindeki
+`TAHSILAT_2026_GERCEK` dizisi artık bu **gerçek** rakamlardır (Ağustos
+kısmi ay). FastAPI'de bu view'i dönen bir uç nokta henüz yok, o yüzden
+veri hâlâ `finance-mock.ts` içinde duruyor — ama artık uydurma değil.
+Fiş bazlı satır verisi (hangi cari, ne zaman, ne kadar) için gerçek bir
+kaynak yok; "Son İşlemler" tablosundaki satırlar (`TAHSILAT_ORNEK_SATIRLAR`)
+gerçek şemaya (`IslemKod`/`FisTur`/`FisNo`/`FisTarih`/`CariAd`/`Tutar`/
+`ISYERI` vb., bkz. `TahsilatSatiri` tipi `finance-types.ts`) uygun ama
+içerik hâlâ illüstratif örnektir. Arayüzde Tahsilatlar kartında yeşil bir
+nokta ve detay panelinde "(Kısmen Gerçek)" etiketi bunu ayırt eder.
+Diğer alanların (Ödemeler, Borçlar, Alacaklar, Banka, Harcamalar, Hata)
+SQL şeması geldikçe aynı yöntemle tek tek gerçek veriye taşınabilir.
+
 ## Yeni firma eklemek
 
 Firma listesi tamamen `/logo/durum`'dan geldiği için Logo'da yeni bir

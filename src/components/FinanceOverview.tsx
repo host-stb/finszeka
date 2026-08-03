@@ -14,7 +14,7 @@ const GRANULARITY_OPTIONS: { key: Granularity; label: string }[] = [
   { key: "yillik", label: "Yıllık" },
 ];
 
-function MiniTrendChart({ data }: { data: { month: string; value: number }[] }) {
+function MiniTrendChart({ data }: { data: { month: string; value: number | null }[] }) {
   return (
     <div className="h-28 w-full">
       <ResponsiveContainer width="100%" height="100%">
@@ -27,7 +27,7 @@ function MiniTrendChart({ data }: { data: { month: string; value: number }[] }) 
           </defs>
           <XAxis dataKey="month" tick={{ fontSize: 9, fill: "var(--muted)" }} axisLine={false} tickLine={false} />
           <Tooltip
-            formatter={(v) => [`${formatCompactCurrency(Number(v))} ₺`, ""]}
+            formatter={(v) => (v == null ? ["Henüz yok", ""] : [`${formatCompactCurrency(Number(v))} ₺`, ""])}
             labelFormatter={(l) => l}
             contentStyle={{
               background: "var(--ink)",
@@ -44,6 +44,7 @@ function MiniTrendChart({ data }: { data: { month: string; value: number }[] }) 
             strokeWidth={2}
             fill="url(#financeFill)"
             dot={false}
+            connectNulls={false}
           />
         </AreaChart>
       </ResponsiveContainer>
@@ -91,11 +92,15 @@ export default function FinanceOverview({ companyName }: { companyName: string }
       <div className="flex items-start gap-2 rounded-xl border border-dashed border-[var(--brass)]/60 bg-[var(--brass-soft)]/30 px-4 py-3 text-xs text-[var(--brass-strong)]">
         <AlertIcon className="mt-0.5 h-4 w-4 shrink-0" />
         <span>
-          <strong className="font-semibold">DUMMY VERİ.</strong> Bu bölümdeki tüm rakamlar
-          örnektir — Ödemeler, Tahsilatlar, Borçlar, Alacaklar, Banka, Harcamalar ve Hata
-          (mutabakat farkı) için satzeka/FastAPI tarafında henüz gerçek bir uç nokta yok.
-          Backend hazır olduğunda sadece <code>src/lib/finance-mock.ts</code> yerine gerçek
-          bir API çağrısı bağlanacak, arayüz aynı kalacak.
+          <strong className="font-semibold">DUMMY VERİ.</strong> Bu bölümdeki rakamların çoğu
+          örnektir — Ödemeler, Borçlar, Alacaklar, Banka, Harcamalar ve Hata (mutabakat farkı)
+          için satzeka/FastAPI tarafında henüz gerçek bir uç nokta yok.{" "}
+          <strong className="font-semibold text-[var(--positive)]">İstisna: Tahsilatlar</strong>{" "}
+          aylık toplamları artık gerçek (VW_100_TAHSILATLAR, danışmanın 03.08.2026 SQL
+          sorgusundan Oca-Ağu 2026) — kartta yeşil nokta bunu gösteriyor; fiş bazlı satır
+          detayı ise hâlâ örnek. Backend hazır olduğunda sadece{" "}
+          <code>src/lib/finance-mock.ts</code> yerine gerçek bir API çağrısı bağlanacak,
+          arayüz aynı kalacak.
         </span>
       </div>
 
@@ -153,9 +158,17 @@ export default function FinanceOverview({ companyName }: { companyName: string }
               <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
                 {m.label}
               </p>
-              <span className="shrink-0 rounded-full bg-[var(--line)] px-1.5 py-0.5 text-[8px] font-medium uppercase text-[var(--muted)]">
-                {m.kind === "flow" ? "Akış" : "Anlık"}
-              </span>
+              <div className="flex shrink-0 items-center gap-1">
+                {m.dataNote && (
+                  <span
+                    className="h-1.5 w-1.5 rounded-full bg-[var(--positive)]"
+                    title={m.dataNote}
+                  />
+                )}
+                <span className="rounded-full bg-[var(--line)] px-1.5 py-0.5 text-[8px] font-medium uppercase text-[var(--muted)]">
+                  {m.kind === "flow" ? "Akış" : "Anlık"}
+                </span>
+              </div>
             </div>
             <p className="mt-1.5 font-[family-name:var(--font-mono)] text-base font-semibold text-[var(--ink)] tabular-nums sm:text-lg">
               {formatCompactCurrency(m.value)} ₺
@@ -179,7 +192,13 @@ export default function FinanceOverview({ companyName }: { companyName: string }
             <div className="flex items-center justify-between">
               <p className="font-[family-name:var(--font-display)] text-base font-medium text-[var(--ink)]">
                 {selected.label} · Trend{" "}
-                <span className="text-xs font-normal text-[var(--brass-strong)]">(Dummy)</span>
+                <span
+                  className={`text-xs font-normal ${
+                    selected.dataNote ? "text-[var(--positive)]" : "text-[var(--brass-strong)]"
+                  }`}
+                >
+                  ({selected.dataNote ? "Kısmen Gerçek" : "Dummy"})
+                </span>
               </p>
               <button
                 type="button"
@@ -189,6 +208,9 @@ export default function FinanceOverview({ companyName }: { companyName: string }
                 Kapat
               </button>
             </div>
+            {selected.dataNote && (
+              <p className="mt-1 text-[11px] text-[var(--positive)]">{selected.dataNote}</p>
+            )}
             <div className="mt-2">
               <MiniTrendChart data={selected.trend} />
             </div>
@@ -244,6 +266,45 @@ export default function FinanceOverview({ companyName }: { companyName: string }
                         </td>
                         <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
                           {formatCompactCurrency(acc.balance)} ₺
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {selected.sampleRows && (
+            <div className="sm:col-span-2">
+              <p className="font-[family-name:var(--font-display)] text-base font-medium text-[var(--ink)]">
+                Son İşlemler{" "}
+                <span className="text-xs font-normal text-[var(--brass-strong)]">
+                  (örnek satır — fiş bazlı gerçek veri API&apos;ye bağlanınca burada listelenecek)
+                </span>
+              </p>
+              <div className="mt-2 overflow-x-auto rounded-xl border border-[var(--line)]">
+                <table className="w-full min-w-[560px] text-sm">
+                  <thead>
+                    <tr className="bg-[var(--paper)] text-left text-[11px] uppercase tracking-wider text-[var(--muted)]">
+                      <th className="px-3 py-2 font-medium">Tarih</th>
+                      <th className="px-3 py-2 font-medium">Cari</th>
+                      <th className="px-3 py-2 font-medium">İşlem Yeri</th>
+                      <th className="px-3 py-2 font-medium">Açıklama</th>
+                      <th className="px-3 py-2 text-right font-medium">Tutar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {selected.sampleRows.map((row) => (
+                      <tr key={row.islemKod} className="border-t border-[var(--line)]">
+                        <td className="px-3 py-2 whitespace-nowrap text-[var(--muted)]">
+                          {formatTimestamp(row.fisTarih).split(" ")[0]}
+                        </td>
+                        <td className="px-3 py-2 text-[var(--ink-soft)]">{row.cariAd}</td>
+                        <td className="px-3 py-2 text-[var(--muted)]">{row.islemYeri}</td>
+                        <td className="px-3 py-2 text-[var(--muted)]">{row.aciklama}</td>
+                        <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
+                          {formatCompactCurrency(row.tutar)} ₺
                         </td>
                       </tr>
                     ))}

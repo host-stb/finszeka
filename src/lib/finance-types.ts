@@ -42,7 +42,29 @@ export interface BankAccount {
 
 export interface TrendPoint {
   month: string;
-  value: number;
+  /** Henüz gerçekleşmemiş (gelecek) aylar için null — grafikte boşluk bırakılır. */
+  value: number | null;
+}
+
+/**
+ * Danışmanın SQL Server'da paylaştığı VW_100_TAHSILATLAR görünümünün gerçek
+ * satır şeması. FastAPI tarafında bu view'i dönen bir uç nokta henüz yok
+ * (bkz. finance-mock.ts) — bu tip, o uç nokta geldiğinde birebir eşleşmesi
+ * için şimdiden gerçek kolon adlarına göre tanımlandı.
+ */
+export interface TahsilatSatiri {
+  islemKod: string;
+  fisTur: string;
+  fisNo: string;
+  fisTarih: string; // ISO
+  fisAciklama: string;
+  islemYeriKod: string;
+  islemYeri: string;
+  cariAd: string;
+  cariKod: string;
+  tutar: number;
+  aciklama: string;
+  isyeri: string;
 }
 
 export interface FinanceMetric {
@@ -57,6 +79,10 @@ export interface FinanceMetric {
   aging?: AgingBucket[];
   /** Sadece "banka" için: hesap bazlı bakiye. */
   bankAccounts?: BankAccount[];
+  /** Bu metrik için trend/toplamın hangi ölçüde gerçek veriye dayandığını açıklayan kısa not. */
+  dataNote?: string;
+  /** Sadece "tahsilatlar" için: gerçek şemaya uygun örnek fiş satırları (fiş bazlı veri API'ye bağlanana kadar illüstratif). */
+  sampleRows?: TahsilatSatiri[];
 }
 
 export interface UpcomingItem {
