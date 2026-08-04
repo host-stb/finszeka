@@ -167,6 +167,44 @@ nokta ve detay panelinde "(Kısmen Gerçek)" etiketi bunu ayırt eder.
 Diğer alanların (Ödemeler, Borçlar, Alacaklar, Banka, Harcamalar, Hata)
 SQL şeması geldikçe aynı yöntemle tek tek gerçek veriye taşınabilir.
 
+## Web Mağaza (holistikmarket.com)
+
+Üstteki menüde üçüncü sekme: **Web Mağaza**. Bu, GERÇEK Logo verisiyle
+çalışan bir bölüm (dummy değil) — holistikmarket.com'un Bugün / Bu Hafta /
+Bu Ay / Yılbaşından Bugüne cirosunu, kendi site + pazaryeri kanalları
+kalem kalem kırılımıyla gösterir.
+
+**Kanal eşlemesi** (`src/lib/webstore-report.ts`, 2026-08-04'te
+`/logo/cariler` ile doğrulandı — hepsi `Holimer` şirketi altında):
+
+- **Kendi Sitem**: `9.HOLISTIK.COM` (HOLİSTİKMARKET.COM) + `9.TICIMAX`
+  (HOLİSTİK MARKET.COM) — ikisi de aynı sitenin farklı tahsilat kanalı,
+  toplanıyor.
+- **Pazaryerleri** (ayrı ayrı listelenir): Trendyol (`9.H.TRENDYOL`),
+  Hepsiburada (`9.H.HEPSIBURADA`), Amazon (`9.H.AMAZON`), Pazarama
+  (`9.H.PAZARAMA`), PTT AVM (`9.H.PTT`), N11 (`9.H.N11`), Idefix
+  (`9.H.IDEFIX`).
+- **Genel Toplam** = Kendi Sitem + tüm pazaryerlerinin toplamı.
+
+**Hesaplama yöntemi**: `/logo/satislar/ozet` (sirket=Holimer, ilk_n=50) tek
+çağrıda hem genel toplamı hem "en çok alan cariler" listesini veriyor; kısa
+dönemlerde (bugün/hafta/ay) bu liste 9 kanalın tamamını güvenle yakalıyor.
+Yılbaşından bugüne gibi uzun dönemlerde düşük hacimli kanallar (N11, Idefix)
+top-50 dışında kalabiliyor — bu durumda o kanal için `/logo/satislar`'ı
+`cari_kodu` filtresiyle çekip ham satırlardan topluyoruz (hacimleri küçük
+olduğu için tek sayfada bitiyor, doğrulandı).
+
+**Bekleyen iyileştirme**: Danışmana `/logo/satislar/ozet`'e bir `cari_kodu`
+(tekli/çoklu) filtresi eklemesi rica edildi — eklenince yukarıdaki "ham
+veriden tamamla" adımına hiç gerek kalmayacak, tüm dönemler için tek çağrı
+yeterli olacak. Ayrıca ürün bazlı en çok/en az satan liste bu filtre
+eklenince kolayca yapılabilecek (`/logo/satislar/ozet` zaten
+`en_cok_satan_urunler` döndürüyor, sadece kanal bazlı filtrelenmesi lazım).
+
+FASTAPI_BASE_URL tanımsızsa veya istek tamamen başarısız olursa
+`src/lib/webstore-mock.ts`'teki örnek veriye düşülür (rozette "○ Örnek
+Veri" görünür).
+
 ## Yeni firma eklemek
 
 Firma listesi tamamen `/logo/durum`'dan geldiği için Logo'da yeni bir

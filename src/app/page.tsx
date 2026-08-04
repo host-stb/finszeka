@@ -7,12 +7,13 @@ import QuarterCompareCards from "@/components/QuarterCompareCards";
 import ReportTable from "@/components/ReportTable";
 import RevenueChart from "@/components/RevenueChart";
 import SummaryCards from "@/components/SummaryCards";
+import WebstoreOverview from "@/components/WebstoreOverview";
 import { AlertIcon, RefreshIcon } from "@/components/icons";
 import { formatTimestamp } from "@/lib/format";
 import { QUARTERS } from "@/lib/report-utils";
 import { ApiEnvelope, CompanyReport, CompanySummary } from "@/lib/types";
 
-type View = "gelir" | "finans";
+type View = "gelir" | "finans" | "webmagaza";
 
 export default function Home() {
   const [view, setView] = useState<View>("gelir");
@@ -118,6 +119,7 @@ export default function Home() {
             [
               { key: "gelir", label: "Gelir Raporu" },
               { key: "finans", label: "Finans Özeti" },
+              { key: "webmagaza", label: "Web Mağaza" },
             ] as { key: View; label: string }[]
           ).map((item) => (
             <button
@@ -138,10 +140,12 @@ export default function Home() {
           ))}
         </nav>
 
-        {/* Firma sekmeleri */}
-        <div className="border-b border-[var(--line)]">
-          <CompanyTabs companies={companies} activeId={activeId} onSelect={setActiveId} />
-        </div>
+        {/* Firma sekmeleri — Web Mağaza sekmesi belirli bir markaya (holistikmarket.com) bağlı olduğu için firma seçiciden bağımsız */}
+        {view !== "webmagaza" && (
+          <div className="border-b border-[var(--line)]">
+            <CompanyTabs companies={companies} activeId={activeId} onSelect={setActiveId} />
+          </div>
+        )}
 
         {error && (
           <div className="flex items-center gap-2 rounded-xl border border-[var(--negative)]/25 bg-[var(--negative)]/5 px-4 py-3 text-sm text-[var(--negative)]">
@@ -150,7 +154,9 @@ export default function Home() {
           </div>
         )}
 
-        {view === "finans" ? (
+        {view === "webmagaza" ? (
+          <WebstoreOverview />
+        ) : view === "finans" ? (
           <FinanceOverview companyName={report?.companyName ?? "Firma"} />
         ) : report ? (
           <>

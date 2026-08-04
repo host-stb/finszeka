@@ -5,9 +5,12 @@
 // Doğrulanmış uç noktalar (2026-08-01 itibarıyla api.nutramolai.com üzerinde):
 //   GET /logo/durum          -> LogoDurum
 //   GET /logo/satislar/ozet  -> LogoSatislarOzet (baslangic, bitis, sirket, ilk_n)
-//   GET /logo/satislar       -> satır bazlı fatura verisi (burada kullanılmıyor;
-//                                 yıllık veri 100binlerce satır olduğundan canlı
-//                                 bir "Güncelle" isteği için pratik değil)
+//   GET /logo/satislar       -> satır bazlı fatura verisi (fetchSatislar).
+//                                 Yıllık veri 100binlerce satır olduğundan büyük
+//                                 hacimli cariler için burada TAM yıl çekilmiyor —
+//                                 sadece küçük hacimli kanallar (bkz.
+//                                 src/lib/webstore-report.ts) için nokta atışı
+//                                 cari_kodu filtresiyle kullanılıyor.
 //   GET /logo/cariler        -> cari bazlı toplam fatura tutarı (bakiye/borç-alacak yok)
 
 export interface LogoDurum {
@@ -68,5 +71,56 @@ export async function fetchSatislarOzet(
 
   const res = await fetch(url, { cache: "no-store", headers: authHeaders() });
   if (!res.ok) throw new Error(`logo/satislar/ozet HTTP ${res.status}`);
+  return res.json();
+}
+
+export interface LogoSatisSatiri {
+  sirket: string;
+  tarihi: string;
+  fatura_numarasi: string;
+  fatura_turu: string;
+  fatura_iptal_durumu: string;
+  cari_hesap_kodu: string;
+  cari_hesap_unvani: string;
+  hizmet_kodu: string;
+  hizmet_aciklamasi: string;
+  birim: string;
+  miktar: number;
+  birim_fiyat: number;
+  satir_matrahi: number;
+  kdv: number;
+  toplami: number;
+  satis_temsilci_adi: string;
+  siparis_numarasi: string;
+}
+
+export interface LogoSatislarSayfa {
+  adet: number;
+  limit: number;
+  offset: number;
+  satirlar: LogoSatisSatiri[];
+}
+
+export async function fetchSatislar(
+  base: string,
+  params: {
+    baslangic?: string;
+    bitis?: string;
+    sirket?: string;
+    cariKodu?: string;
+    limit?: number;
+    offset?: number;
+  }
+): Promise<LogoSatislarSayfa> {
+  const url = new URL(`${base}/logo/satislar`);
+  if (params.baslangic) url.searchParams.set("baslangic", params.baslangic);
+  if (params.bitis) url.searchParams.set("bitis", params.bitis);
+  if (params.sirket) url.searchParams.set("sirket", params.sirket);
+  if (params.cariKodu) url.searchParams.set("cari_kodu", params.cariKodu);
+  url.searchParams.set("limit", String(params.limit ?? 1000));
+  url.searchParams.set("offset", String(params.offset ?? 0));
+
+  const res = await fetch(url, { cache: "no-store", headers: authHeaders() });
+  if (!res.ok) throw new Error(`logo/satislar HTTP ${res.status}`);
   return res.json();
 }
