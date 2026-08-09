@@ -15,8 +15,14 @@ import { ApiEnvelope, CompanyReport, CompanySummary } from "@/lib/types";
 
 type View = "gelir" | "finans" | "webmagaza";
 
+function baslangicGorunumu(): View {
+  if (typeof window === "undefined") return "gelir";
+  const v = new URLSearchParams(window.location.search).get("view");
+  return v === "finans" || v === "webmagaza" ? v : "gelir";
+}
+
 export default function Home() {
-  const [view, setView] = useState<View>("gelir");
+  const [view, setView] = useState<View>(baslangicGorunumu);
   const [companies, setCompanies] = useState<CompanySummary[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [report, setReport] = useState<CompanyReport | null>(null);

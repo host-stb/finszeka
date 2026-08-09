@@ -262,7 +262,7 @@ export default function FinanceOverview({ companyName }: { companyName: string }
                       <tr key={acc.name} className="border-t border-[var(--line)]">
                         <td className="px-3 py-2 text-[var(--ink-soft)]">{acc.name}</td>
                         <td className="px-3 py-2 text-[var(--muted)]">
-                          {formatTimestamp(acc.lastTxnDate).split(" ")[0]}
+                          {formatTimestamp(acc.lastTxnDate).split(" ").slice(0, 2).join(" ")}
                         </td>
                         <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
                           {formatCompactCurrency(acc.balance)} ₺
@@ -298,7 +298,7 @@ export default function FinanceOverview({ companyName }: { companyName: string }
                     {selected.sampleRows.map((row) => (
                       <tr key={row.islemKod} className="border-t border-[var(--line)]">
                         <td className="px-3 py-2 whitespace-nowrap text-[var(--muted)]">
-                          {formatTimestamp(row.fisTarih).split(" ")[0]}
+                          {formatTimestamp(row.fisTarih).split(" ").slice(0, 2).join(" ")}
                         </td>
                         <td className="px-3 py-2 text-[var(--ink-soft)]">{row.cariAd}</td>
                         <td className="px-3 py-2 text-[var(--muted)]">{row.islemYeri}</td>
@@ -339,7 +339,7 @@ export default function FinanceOverview({ companyName }: { companyName: string }
               </div>
               <div className="flex shrink-0 items-center gap-4 text-sm">
                 <span className="text-xs text-[var(--muted)]">
-                  {formatTimestamp(item.date).split(" ")[0]}
+                  {formatTimestamp(item.date).split(" ").slice(0, 2).join(" ")}
                 </span>
                 <span className="font-[family-name:var(--font-mono)] font-medium tabular-nums text-[var(--ink)]">
                   {formatCompactCurrency(item.value)} ₺

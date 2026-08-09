@@ -205,6 +205,70 @@ FASTAPI_BASE_URL tanımsızsa veya istek tamamen başarısız olursa
 `src/lib/webstore-mock.ts`'teki örnek veriye düşülür (rozette "○ Örnek
 Veri" görünür).
 
+### Geçmiş dönemle kıyaslama
+
+Her dönem kartı (Bugün/Bu Hafta/Bu Ay/Yılbaşından Bugüne) artık bir önceki
+eşdeğer dönemle otomatik kıyaslanır — Bugün → Dün, Bu Hafta → Geçen Hafta
+(aynı gün sayısı), Bu Ay → Geçen Ay (aynı gün sayısı), Yılbaşından Bugüne →
+Geçen Yıl (yılbaşı – aynı tarih). Genel toplamda ve her kanalda (Kendi
+Sitem, her pazaryeri ayrı ayrı) yüzde değişim ok/renk rozetiyle gösterilir
+(`src/lib/webstore-report.ts` → `oncekiDonemAraligi`,
+`src/components/WebstoreOverview.tsx` → `DeltaBadge`).
+
+### KDV dahil / hariç (matrah)
+
+Gösterilen tüm tutarlar **KDV dahildir** (Logo'nun `toplami`/`toplam_tutar`
+alanı). Bugün/Bu Hafta/Bu Ay gibi kısa dönemlerde ayrıca satır bazlı veriden
+(`satir_matrahi` + `kdv` alanları) gerçek **Matrah (KDV hariç)** ve **KDV**
+tutarları da hesaplanıp kartta ayrı bir satırda gösterilir. Yılbaşından
+Bugüne gibi uzun dönemlerde bu kırılım hesaplanmaz (veri hacmi çok
+büyüdüğü için performans amaçlı atlanır) — kart bunu açıkça belirtir,
+rakam uydurulmaz (bkz. `WebstoreMatrahKirilimi.matrahHesaplandi`).
+
+### Kanal Bazlı Karşılaştırma (pazaryerleri çubuk grafik)
+
+Dönem kartlarının altında `WebstorePazaryeriKarsilastirma.tsx`: seçilen
+dönem (Bugün/Bu Hafta/Bu Ay/Yılbaşından Bugüne) için Kendi Site + her
+pazaryeri, güncel dönem vs bir önceki eşdeğer dönem gruplu çubuk grafikte
+karşılaştırılır. Ek bir API çağrısı gerekmez — zaten `/api/webstore`'dan
+gelen `karsilastirma` verisini kullanır.
+
+### Trend Grafikleri (ayrı sayfa: `/trend`)
+
+Ana sayfadaki "Trend Grafikleri" kartına tıklayınca `/trend` sayfasına
+gidilir (aynı Google girişiyle korunur, `proxy.ts` tüm rotaları kapsar).
+Orada iki bölüm var:
+
+1. **Günlük / Haftalık / Aylık / Yıllık sekmeleri**
+   (`src/components/WebstoreTrendSection.tsx`): Günlük (ay seçici ile gün
+   gün detay), Haftalık (son 12 hafta), Aylık (seçilen yılın 12 ayı, yıl
+   seçici ile) ve Yıllık (Logo'daki en eski faturadan bugüne, en fazla son
+   6 yıl) — her biri çubuk grafik + tablo ile (`WebstoreSeriChart.tsx`).
+   Yeni uç nokta: `GET /api/webstore/seri?granularite=haftalik|aylik|yillik&yil=`
+   → `src/lib/webstore-report.ts` içindeki `fetchWebstoreHaftalikSeri` /
+   `fetchWebstoreAylikSeri` / `fetchWebstoreYillikSeri`. Bu üçü "hızlı
+   yol"u kullanır (matrah/KDV kırılımı yok, sadece KDV dahil toplam) — çok
+   sayıda nokta çekildiği için performans amaçlı. Tek bir dönemin verisi
+   alınamazsa (ağ/HTTP hatası) o nokta `veriAlinamadi: true` ile
+   işaretlenir ve grafikte/tabloda gri/"Veri alınamadı" olarak ayrı
+   gösterilir — gerçek bir sıfırla karıştırılmaz, tüm seri mock'a düşmez.
+2. **Yıl Yıla Karşılaştırma** (`WebstoreYilKarsilastirma.tsx`): iki yıl
+   seçin, Ocak–Aralık ay ay ciro yan yana çubuk grafikte karşılaştırılır
+   (aynı `/api/webstore/seri?granularite=aylik` uç noktası iki farklı yıl
+   için paralel çağrılır).
+
+### Günlük Detay (ay seçici + grafik)
+
+Web Mağaza sekmesinin altında "Günlük Detay" bölümü, seçilen bir ay için gün
+gün ciro serisini (kendi site / pazaryerleri kırılımlı) çizgi grafik ve
+tablo olarak gösterir; aynı ayın geçen yılıyla otomatik kıyaslanır (ikinci,
+kesikli çizgi). Yeni uç nokta: `GET /api/webstore/gunluk?yil=&ay=` →
+`src/lib/webstore-report.ts` içindeki `fetchWebstoreGunlukSeri` her bir
+web mağaza kanalı için o ayın ham satırlarını çekip güne göre gruplar
+(`src/components/WebstoreDailyBreakdown.tsx`). FASTAPI_BASE_URL tanımsızsa
+ya da istek başarısız olursa `getMockWebstoreGunlukSeri` ile örnek veriye
+düşülür.
+
 ## Yeni firma eklemek
 
 Firma listesi tamamen `/logo/durum`'dan geldiği için Logo'da yeni bir

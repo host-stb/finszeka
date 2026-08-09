@@ -1,10 +1,31 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import { formatCompactCurrency, formatTimestamp } from "@/lib/format";
+import { formatCompactCurrency, formatPercent, formatTimestamp } from "@/lib/format";
 import { ApiEnvelope } from "@/lib/types";
 import { WebstoreRaporu } from "@/lib/webstore-types";
+import WebstorePazaryeriKarsilastirma from "./WebstorePazaryeriKarsilastirma";
 import { AlertIcon, RefreshIcon } from "./icons";
+
+function DeltaBadge({ value }: { value: number | null }) {
+  if (value === null || !Number.isFinite(value)) {
+    return <span className="text-[11px] text-[var(--muted)]">veri yok</span>;
+  }
+  const positive = value >= 0;
+  return (
+    <span
+      className={`inline-flex items-center gap-0.5 text-[11px] font-medium tabular-nums ${
+        positive ? "text-[var(--positive)]" : "text-[var(--negative)]"
+      }`}
+    >
+      <svg viewBox="0 0 12 12" className={`h-2.5 w-2.5 ${positive ? "" : "rotate-180"}`} fill="currentColor" aria-hidden="true">
+        <path d="M6 1.5l4.5 6h-9L6 1.5z" />
+      </svg>
+      {formatPercent(value)}
+    </span>
+  );
+}
 
 export default function WebstoreOverview() {
   const [raporu, setRaporu] = useState<WebstoreRaporu | null>(null);
@@ -44,6 +65,7 @@ export default function WebstoreOverview() {
           </h2>
           <p className="mt-1 text-xs text-[var(--muted)]">
             Kendi site (Holistik.com + Ticimax) ve pazaryeri kanalları — Logo&apos;dan gerçek veri.
+            Tutarlar KDV dahildir; kısa dönemlerde ayrıca KDV hariç matrah gösterilir.
           </p>
         </div>
 
@@ -93,33 +115,69 @@ export default function WebstoreOverview() {
               className="animate-rise-in flex flex-col rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-4 shadow-[0_1px_2px_rgba(28,25,23,0.04)]"
               style={{ animationDelay: `${i * 60}ms` }}
             >
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
-                {d.label}
-              </p>
+              <div className="flex items-start justify-between gap-2">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
+                  {d.label}
+                </p>
+                <DeltaBadge value={d.karsilastirma.degisimYuzde} />
+              </div>
               <p className="mt-1.5 font-[family-name:var(--font-mono)] text-2xl font-semibold text-[var(--ink)] tabular-nums">
                 {formatCompactCurrency(d.genelToplam)} ₺
               </p>
               <p className="mt-0.5 text-xs text-[var(--muted)]">
-                {d.genelFaturaAdedi.toLocaleString("tr-TR")} fatura · toplam ciro
+                {d.genelFaturaAdedi.toLocaleString("tr-TR")} fatura · {d.karsilastirma.label}:{" "}
+                {formatCompactCurrency(d.karsilastirma.genelToplam)} ₺
               </p>
+
+              {d.matrahKirilimi.matrahHesaplandi ? (
+                <p className="mt-1 text-[11px] text-[var(--muted)]">
+                  Matrah (KDV hariç): {formatCompactCurrency(d.matrahKirilimi.matrah)} ₺ · KDV:{" "}
+                  {formatCompactCurrency(d.matrahKirilimi.kdv)} ₺
+                </p>
+              ) : (
+                <p className="mt-1 text-[11px] text-[var(--muted)]">
+                  KDV kırılımı bu dönem için hesaplanmadı (uzun dönem — sadece KDV dahil tutar).
+                </p>
+              )}
 
               <div className="mt-3 flex flex-col divide-y divide-[var(--line)] border-t border-[var(--line)]">
                 <div className="flex items-center justify-between py-2 text-sm">
-                  <span className="font-medium text-[var(--ink-soft)]">
-                    {d.kendiSite.ad}
-                  </span>
-                  <span className="font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
-                    {formatCompactCurrency(d.kendiSite.toplamTutar)} ₺
+                  <span className="font-medium text-[var(--ink-soft)]">{d.kendiSite.ad}</span>
+                  <span className="flex items-center gap-2">
+                    <DeltaBadge
+                      value={
+                        d.karsilastirma.kendiSiteToplam > 0
+                          ? ((d.kendiSite.toplamTutar - d.karsilastirma.kendiSiteToplam) /
+                              d.karsilastirma.kendiSiteToplam) *
+                            100
+                          : null
+                      }
+                    />
+                    <span className="font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
+                      {formatCompactCurrency(d.kendiSite.toplamTutar)} ₺
+                    </span>
                   </span>
                 </div>
-                {d.pazaryerleri.map((p) => (
-                  <div key={p.key} className="flex items-center justify-between py-2 text-sm">
-                    <span className="text-[var(--muted)]">{p.ad}</span>
-                    <span className="font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
-                      {formatCompactCurrency(p.toplamTutar)} ₺
-                    </span>
-                  </div>
-                ))}
+                {d.pazaryerleri.map((p) => {
+                  const oncekiTutar = d.karsilastirma.pazaryerleriToplam[p.key] ?? 0;
+                  return (
+                    <div key={p.key} className="flex items-center justify-between py-2 text-sm">
+                      <span className="text-[var(--muted)]">{p.ad}</span>
+                      <span className="flex items-center gap-2">
+                        <DeltaBadge
+                          value={
+                            oncekiTutar > 0
+                              ? ((p.toplamTutar - oncekiTutar) / oncekiTutar) * 100
+                              : null
+                          }
+                        />
+                        <span className="font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
+                          {formatCompactCurrency(p.toplamTutar)} ₺
+                        </span>
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -131,6 +189,28 @@ export default function WebstoreOverview() {
           </div>
         )
       )}
+
+      {raporu && <WebstorePazaryeriKarsilastirma donemler={raporu.donemler} />}
+
+      <Link
+        href="/trend"
+        className="animate-rise-in group flex items-center justify-between gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] px-5 py-4 shadow-[0_1px_2px_rgba(28,25,23,0.04)] transition-colors hover:border-[var(--brass)]"
+      >
+        <div>
+          <p className="font-[family-name:var(--font-display)] text-base font-medium text-[var(--ink)]">
+            Trend Grafikleri
+          </p>
+          <p className="mt-0.5 text-xs text-[var(--muted)]">
+            Günlük / Haftalık / Aylık / Yıllık grafikler ve yıl yıla karşılaştırma — ayrı sayfada.
+          </p>
+        </div>
+        <span className="flex items-center gap-1 text-sm font-medium text-[var(--brass-strong)] transition-transform group-hover:translate-x-0.5">
+          Görüntüle
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </Link>
     </div>
   );
 }
