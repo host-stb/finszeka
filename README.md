@@ -269,6 +269,60 @@ web mağaza kanalı için o ayın ham satırlarını çekip güne göre gruplar
 ya da istek başarısız olursa `getMockWebstoreGunlukSeri` ile örnek veriye
 düşülür.
 
+## Kutu Trendi (TÜM şirketler, konsolide + şirket kırılımı + web mağaza payı)
+
+Üst menüdeki **Kutu Trendi** bağlantısı ayrı bir sayfaya (`/kutu-trend`) götürür.
+Web Mağaza'dan farklı olarak burada kanal ayrımı değil ŞİRKET ayrımı vardır —
+Logo'daki TÜM satışları kapsar (bugün için Holimer + Fw İlaç; liste
+`/logo/durum`'dan dinamik gelir, hardcode değil).
+
+Gösterilen: Günlük / Haftalık / Aylık / Yıllık sekmelerinde toplam satılan
+**kutu adedi** (`/logo/satislar/ozet` → `genel.toplam_miktar` — fatura
+satırlarındaki miktar/birim toplamı) ve **kutu başına ciro** (`toplam_tutar /
+toplam_miktar`), TL / EUR / USD olarak — hem TÜMÜ toplamı hem şirket bazlı
+kırılım (yığılmış çubuk grafik + ayrı tablo).
+
+- Yeni dosyalar: `src/lib/kutu-types.ts` (veri sözleşmesi), `src/lib/kur-api.ts`
+  (TCMB `today.xml`'den günlük gösterge kuru — sunucu tarafında, CORS
+  nedeniyle tarayıcıdan çekilemez), `src/lib/kutu-report.ts` (dönem
+  serilerini hesaplar — her dönem noktası, seçilen şirket listesindeki HER
+  şirket için ayrı bir `/logo/satislar/ozet` çağrısıyla paralel hesaplanır ve
+  toplanır), `src/lib/kutu-mock.ts` (mock fallback),
+  `src/app/api/kutu-trend/seri/route.ts`
+  (`?granularite=gunluk|haftalik|aylik|yillik&yil=&ay=`),
+  `src/components/KutuTrendSection.tsx` + `KutuSeriChart.tsx`,
+  `src/app/kutu-trend/page.tsx`.
+- **Şirket kırılımı:** Şirketlerden biri bile veri alınamazsa (ağ/HTTP hatası)
+  TÜM nokta `veriAlinamadi: true` ile işaretlenir — kısmi bir toplamı gerçekmiş
+  gibi göstermemek için (webstore-report.ts'teki "hata yutma" deseninden daha
+  katı).
+- **Web mağaza (e-ticaret) payı:** Holimer'ın toplamının ne kadarının web
+  mağaza kanallarından (holistikmarket.com + 7 pazaryeri — bkz.
+  `webstore-report.ts` içindeki `TUM_KANAL_KODLARI`) geldiği, SADECE Günlük ve
+  Haftalık sekmelerinde hesaplanıp gösterilir ("└ Web Mağaza" alt satırları,
+  çubuk grafikte koyu/açık ton ayrımı). `/logo/satislar/ozet` kanal bazlı
+  miktar (kutu) vermediği için bu kırılım ham fatura satırlarının
+  (`/logo/satislar`, `cari_kodu` filtresiyle) sayfalanmasıyla hesaplanır — tüm
+  dönem aralığı için TEK seferde (nokta başına değil) çekilip güne göre
+  yeniden dağıtılır. Aylık (tam yıl) ve Yıllık (çoklu yıl) için bu hacim çok
+  büyüyeceğinden performans nedeniyle BİLEREK hesaplanmaz —
+  `KutuSeri.webMagazaHesaplandi` bayrağı bunu arayüze bildirir, o durumda bir
+  uyarı notu gösterilir (rakam uydurmamak için 0 değil, alan hiç doldurulmaz).
+- **Çift sayım notu:** "TÜMÜ" toplamı tüm şirketleri toplar; şirketler arası
+  satış varsa konsolide toplamda çift sayılmış olabilir (bkz. proje genelindeki
+  SOUL.md kuralı). Şirket bazlı kırılım en azından hangi şirketin ne kadar
+  katkı yaptığını görünür kılıyor.
+- **Kur:** TCMB'nin günlük gösterge niteliğindeki döviz kuru kullanılır
+  (alış/satış ortalaması). Hafta sonu/tatilde TCMB güncellemediği için son
+  yayınlanan kur kullanılır — kartta hangi tarihe ait olduğu gösterilir. TCMB
+  servisine hiç ulaşılamazsa TL rakamları yine gerçek ve güncel kalır, sadece
+  EUR/USD kolonları "kur alınamadı" uyarısıyla boş gösterilir (rakam
+  uydurulmaz).
+- **Yıllık sekme sınırlaması:** Logo mirror veritabanında şu an yalnızca
+  belirli bir tarihten (bkz. `/logo/durum` → `en_eski_fatura`) sonrası veri
+  varsa, yıllık karşılaştırma o kadar geriye gidebilir — kart bunu açıkça
+  belirtir.
+
 ## Yeni firma eklemek
 
 Firma listesi tamamen `/logo/durum`'dan geldiği için Logo'da yeni bir

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import CompanyTabs from "@/components/CompanyTabs";
 import FinanceOverview from "@/components/FinanceOverview";
 import QuarterCompareCards from "@/components/QuarterCompareCards";
@@ -144,6 +145,12 @@ export default function Home() {
               )}
             </button>
           ))}
+          <Link
+            href="/kutu-trend"
+            className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--paper-card)] hover:text-[var(--ink-soft)]"
+          >
+            Kutu Trendi
+          </Link>
         </nav>
 
         {/* Firma sekmeleri — Web Mağaza sekmesi belirli bir markaya (holistikmarket.com) bağlı olduğu için firma seçiciden bağımsız */}

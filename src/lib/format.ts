@@ -33,6 +33,16 @@ export function formatPercent(value: number | null | undefined): string {
   return `${percentFormatter.format(value)}%`;
 }
 
+const integerFormatter = new Intl.NumberFormat("tr-TR", {
+  maximumFractionDigits: 0,
+});
+
+/** Adet/kutu gibi tam sayı büyüklükler için: "128.358". Değer yoksa "-" döner. */
+export function formatInteger(value: number | null | undefined): string {
+  if (value === null || value === undefined || !Number.isFinite(value)) return "-";
+  return integerFormatter.format(value);
+}
+
 // getDay()/getUTCDay() sırasına göre: 0=Pazar, 1=Pazartesi, ... 6=Cumartesi.
 const GUN_KISALTMALARI = ["PZ", "PT", "SL", "ÇR", "PR", "CM", "CT"];
 

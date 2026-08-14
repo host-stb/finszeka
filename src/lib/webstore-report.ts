@@ -45,11 +45,16 @@ import {
   WebstoreSeriNoktasi,
 } from "./webstore-types";
 
-const SIRKET = "Holimer";
+// NOT: aşağıdaki dört sabit `export` edilmiştir çünkü src/lib/kutu-report.ts
+// da (Kutu Trendi'ndeki "web mağaza payı" kırılımı için) aynı kanal/şirket
+// eşlemesini kullanıyor — kanal kodları tek bir yerde (burada) tanımlı
+// kalsın diye, kopyalanmıyor.
 
-const KENDI_SITE_KODLARI = ["9.HOLISTIK.COM", "9.TICIMAX"];
+export const SIRKET = "Holimer";
 
-const PAZARYERLERI: { kod: string; ad: string }[] = [
+export const KENDI_SITE_KODLARI = ["9.HOLISTIK.COM", "9.TICIMAX"];
+
+export const PAZARYERLERI: { kod: string; ad: string }[] = [
   { kod: "9.H.TRENDYOL", ad: "Trendyol" },
   { kod: "9.H.HEPSIBURADA", ad: "Hepsiburada" },
   { kod: "9.H.AMAZON", ad: "Amazon" },
@@ -59,7 +64,7 @@ const PAZARYERLERI: { kod: string; ad: string }[] = [
   { kod: "9.H.IDEFIX", ad: "Idefix" },
 ];
 
-const TUM_KANAL_KODLARI = [...KENDI_SITE_KODLARI, ...PAZARYERLERI.map((p) => p.kod)];
+export const TUM_KANAL_KODLARI = [...KENDI_SITE_KODLARI, ...PAZARYERLERI.map((p) => p.kod)];
 
 const TAM_AY_ADLARI = [
   "Ocak",
