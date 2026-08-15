@@ -5,6 +5,7 @@ import { fetchWebstoreGunlukSeri } from "@/lib/webstore-report";
 import { WebstoreGunlukSeri } from "@/lib/webstore-types";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 /**
  * Seçilen bir ay için holistikmarket.com günlük ciro serisi (+ varsa aynı

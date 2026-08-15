@@ -237,35 +237,61 @@ export default function WebstoreDailyBreakdown() {
             </ResponsiveContainer>
           </div>
 
-          <div className="ledger-scroll max-h-72 overflow-y-auto rounded-xl border border-[var(--line)]">
-            <table className="w-full text-sm">
+          <div className="ledger-scroll max-h-72 overflow-x-auto overflow-y-auto rounded-xl border border-[var(--line)]">
+            <table className="w-full min-w-[880px] text-sm">
               <thead className="sticky top-0 bg-[var(--paper-card)] text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
                 <tr className="border-b border-[var(--line)]">
-                  <th className="px-3 py-2 text-left">Tarih</th>
-                  <th className="px-3 py-2 text-right">Kendi Site</th>
-                  <th className="px-3 py-2 text-right">Pazaryerleri</th>
-                  <th className="px-3 py-2 text-right">Genel Toplam</th>
-                  <th className="px-3 py-2 text-right">Fatura</th>
-                  <th className="px-3 py-2 text-right">Miktar (Kutu)</th>
+                  <th className="px-3 py-2 text-left" rowSpan={2}>
+                    Tarih
+                  </th>
+                  <th className="border-l border-[var(--line)] px-3 py-1 text-center" colSpan={3}>
+                    Kendi Site
+                  </th>
+                  <th className="border-l border-[var(--line)] px-3 py-1 text-center" colSpan={3}>
+                    Pazaryerleri
+                  </th>
+                  <th className="border-l border-[var(--line)] px-3 py-2 text-right" rowSpan={2}>
+                    Genel Toplam
+                  </th>
+                  <th className="px-3 py-2 text-right" rowSpan={2}>
+                    Fatura
+                  </th>
+                </tr>
+                <tr className="border-b border-[var(--line)]">
+                  <th className="border-l border-[var(--line)] px-3 py-1.5 text-right font-normal normal-case">Ciro</th>
+                  <th className="px-3 py-1.5 text-right font-normal normal-case">Kutu</th>
+                  <th className="px-3 py-1.5 text-right font-normal normal-case">₺/Kutu</th>
+                  <th className="border-l border-[var(--line)] px-3 py-1.5 text-right font-normal normal-case">Ciro</th>
+                  <th className="px-3 py-1.5 text-right font-normal normal-case">Kutu</th>
+                  <th className="px-3 py-1.5 text-right font-normal normal-case">₺/Kutu</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--line)]">
                 {seri.gunler.map((g) => (
                   <tr key={g.tarih} className="hover:bg-[var(--paper)]">
                     <td className="px-3 py-2 text-[var(--ink-soft)]">{formatDate(g.tarih)}</td>
-                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
+                    <td className="border-l border-[var(--line)] px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
                       {formatCurrency(g.kendiSiteToplam)}
                     </td>
-                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
+                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--muted)]">
+                      {formatInteger(g.kendiSiteKutuAdedi)}
+                    </td>
+                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--muted)]">
+                      {g.ciroKutuKendiSite !== null ? formatCurrency(g.ciroKutuKendiSite) : "—"}
+                    </td>
+                    <td className="border-l border-[var(--line)] px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--ink)]">
                       {formatCurrency(g.pazaryerleriToplam)}
                     </td>
-                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] font-semibold tabular-nums text-[var(--ink)]">
+                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--muted)]">
+                      {formatInteger(g.pazaryerleriKutuAdedi)}
+                    </td>
+                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--muted)]">
+                      {g.ciroKutuPazaryerleri !== null ? formatCurrency(g.ciroKutuPazaryerleri) : "—"}
+                    </td>
+                    <td className="border-l border-[var(--line)] px-3 py-2 text-right font-[family-name:var(--font-mono)] font-semibold tabular-nums text-[var(--ink)]">
                       {formatCurrency(g.genelToplam)}
                     </td>
                     <td className="px-3 py-2 text-right text-[var(--muted)]">{g.faturaAdedi}</td>
-                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--muted)]">
-                      {formatInteger(g.kutuAdedi)}
-                    </td>
                   </tr>
                 ))}
               </tbody>

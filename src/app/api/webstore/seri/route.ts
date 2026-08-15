@@ -9,6 +9,10 @@ import {
 import { WebstoreGranularite, WebstoreSeri } from "@/lib/webstore-types";
 
 export const dynamic = "force-dynamic";
+// Aylık/Yıllık artık kutu (miktar) verisi için ham fatura satırlarını
+// sayfalıyor (bkz. webstore-report.ts) — bu, Vercel'in varsayılan 10sn
+// sınırını aşabilir; platformun izin verdiği en yükseğe çıkarıyoruz.
+export const maxDuration = 60;
 
 const GECERLI_GRANULARITELER: WebstoreGranularite[] = ["haftalik", "aylik", "yillik"];
 

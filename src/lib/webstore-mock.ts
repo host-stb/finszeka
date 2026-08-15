@@ -149,14 +149,22 @@ function aySeriUret(yil: number, ay: number, gunSayisi: number, gunlukOrtalama: 
     const kendiSiteToplam = Math.round(genelToplam * 0.32);
     const pazaryerleriToplam = genelToplam - kendiSiteToplam;
     toplam += genelToplam;
+    // ~260 TL/kutu (kendi site) / ~300 TL/kutu (pazaryerleri, komisyon dahil
+    // biraz daha yüksek fiyat varsayımı) dummy — kutu-mock.ts'teki (~200-350
+    // TL) aralığıyla tutarlı.
+    const kendiSiteKutuAdedi = Math.round(kendiSiteToplam / 260) || 0;
+    const pazaryerleriKutuAdedi = Math.round(pazaryerleriToplam / 300) || 0;
     gunler.push({
       tarih: `${yil}-${String(ay).padStart(2, "0")}-${String(gun).padStart(2, "0")}`,
       genelToplam,
       kendiSiteToplam,
       pazaryerleriToplam,
       faturaAdedi: Math.round(genelToplam / 500) || 0,
-      // ~260 TL/kutu dummy varsayım — kutu-mock.ts'teki (~200-350 TL) aralığıyla tutarlı.
-      kutuAdedi: Math.round(genelToplam / 260) || 0,
+      kutuAdedi: kendiSiteKutuAdedi + pazaryerleriKutuAdedi,
+      kendiSiteKutuAdedi,
+      pazaryerleriKutuAdedi,
+      ciroKutuKendiSite: kendiSiteKutuAdedi > 0 ? kendiSiteToplam / kendiSiteKutuAdedi : null,
+      ciroKutuPazaryerleri: pazaryerleriKutuAdedi > 0 ? pazaryerleriToplam / pazaryerleriKutuAdedi : null,
     });
   }
   return { gunler, toplam };
@@ -194,6 +202,9 @@ function seriNoktasiUret(key: string, label: string, ortalama: number, seed: num
   const noise = 0.6 + seededNoise(seed) * 0.8;
   const genelToplam = Math.round(ortalama * noise);
   const kendiSiteToplam = Math.round(genelToplam * 0.32);
+  const pazaryerleriToplam = genelToplam - kendiSiteToplam;
+  const kendiSiteKutuAdedi = Math.round(kendiSiteToplam / 260) || 0;
+  const pazaryerleriKutuAdedi = Math.round(pazaryerleriToplam / 300) || 0;
   return {
     key,
     label,
@@ -202,7 +213,11 @@ function seriNoktasiUret(key: string, label: string, ortalama: number, seed: num
     genelToplam,
     genelFaturaAdedi: Math.round(genelToplam / 500) || 0,
     kendiSiteToplam,
-    pazaryerleriToplam: genelToplam - kendiSiteToplam,
+    pazaryerleriToplam,
+    kendiSiteKutuAdedi,
+    pazaryerleriKutuAdedi,
+    ciroKutuKendiSite: kendiSiteKutuAdedi > 0 ? kendiSiteToplam / kendiSiteKutuAdedi : null,
+    ciroKutuPazaryerleri: pazaryerleriKutuAdedi > 0 ? pazaryerleriToplam / pazaryerleriKutuAdedi : null,
   };
 }
 
@@ -220,6 +235,7 @@ export function getMockWebstoreSeri(granularite: WebstoreGranularite, yil?: numb
       baslik: `${hedefYil} — Aylık`,
       noktalar,
       toplam: noktalar.reduce((s, n) => s + n.genelToplam, 0),
+      kutuHesaplandi: true,
     };
   }
 
@@ -235,6 +251,7 @@ export function getMockWebstoreSeri(granularite: WebstoreGranularite, yil?: numb
       baslik: "Son 12 Hafta",
       noktalar,
       toplam: noktalar.reduce((s, n) => s + n.genelToplam, 0),
+      kutuHesaplandi: true,
     };
   }
 
@@ -249,5 +266,6 @@ export function getMockWebstoreSeri(granularite: WebstoreGranularite, yil?: numb
     baslik: "Yıllık",
     noktalar,
     toplam: noktalar.reduce((s, n) => s + n.genelToplam, 0),
+    kutuHesaplandi: true,
   };
 }

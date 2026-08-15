@@ -377,18 +377,19 @@ export async function fetchWebstoreRaporu(base: string): Promise<WebstoreRaporu>
 // Günlük detay (bir ay seçilip gün gün ciro serisi görmek için).
 // ---------------------------------------------------------------------------
 
-/** Bir kanalın verilen aralıktaki satırlarını güne göre gruplar. */
+/** Bir kanalın verilen aralıktaki satırlarını güne göre gruplar. `sayfaLimiti` çağırana göre değişir (bkz. çağrı yerlerindeki yorumlar — uzun dönemler daha yüksek sınır ister). */
 async function kanalGunlukHamVeriden(
   base: string,
   cariKodu: string,
   baslangic: string,
-  bitis: string
+  bitis: string,
+  sayfaLimiti: number
 ): Promise<Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>> {
   const gunMap = new Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>();
   let offset = 0;
   const limit = 1000;
 
-  for (let sayfa = 0; sayfa < 60; sayfa++) {
+  for (let sayfa = 0; sayfa < sayfaLimiti; sayfa++) {
     const veri = await fetchSatislar(base, { baslangic, bitis, cariKodu, limit, offset });
     for (const satir of veri.satirlar) {
       const gun = gunAnahtari(satir.tarihi);
@@ -403,6 +404,57 @@ async function kanalGunlukHamVeriden(
   }
 
   return gunMap;
+}
+
+/**
+ * Bir kanal grubunun (kendi site VEYA pazaryerleri) verilen aralıktaki
+ * TÜM ham verisini bir kez çekip güne göre birleştirir. Bu, seri
+ * fonksiyonlarında (haftalık/aylık/yıllık) nokta başına değil TEK seferde
+ * çağrılır — sonra her nokta kendi [baslangic, bitis] aralığını bu haritadan
+ * toplar (bkz. araliktaTopla). Bir kanal başarısız olursa (ağ/HTTP hatası)
+ * o kanal sessizce 0 katkı yapar — TÜM grubu/seriyi düşürmemek için (bkz.
+ * kanalToplamiHamVeriden'daki aynı "hata yutma" deseni).
+ */
+async function kanalGrubuGunlukToplamHaritasi(
+  base: string,
+  kodlar: string[],
+  baslangic: string,
+  bitis: string,
+  sayfaLimiti: number
+): Promise<Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>> {
+  const kanalSonuclari = await Promise.all(
+    kodlar.map((kod) =>
+      kanalGunlukHamVeriden(base, kod, baslangic, bitis, sayfaLimiti).catch((err) => {
+        console.error(`[webstore-report] kanal ${kod} için ham veri (kutu) alınamadı:`, err);
+        return new Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>();
+      })
+    )
+  );
+
+  const birlesik = new Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>();
+  for (const kanalMap of kanalSonuclari) {
+    for (const [gun, v] of kanalMap) {
+      const mevcut = birlesik.get(gun) ?? { tutar: 0, kutuAdedi: 0, faturaSet: new Set<string>() };
+      mevcut.tutar += v.tutar;
+      mevcut.kutuAdedi += v.kutuAdedi;
+      v.faturaSet.forEach((f) => mevcut.faturaSet.add(f));
+      birlesik.set(gun, mevcut);
+    }
+  }
+  return birlesik;
+}
+
+/** [baslangic, bitis] (dahil) aralığındaki günlük kutu adedini bir günlük haritadan toplar. */
+function haritadanKutuTopla(
+  harita: Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>,
+  baslangic: string,
+  bitis: string
+): number {
+  let toplam = 0;
+  for (const [gun, v] of harita) {
+    if (gun >= baslangic && gun <= bitis) toplam += v.kutuAdedi;
+  }
+  return toplam;
 }
 
 async function gunlukSeriHesapla(
@@ -422,7 +474,7 @@ async function gunlukSeriHesapla(
 
   const kanalSonuclari = await Promise.all(
     TUM_KANAL_KODLARI.map((kod) =>
-      kanalGunlukHamVeriden(base, kod, baslangic, bitis).catch(
+      kanalGunlukHamVeriden(base, kod, baslangic, bitis, 60).catch(
         () => new Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>()
       )
     )
@@ -441,14 +493,15 @@ async function gunlukSeriHesapla(
     const tarih = fmt(d);
     let kendiSiteToplam = 0;
     let pazaryerleriToplam = 0;
-    let kutuAdedi = 0;
+    let kendiSiteKutuAdedi = 0;
+    let pazaryerleriKutuAdedi = 0;
     const faturaSet = new Set<string>();
 
     kendiSiteIdxler.forEach((idx) => {
       const g = kanalSonuclari[idx].get(tarih);
       if (g) {
         kendiSiteToplam += g.tutar;
-        kutuAdedi += g.kutuAdedi;
+        kendiSiteKutuAdedi += g.kutuAdedi;
         g.faturaSet.forEach((f) => faturaSet.add(f));
       }
     });
@@ -456,7 +509,7 @@ async function gunlukSeriHesapla(
       const g = kanalSonuclari[idx].get(tarih);
       if (g) {
         pazaryerleriToplam += g.tutar;
-        kutuAdedi += g.kutuAdedi;
+        pazaryerleriKutuAdedi += g.kutuAdedi;
         g.faturaSet.forEach((f) => faturaSet.add(f));
       }
     });
@@ -469,7 +522,11 @@ async function gunlukSeriHesapla(
       kendiSiteToplam,
       pazaryerleriToplam,
       faturaAdedi: faturaSet.size,
-      kutuAdedi,
+      kutuAdedi: kendiSiteKutuAdedi + pazaryerleriKutuAdedi,
+      kendiSiteKutuAdedi,
+      pazaryerleriKutuAdedi,
+      ciroKutuKendiSite: kendiSiteKutuAdedi > 0 ? kendiSiteToplam / kendiSiteKutuAdedi : null,
+      ciroKutuPazaryerleri: pazaryerleriKutuAdedi > 0 ? pazaryerleriToplam / pazaryerleriKutuAdedi : null,
     });
   }
 
@@ -519,11 +576,21 @@ export async function fetchWebstoreGunlukSeri(
 
 // ---------------------------------------------------------------------------
 // Haftalık / Aylık / Yıllık zaman serisi (trend grafiği).
-// Hepsi "hızlı yol"u (kanalToplamlariniGetir(..., false)) kullanır — matrah/kdv
-// kırılımı yok, sadece KDV dahil toplam. Uzun bir zaman aralığında çok sayıda
-// nokta çekildiği için (12 ay, 12 hafta, birkaç yıl) performans amaçlı böyle
+//
+// Ciro (genelToplam/kendiSiteToplam/pazaryerleriToplam): "hızlı yol"
+// (kanalToplamlariniGetir(..., false)) kullanır — matrah/kdv kırılımı yok,
+// sadece KDV dahil toplam. Uzun bir zaman aralığında çok sayıda nokta
+// çekildiği için (12 ay, 12 hafta, birkaç yıl) performans amaçlı böyle
 // tasarlandı; kısa dönem kartlarındaki (bugün/hafta/ay) detaylı matrah
 // hesaplamasıyla karıştırılmamalı.
+//
+// Kutu (miktar): /logo/satislar/ozet kanal bazlı miktar vermediği için TEK
+// yol ham fatura satırlarını sayfalamak — ama nokta başına değil, TÜM seri
+// aralığı için TEK seferde (bkz. noktalaraKutuEkle / kanalGrubuGunlukToplamHaritasi),
+// sonra her noktaya güne göre yeniden dağıtılır. Bu, Günlük Detay'daki
+// (gunlukSeriHesapla) aynı deseninin haftalık/aylık/yıllık'a genişletilmiş
+// hali — ciro hesabından bağımsız, WebstoreSeri.kutuHesaplandi ile ayrı
+// izlenir (ciro her zaman gerçek kalır, kutu fetch'i başarısız olsa bile).
 // ---------------------------------------------------------------------------
 
 /**
@@ -555,6 +622,12 @@ async function noktaHesapla(
       genelFaturaAdedi: ozet.genelFaturaAdedi,
       kendiSiteToplam: ozet.kendiSite.toplamTutar,
       pazaryerleriToplam: ozet.pazaryerleri.reduce((s, p) => s + p.toplamTutar, 0),
+      // Kutu alanları burada değil, ayrı bir geçişte (noktayaKutuEkle) doldurulur —
+      // bkz. fetchWebstore{Aylik,Haftalik,Yillik}Seri ve WebstoreSeri.kutuHesaplandi.
+      kendiSiteKutuAdedi: 0,
+      pazaryerleriKutuAdedi: 0,
+      ciroKutuKendiSite: null,
+      ciroKutuPazaryerleri: null,
     };
   } catch (err) {
     console.error(`[webstore-report] ${key} (${baslangic} – ${bitis}) için veri alınamadı:`, err);
@@ -568,7 +641,70 @@ async function noktaHesapla(
       kendiSiteToplam: 0,
       pazaryerleriToplam: 0,
       veriAlinamadi: true,
+      kendiSiteKutuAdedi: 0,
+      pazaryerleriKutuAdedi: 0,
+      ciroKutuKendiSite: null,
+      ciroKutuPazaryerleri: null,
     };
+  }
+}
+
+/**
+ * Önceden çekilmiş kanal-grubu günlük haritalarından, tek bir noktanın
+ * [baslangic, bitis] aralığına düşen kutu adedini toplayıp noktaya ekler.
+ * Saf senkron bir birleştirme — ayrı bir ağ çağrısı yapmaz.
+ */
+function noktayaKutuEkle(
+  nokta: WebstoreSeriNoktasi,
+  kendiSiteHarita: Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>,
+  pazaryerleriHarita: Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>
+): WebstoreSeriNoktasi {
+  if (nokta.veriAlinamadi) return nokta;
+  const kendiSiteKutuAdedi = haritadanKutuTopla(kendiSiteHarita, nokta.baslangic, nokta.bitis);
+  const pazaryerleriKutuAdedi = haritadanKutuTopla(pazaryerleriHarita, nokta.baslangic, nokta.bitis);
+  return {
+    ...nokta,
+    kendiSiteKutuAdedi,
+    pazaryerleriKutuAdedi,
+    ciroKutuKendiSite: kendiSiteKutuAdedi > 0 ? nokta.kendiSiteToplam / kendiSiteKutuAdedi : null,
+    ciroKutuPazaryerleri:
+      pazaryerleriKutuAdedi > 0 ? nokta.pazaryerleriToplam / pazaryerleriKutuAdedi : null,
+  };
+}
+
+/**
+ * Bir serinin TÜM noktalarını kapsayan kutu (miktar) verisini TEK seferde
+ * çeker (nokta başına değil — bkz. kanalGrubuGunlukToplamHaritasi) ve her
+ * noktaya dağıtır. Grup fetch'i tamamen başarısız olursa (ör. ağ hatası)
+ * `kutuHesaplandi: false` ile orijinal noktalar (kutu alanları 0/null)
+ * değiştirilmeden döner — rakam uydurmamak için.
+ */
+async function noktalaraKutuEkle(
+  base: string,
+  noktalar: WebstoreSeriNoktasi[],
+  genelBaslangic: string,
+  genelBitis: string,
+  sayfaLimiti: number
+): Promise<{ noktalar: WebstoreSeriNoktasi[]; kutuHesaplandi: boolean }> {
+  if (noktalar.length === 0) return { noktalar, kutuHesaplandi: false };
+  try {
+    const [kendiSiteHarita, pazaryerleriHarita] = await Promise.all([
+      kanalGrubuGunlukToplamHaritasi(base, KENDI_SITE_KODLARI, genelBaslangic, genelBitis, sayfaLimiti),
+      kanalGrubuGunlukToplamHaritasi(
+        base,
+        PAZARYERLERI.map((p) => p.kod),
+        genelBaslangic,
+        genelBitis,
+        sayfaLimiti
+      ),
+    ]);
+    return {
+      noktalar: noktalar.map((n) => noktayaKutuEkle(n, kendiSiteHarita, pazaryerleriHarita)),
+      kutuHesaplandi: true,
+    };
+  } catch (err) {
+    console.error("[webstore-report] kutu (miktar) verisi hesaplanamadı, bu seride gösterilmeyecek:", err);
+    return { noktalar, kutuHesaplandi: false };
   }
 }
 
@@ -586,10 +722,23 @@ export async function fetchWebstoreAylikSeri(base: string, yil?: number): Promis
     aylar.push({ ay, baslangic: ayBaslangic, bitis });
   }
 
-  const noktalar = await Promise.all(
+  const noktalarHam = await Promise.all(
     aylar.map((a) =>
       noktaHesapla(base, `${hedefYil}-${a.ay}`, TAM_AY_ADLARI[a.ay - 1].slice(0, 3), a.baslangic, a.bitis)
     )
+  );
+
+  // Kutu (miktar) verisi: seçilen yılın TAMAMI için 9 kanalın ham verisi TEK
+  // seferde çekilir (nokta başına değil) — bkz. noktalaraKutuEkle. Tam yıl
+  // olduğu için sayfa sınırı Günlük Detay'daki (60/ay) orana göre yüksek
+  // tutuluyor; gerçek hacim bu sınırın çok altında kalıyor olsa da güvenlik
+  // payı olarak böyle bırakıldı.
+  const { noktalar, kutuHesaplandi } = await noktalaraKutuEkle(
+    base,
+    noktalarHam,
+    fmt(aylar[0]?.baslangic ?? bugun),
+    fmt(aylar[aylar.length - 1]?.bitis ?? bugun),
+    600
   );
 
   return {
@@ -597,6 +746,7 @@ export async function fetchWebstoreAylikSeri(base: string, yil?: number): Promis
     baslik: `${hedefYil} — Aylık`,
     noktalar,
     toplam: noktalar.reduce((s, n) => s + n.genelToplam, 0),
+    kutuHesaplandi,
   };
 }
 
@@ -619,7 +769,7 @@ export async function fetchWebstoreHaftalikSeri(
     haftalar.push({ baslangic: b, bitis: s > bugun ? bugun : s });
   }
 
-  const noktalar = await Promise.all(
+  const noktalarHam = await Promise.all(
     haftalar.map((h) =>
       noktaHesapla(
         base,
@@ -631,11 +781,25 @@ export async function fetchWebstoreHaftalikSeri(
     )
   );
 
+  // Kutu (miktar) verisi: seçilen tüm hafta aralığı (ör. son 12 hafta ~84
+  // gün) için TEK seferde — bkz. noktalaraKutuEkle üstündeki not.
+  const { noktalar, kutuHesaplandi } =
+    haftalar.length > 0
+      ? await noktalaraKutuEkle(
+          base,
+          noktalarHam,
+          fmt(haftalar[0].baslangic),
+          fmt(haftalar[haftalar.length - 1].bitis),
+          150
+        )
+      : { noktalar: noktalarHam, kutuHesaplandi: false };
+
   return {
     granularite: "haftalik",
     baslik: `Son ${haftaSayisi} Hafta`,
     noktalar,
     toplam: noktalar.reduce((s, n) => s + n.genelToplam, 0),
+    kutuHesaplandi,
   };
 }
 
@@ -658,7 +822,7 @@ export async function fetchWebstoreYillikSeri(base: string): Promise<WebstoreSer
   const yillar: number[] = [];
   for (let yil = baslangicYil; yil <= bugun.getUTCFullYear(); yil++) yillar.push(yil);
 
-  const noktalar = await Promise.all(
+  const noktalarHam = await Promise.all(
     yillar.map((yil) => {
       const baslangic = new Date(Date.UTC(yil, 0, 1));
       const sonGun = new Date(Date.UTC(yil, 11, 31));
@@ -667,10 +831,25 @@ export async function fetchWebstoreYillikSeri(base: string): Promise<WebstoreSer
     })
   );
 
+  // Kutu (miktar) verisi: en fazla 6 yıllık aralık için TEK seferde — bkz.
+  // noktalaraKutuEkle üstündeki not. Bu en uzun aralık olduğu için sayfa
+  // sınırı da en yüksek tutuluyor; yine de güvenlik sınırı olarak
+  // düşünülmeli, gerçek hacmin çok üzerinde.
+  const ilkYil = yillar[0] ?? bugun.getUTCFullYear();
+  const sonYilBitis = new Date(Date.UTC(yillar[yillar.length - 1] ?? bugun.getUTCFullYear(), 11, 31));
+  const { noktalar, kutuHesaplandi } = await noktalaraKutuEkle(
+    base,
+    noktalarHam,
+    fmt(new Date(Date.UTC(ilkYil, 0, 1))),
+    fmt(sonYilBitis > bugun ? bugun : sonYilBitis),
+    1500
+  );
+
   return {
     granularite: "yillik",
     baslik: "Yıllık",
     noktalar,
     toplam: noktalar.reduce((s, n) => s + n.genelToplam, 0),
+    kutuHesaplandi,
   };
 }

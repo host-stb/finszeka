@@ -64,8 +64,16 @@ export interface WebstoreGunlukNokta {
   kendiSiteToplam: number;
   pazaryerleriToplam: number;
   faturaAdedi: number;
-  /** Fatura satırlarındaki miktar/birim toplamı (bkz. kutu-types.ts'teki tanım) — o günkü web mağaza satışlarının kutu adedi. */
+  /** Fatura satırlarındaki miktar/birim toplamı (bkz. kutu-types.ts'teki tanım) — o günkü TÜM web mağaza satışlarının (kendi site + pazaryerleri) kutu adedi. */
   kutuAdedi: number;
+  /** Kendi sitenin (holistikmarket.com) o günkü kutu adedi. */
+  kendiSiteKutuAdedi: number;
+  /** Tüm pazaryerlerinin (Trendyol, Hepsiburada vb.) o günkü toplam kutu adedi. */
+  pazaryerleriKutuAdedi: number;
+  /** kendiSiteToplam / kendiSiteKutuAdedi. Kutu adedi 0 ise null — gerçek bir sıfır değil, "hesaplanamaz" anlamındadır. */
+  ciroKutuKendiSite: number | null;
+  /** pazaryerleriToplam / pazaryerleriKutuAdedi. */
+  ciroKutuPazaryerleri: number | null;
 }
 
 export interface WebstoreGunlukSeri {
@@ -101,6 +109,21 @@ export interface WebstoreSeriNoktasi {
    * edilmeli (rakam uydurmamak için).
    */
   veriAlinamadi?: boolean;
+  /** Kendi sitenin bu dönemdeki kutu adedi. WebstoreSeri.kutuHesaplandi false ise veya kutuVeriAlinamadi true ise güvenilir değildir. */
+  kendiSiteKutuAdedi: number;
+  /** Tüm pazaryerlerinin bu dönemdeki toplam kutu adedi. */
+  pazaryerleriKutuAdedi: number;
+  /** kendiSiteToplam / kendiSiteKutuAdedi. Kutu adedi 0 ise null. */
+  ciroKutuKendiSite: number | null;
+  /** pazaryerleriToplam / pazaryerleriKutuAdedi. */
+  ciroKutuPazaryerleri: number | null;
+  /**
+   * true ise bu NOKTA için kutu adedi hesaplanamadı (genel kutu fetch'i
+   * başarılı olsa bile — ör. ağ hatası bu noktanın aralığını etkilemiş
+   * olabilir). Ciro rakamları (genelToplam vb.) bundan etkilenmez, sadece
+   * kutu/₺-kutu alanları 0/null olarak kalır ve arayüzde ayırt edilmelidir.
+   */
+  kutuVeriAlinamadi?: boolean;
 }
 
 export interface WebstoreSeri {
@@ -108,4 +131,13 @@ export interface WebstoreSeri {
   baslik: string;
   noktalar: WebstoreSeriNoktasi[];
   toplam: number;
+  /**
+   * true ise noktalardaki kutu alanları (kendiSiteKutuAdedi vb.) gerçekten
+   * hesaplanmıştır. false ise TÜM seri için kutu hesaplaması hiç
+   * denenememiştir (ör. ham veri servisine hiç ulaşılamadı) — bu durumda
+   * kutu/₺-kutu alanları 0/null'dır ve arayüzde gösterilmemelidir (rakam
+   * uydurmamak için). Kısmi/tekil nokta hataları için bkz.
+   * WebstoreSeriNoktasi.kutuVeriAlinamadi.
+   */
+  kutuHesaplandi: boolean;
 }
