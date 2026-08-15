@@ -383,8 +383,8 @@ async function kanalGunlukHamVeriden(
   cariKodu: string,
   baslangic: string,
   bitis: string
-): Promise<Map<string, { tutar: number; faturaSet: Set<string> }>> {
-  const gunMap = new Map<string, { tutar: number; faturaSet: Set<string> }>();
+): Promise<Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>> {
+  const gunMap = new Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>();
   let offset = 0;
   const limit = 1000;
 
@@ -392,8 +392,9 @@ async function kanalGunlukHamVeriden(
     const veri = await fetchSatislar(base, { baslangic, bitis, cariKodu, limit, offset });
     for (const satir of veri.satirlar) {
       const gun = gunAnahtari(satir.tarihi);
-      const mevcut = gunMap.get(gun) ?? { tutar: 0, faturaSet: new Set<string>() };
+      const mevcut = gunMap.get(gun) ?? { tutar: 0, kutuAdedi: 0, faturaSet: new Set<string>() };
       mevcut.tutar += satir.toplami;
+      mevcut.kutuAdedi += satir.miktar;
       mevcut.faturaSet.add(satir.fatura_numarasi);
       gunMap.set(gun, mevcut);
     }
@@ -422,7 +423,7 @@ async function gunlukSeriHesapla(
   const kanalSonuclari = await Promise.all(
     TUM_KANAL_KODLARI.map((kod) =>
       kanalGunlukHamVeriden(base, kod, baslangic, bitis).catch(
-        () => new Map<string, { tutar: number; faturaSet: Set<string> }>()
+        () => new Map<string, { tutar: number; kutuAdedi: number; faturaSet: Set<string> }>()
       )
     )
   );
@@ -440,12 +441,14 @@ async function gunlukSeriHesapla(
     const tarih = fmt(d);
     let kendiSiteToplam = 0;
     let pazaryerleriToplam = 0;
+    let kutuAdedi = 0;
     const faturaSet = new Set<string>();
 
     kendiSiteIdxler.forEach((idx) => {
       const g = kanalSonuclari[idx].get(tarih);
       if (g) {
         kendiSiteToplam += g.tutar;
+        kutuAdedi += g.kutuAdedi;
         g.faturaSet.forEach((f) => faturaSet.add(f));
       }
     });
@@ -453,6 +456,7 @@ async function gunlukSeriHesapla(
       const g = kanalSonuclari[idx].get(tarih);
       if (g) {
         pazaryerleriToplam += g.tutar;
+        kutuAdedi += g.kutuAdedi;
         g.faturaSet.forEach((f) => faturaSet.add(f));
       }
     });
@@ -465,6 +469,7 @@ async function gunlukSeriHesapla(
       kendiSiteToplam,
       pazaryerleriToplam,
       faturaAdedi: faturaSet.size,
+      kutuAdedi,
     });
   }
 

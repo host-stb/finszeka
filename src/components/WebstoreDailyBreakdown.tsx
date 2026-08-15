@@ -11,7 +11,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { formatCompactCurrency, formatCurrency, formatDate, formatPercent } from "@/lib/format";
+import { formatCompactCurrency, formatCurrency, formatDate, formatInteger, formatPercent } from "@/lib/format";
 import { ApiEnvelope } from "@/lib/types";
 import { WebstoreGunlukSeri } from "@/lib/webstore-types";
 import { CalendarIcon, RefreshIcon } from "./icons";
@@ -246,6 +246,7 @@ export default function WebstoreDailyBreakdown() {
                   <th className="px-3 py-2 text-right">Pazaryerleri</th>
                   <th className="px-3 py-2 text-right">Genel Toplam</th>
                   <th className="px-3 py-2 text-right">Fatura</th>
+                  <th className="px-3 py-2 text-right">Miktar (Kutu)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--line)]">
@@ -262,6 +263,9 @@ export default function WebstoreDailyBreakdown() {
                       {formatCurrency(g.genelToplam)}
                     </td>
                     <td className="px-3 py-2 text-right text-[var(--muted)]">{g.faturaAdedi}</td>
+                    <td className="px-3 py-2 text-right font-[family-name:var(--font-mono)] tabular-nums text-[var(--muted)]">
+                      {formatInteger(g.kutuAdedi)}
+                    </td>
                   </tr>
                 ))}
               </tbody>

@@ -64,6 +64,8 @@ export interface WebstoreGunlukNokta {
   kendiSiteToplam: number;
   pazaryerleriToplam: number;
   faturaAdedi: number;
+  /** Fatura satırlarındaki miktar/birim toplamı (bkz. kutu-types.ts'teki tanım) — o günkü web mağaza satışlarının kutu adedi. */
+  kutuAdedi: number;
 }
 
 export interface WebstoreGunlukSeri {

@@ -155,6 +155,8 @@ function aySeriUret(yil: number, ay: number, gunSayisi: number, gunlukOrtalama: 
       kendiSiteToplam,
       pazaryerleriToplam,
       faturaAdedi: Math.round(genelToplam / 500) || 0,
+      // ~260 TL/kutu dummy varsayım — kutu-mock.ts'teki (~200-350 TL) aralığıyla tutarlı.
+      kutuAdedi: Math.round(genelToplam / 260) || 0,
     });
   }
   return { gunler, toplam };
