@@ -151,6 +151,12 @@ export default function Home() {
           >
             Kutu Trendi
           </Link>
+          <Link
+            href="/hesap-plani"
+            className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--paper-card)] hover:text-[var(--ink-soft)]"
+          >
+            Hesap Planı
+          </Link>
         </nav>
 
         {/* Firma sekmeleri — Web Mağaza sekmesi belirli bir markaya (holistikmarket.com) bağlı olduğu için firma seçiciden bağımsız */}

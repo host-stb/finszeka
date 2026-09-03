@@ -1,0 +1,5411 @@
+[
+  {
+    "id": "c45a62f0-683b-469b-a94f-5f25df6451f0",
+    "kod": "600",
+    "ad": "YURTİÇİ SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "05c12746-5e3c-4794-bb06-6bed125d93c0",
+    "kod": "600.10",
+    "ad": "MAMUL SATIŞLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fa81363c-057d-4b60-ac19-99c05c6a23c0",
+    "kod": "600.10.10000",
+    "ad": "MAMUL SATIŞLARI %00",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b9e7aa16-1400-4cbc-97cb-221d1584fdd9",
+    "kod": "600.10.10010",
+    "ad": "MAMUL SATIŞLARI %01",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1a79eb6c-07dd-447c-9647-51b0e82ba03d",
+    "kod": "600.10.10100",
+    "ad": "MAMUL SATIŞLARI %10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "446e03c7-1aef-42aa-b7ac-530e645a1101",
+    "kod": "600.10.10200",
+    "ad": "MAMUL SATIŞLARI %20",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e0bcd43c-88af-4920-9215-64b400e1e05f",
+    "kod": "600.20",
+    "ad": "TİCARİ MAL SATIŞLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "38930d8f-c245-425b-a22d-ef7555203002",
+    "kod": "600.20.10000",
+    "ad": "TİCARİ MAL SATIŞLARI %00",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d22c37de-70ca-47c3-ab88-ccde84b741b7",
+    "kod": "600.20.10010",
+    "ad": "TİCARİ MAL SATIŞLARI %01",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b44c58be-8034-431f-80c4-088cc5583add",
+    "kod": "600.20.10100",
+    "ad": "TİCARİ MAL SATIŞLARI %10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ccab0e44-3b0e-4136-a5b6-385679ab8ed6",
+    "kod": "600.20.10200",
+    "ad": "TİCARİ MAL SATIŞLARI %20",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "53c30b43-2e36-4afb-9e59-90c62ce668b9",
+    "kod": "600.30",
+    "ad": "HİZMET GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f4fa0b79-5594-42f1-bc62-af78c1b74918",
+    "kod": "600.30.10200",
+    "ad": "HİZMET GELİRLERİ %20",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2d477ea6-bba3-48f6-a802-a2d1f59b07a1",
+    "kod": "600.40",
+    "ad": "TEVKİFATLI SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dba9186e-a9e6-4bbe-948a-216e61b0ca3e",
+    "kod": "600.40.00110",
+    "ad": "TEVKİFATLI SATIŞLAR 01/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dc7870b0-86f9-4412-bbfc-9c10b999e99d",
+    "kod": "600.40.00210",
+    "ad": "TEVKİFATLI SATIŞLAR 02/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0a8f36ec-625e-402e-8e80-9af4ef945328",
+    "kod": "600.40.00310",
+    "ad": "TEVKİFATLI SATIŞLAR 03/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "059926e1-079b-4240-99db-2f0074f9d6c6",
+    "kod": "600.40.00410",
+    "ad": "TEVKİFATLI SATIŞLAR 04/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f9c29a95-04e0-4575-ae2d-cadbfa39a64d",
+    "kod": "600.40.00510",
+    "ad": "TEVKİFATLI SATIŞLAR 05/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d09aaf0c-983d-4c66-ba38-218e88aa48eb",
+    "kod": "600.40.00610",
+    "ad": "TEVKİFATLI SATIŞLAR 06/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "25d489e8-e85b-4ca8-9d44-8ab4e7ca2808",
+    "kod": "600.40.00710",
+    "ad": "TEVKİFATLI SATIŞLAR 07/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "541718ba-ce9d-46d3-8bd7-72376c280b45",
+    "kod": "600.40.00810",
+    "ad": "TEVKİFATLI SATIŞLAR 08/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1bac7ec0-0a37-44e4-be3f-8c2f37b5d0a8",
+    "kod": "600.40.00910",
+    "ad": "TEVKİFATLI SATIŞLAR 09/10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "734ca4f2-4f6e-4203-8253-d3736d77f47a",
+    "kod": "600.50",
+    "ad": "DİĞER SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ccfbe5c5-4552-4ee3-9931-a8d35d627cd7",
+    "kod": "600.50.00010",
+    "ad": "DİĞER SATIŞLAR % 01",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "886b09f8-5323-4730-8fbd-724261d7dc42",
+    "kod": "600.50.00100",
+    "ad": "DİĞER SATIŞLAR %10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fa5251c2-b1fe-46cb-97ff-a7db7253d449",
+    "kod": "600.50.00200",
+    "ad": "DİĞER SATIŞLAR %20",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3e938546-8d9e-4c49-97ae-bb8aa379798a",
+    "kod": "600.98",
+    "ad": "İSTİSNA SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "48c3046c-8374-4eb3-b019-6887818f749d",
+    "kod": "600.98.001",
+    "ad": "HURDA KAĞIT VB SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9cc07113-2013-46a5-9f5f-c7cb7e95b6d3",
+    "kod": "601",
+    "ad": "YURTDIŞI SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e46b609a-bfff-405a-8b42-120ac726406d",
+    "kod": "601.10",
+    "ad": "YURTDIŞI SATIŞLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "38d0a32d-60af-4ebe-bbf7-6c883fd78cb4",
+    "kod": "601.10.10000",
+    "ad": "YURTDIŞI SATIŞLAR _ MAMUL",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1837eaec-7062-4da1-9ab2-b677e4a78c93",
+    "kod": "601.10.20000",
+    "ad": "YURTDIŞI SATIŞLAR _ TİCARİ MAL",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "14f94b77-db46-41cc-9e82-b9b23cd0f2bf",
+    "kod": "602",
+    "ad": "DİĞER GELİRLER",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c472cea9-89b5-4d16-85bb-771fe912629d",
+    "kod": "610",
+    "ad": "SATIŞTAN İADELER (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b16d73a0-f852-47cd-8341-0729c6049a65",
+    "kod": "610.01",
+    "ad": "Aksesuar ve Diğer Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a6c938d8-4bb4-4858-b575-30ff57c65f99",
+    "kod": "610.02",
+    "ad": "Akupunktur Malzemeleri Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a7f6f6d9-15e9-454b-a012-811573a2dd8a",
+    "kod": "610.03",
+    "ad": "Ambalaj Malzemeleri Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "15f2ddd4-fbf8-45ed-ae25-79831d4029c5",
+    "kod": "610.04",
+    "ad": "Gıda Takviyesi Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6e1d7686-737e-45ff-8f7f-70d13a67f4c9",
+    "kod": "610.05",
+    "ad": "Hammaddeler Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4df45dd8-b51c-454b-9eb1-7c809289b2b5",
+    "kod": "610.06",
+    "ad": "Kişisel Bakım Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bd28d119-f5ee-4643-a280-bd0e16431953",
+    "kod": "610.07",
+    "ad": "Medikal Cihazlar Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e4f5a65d-6be8-4b61-84f3-fe9d16043470",
+    "kod": "610.08",
+    "ad": "Raw Materials Satış İadeleri",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "78841500-8072-4df9-b9e3-8ee5831f3ffd",
+    "kod": "610.10",
+    "ad": "SATIŞTAN İADELER _ MAMUL (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "82af3a9b-a083-4069-98de-fd26dc0f0b36",
+    "kod": "610.10.10000",
+    "ad": "MAMUL SATIŞ İADELERİ %00",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "94426b4d-ff47-4a77-81ef-f07fddf71d66",
+    "kod": "610.10.10010",
+    "ad": "MAMUL SATIŞ İADELERİ %01",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b12b0592-b482-4319-b0d9-30a68cda0e21",
+    "kod": "610.10.10100",
+    "ad": "MAMUL SATIŞ İADELERİ %10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "50069554-196c-4548-864f-7329057ed4e7",
+    "kod": "610.10.10200",
+    "ad": "MAMUL SATIŞ İADELERİ %20",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dace165c-2bdd-4866-a553-bf7d37ccf3f0",
+    "kod": "610.20",
+    "ad": "SATIŞTAN İADELER _ TİCARİ MAL (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "28752c60-0180-4121-8722-979fcb9c8fed",
+    "kod": "610.20.10000",
+    "ad": "TİCARİ MAL SATIŞ İADELERİ %00",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b50d8ffd-5e5d-476e-81eb-42bcc0381ba4",
+    "kod": "610.20.10010",
+    "ad": "TİCARİ MAL SATIŞ İADELERİ %01",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b843fbfe-fb3b-4271-9046-bfd1be9f700c",
+    "kod": "610.20.10100",
+    "ad": "TİCARİ MAL SATIŞ İADELERİ %10",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "680bbb4e-4c2c-499c-93de-d2b10a33d710",
+    "kod": "610.20.10200",
+    "ad": "TİCARİ MAL SATIŞ İADELERİ %20",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d2cd990f-6d99-4c84-83d7-17d42e66a503",
+    "kod": "611",
+    "ad": "SATIŞ İSKONTOLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ebc2442d-a5a9-4031-96a2-9ebc843e571f",
+    "kod": "611.10",
+    "ad": "SATIŞ İSKONTOLARI _ MAMUL (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9f7f9b51-4e0c-4a04-b873-8e3d33ff514b",
+    "kod": "611.10.00000",
+    "ad": "SATIŞ İSKONTOLARI _ MAMUL %00 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2678760c-3f8b-4728-bd7b-d554af6fee4b",
+    "kod": "611.10.00010",
+    "ad": "SATIŞ İSKONTOLARI _ MAMUL %01 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b19d0f40-0fc0-48a8-bc74-e1924d327a73",
+    "kod": "611.10.00100",
+    "ad": "SATIŞ İSKONTOLARI _ MAMUL %10 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2fe8239a-739b-49a5-82ce-974645cd0780",
+    "kod": "611.10.00200",
+    "ad": "SATIŞ İSKONTOLARI _ MAMUL %20 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "74027bf8-f37b-4d6d-afd7-9c7aa7ddb8a0",
+    "kod": "611.20",
+    "ad": "SATIŞ İSKONTOLARI _ TİCARİ MAL (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "401de1bd-5bd7-46c2-ace4-873e14993244",
+    "kod": "611.20.00000",
+    "ad": "SATIŞ İSKONTOLARI _ TİCARİ MAL %00 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5c5ac552-1efc-404c-8449-1fb879378af7",
+    "kod": "611.20.00010",
+    "ad": "SATIŞ İSKONTOLARI _ TİCARİ MAL %01 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bd83af47-4436-48cb-8f4b-dfb7ee0f1e7a",
+    "kod": "611.20.00100",
+    "ad": "SATIŞ İSKONTOLARI _ TİCARİ MAL %10 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3963a734-333e-47e0-b32f-1fec34e73900",
+    "kod": "611.20.00200",
+    "ad": "SATIŞ İSKONTOLARI _ TİCARİ MAL %20 (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cd7bbbdd-c5dd-4eb9-b30f-2a0a218e74d7",
+    "kod": "612",
+    "ad": "DİĞER İNDİRİMLER (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "730b37d6-3383-4072-847c-8ecb2c864750",
+    "kod": "620",
+    "ad": "SATILAN MAMULLER MALİYETİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "89c45a58-62ee-4c27-b37a-1a23dac68548",
+    "kod": "621",
+    "ad": "SATILAN TİCARİ MALLAR MALİYETİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f914c28f-1853-4370-adb3-576741a9180e",
+    "kod": "622",
+    "ad": "SATILAN HİZMET MALİYETİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6033cca9-e36b-40bc-a310-ba04a9a04071",
+    "kod": "623",
+    "ad": "DİĞER SATIŞLARIN MALİYETİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "08cccac2-5ca9-4536-900f-85cf3d0f586f",
+    "kod": "630",
+    "ad": "ARAŞTIRMA VE GELİŞTİRME GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "beb4ad00-2fe2-408b-a61c-e371a5d2bfe0",
+    "kod": "631",
+    "ad": "PAZARLAMA, SATIŞ VE DAĞITIM GİDERLERİ(-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "02a2018e-b87e-4762-bf1d-d7207b6fae70",
+    "kod": "631.10",
+    "ad": "PAZARLAMA, SATIŞ VE DAĞITIM GİDERLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c1f74c00-ed44-48fe-992c-d83eb096349a",
+    "kod": "631.10.00010",
+    "ad": "İŞÇİ ÜCRET VE GİDERLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "820542e8-2677-403f-853a-9a06c03fb751",
+    "kod": "631.10.00030",
+    "ad": "DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d489874a-d8d9-48cd-9612-25621379880a",
+    "kod": "631.10.00040",
+    "ad": "ÇEŞİTLİ GİDERLER",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c5246da3-dc32-4c1f-8430-0abba1e3f556",
+    "kod": "631.10.00050",
+    "ad": "VERGİ RESİM VE HARÇLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3607c3de-0d82-4de5-a4f3-99314d1dc705",
+    "kod": "631.10.00060",
+    "ad": "AMORTİSMAN GİDERLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "db9d72f4-705e-431f-ab4b-8fac17f140a8",
+    "kod": "632",
+    "ad": "GENEL YÖNETİM GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dacf6a00-9ed2-45d1-96de-12a8fd604e6d",
+    "kod": "632.10",
+    "ad": "GENEL YÖNETİM GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "eaf12197-08c1-438c-a068-e92e0e44661e",
+    "kod": "632.10.00010",
+    "ad": "İŞÇİ ÜCRET VE GİDERLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "21df3bbe-7c7f-4067-8364-b06c09df9950",
+    "kod": "632.10.00030",
+    "ad": "DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "af622d0c-8418-41be-8598-2b1b55dd50bb",
+    "kod": "632.10.00040",
+    "ad": "ÇEŞİTLİ GİDERLER",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6971403b-f059-4b0d-bc71-53191971cc0f",
+    "kod": "632.10.00050",
+    "ad": "VERGİ RESİM VE HARÇLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "89e9086a-3043-4e5a-90a0-a075eb1da239",
+    "kod": "632.10.00060",
+    "ad": "AMORTİSMAN GİDERLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2e9ef60c-3b02-451c-9369-d18caae3befb",
+    "kod": "640",
+    "ad": "İŞTİRAKLERDEN TEMETTÜ GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9f73d52b-7bad-4a68-9eae-252b8791fc26",
+    "kod": "641",
+    "ad": "BAĞLI ORTAKLIKLARDAN TEMETTÜ GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1787a6c7-7c38-4ff0-a040-5056fb844b4e",
+    "kod": "642",
+    "ad": "FAİZ GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8325e79d-73f4-48a9-84e2-b3b97a426c16",
+    "kod": "642.10",
+    "ad": "FAİZ GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "44d8652e-603a-492c-9851-377f58affa19",
+    "kod": "642.10.00100",
+    "ad": "FAİZ GELİRLERİ _ GARANTİ BANKASI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "04437121-e6c1-4786-ab17-8515c59878d6",
+    "kod": "643",
+    "ad": "KOMİSYON GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "59e54f6d-cd30-4f67-9972-66afb675b875",
+    "kod": "644",
+    "ad": "KONUSU KALMAYAN KARŞILIKLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "98c32247-b4a6-4732-9e3b-231b917dfd5e",
+    "kod": "645",
+    "ad": "MENKUL KIYMET SATIŞ KARLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "59b6ef52-4cfd-4f0e-89c9-e4b05c957828",
+    "kod": "646",
+    "ad": "KAMBİYO KARLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cf8c3d3f-339b-4037-9b12-fa038ac870b8",
+    "kod": "646.10",
+    "ad": "KUR FARKLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d4a9cffd-ccda-4a41-b477-29648d1726be",
+    "kod": "646.10.01020",
+    "ad": "KUR FARKLARI _ BANKALAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d49d4250-a5ce-4c69-bc93-31b45e5dcada",
+    "kod": "646.10.01200",
+    "ad": "KUR FARKLARI _ ALICILAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7bec41bb-cf87-4027-93e5-bf45d2d145eb",
+    "kod": "646.10.03000",
+    "ad": "KUR FARKLARI _ BANKA KREDİLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4d716520-7721-4d5d-b6b1-f4ef98c852a7",
+    "kod": "646.10.03200",
+    "ad": "KUR FARKLARI _ SATICILAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d029d029-c769-41c4-b2d9-cfa65389b163",
+    "kod": "647",
+    "ad": "REESKONT FAİZ GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "115f1b21-c736-4765-b574-c2c0613d70a2",
+    "kod": "648",
+    "ad": "ENFLASYON DÜZELTMESİ KARLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "574676fd-6a17-4030-adc3-d0786404b18d",
+    "kod": "649",
+    "ad": "FAALİYETLE İLGİLİ DİĞER GELİR VE KARLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6d0bb706-ea10-4694-bb2c-6025269bc1d2",
+    "kod": "649.10",
+    "ad": "YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cc8e9b21-c936-40db-8770-abc56dd58c97",
+    "kod": "649.10.00010",
+    "ad": "KİRA YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "267b1153-f101-4be3-bc2b-bc77a972f1f3",
+    "kod": "649.10.00020",
+    "ad": "AİDAT YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e417493b-9475-4519-a658-1c1ab938a8f2",
+    "kod": "649.10.00030",
+    "ad": "YEMEK YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "32ae8a1f-5d11-4ddb-bef3-3f3801444b1d",
+    "kod": "649.10.00040",
+    "ad": "KARGO YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "492a5373-1430-4136-a5b1-af539e214fdd",
+    "kod": "649.10.00050",
+    "ad": "HİZMET YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "94615b9c-882a-4b44-a3c7-07fd572ef0f0",
+    "kod": "649.10.00090",
+    "ad": "DİĞER YANSITMA GELİRLERİ",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "84762fea-a13a-4ba6-89cc-15103682953d",
+    "kod": "653",
+    "ad": "KOMİSYON GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b04cd4b6-c038-44c8-9250-595640390764",
+    "kod": "654",
+    "ad": "KARŞILIK GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "296a3bba-b124-43e1-9317-9a20666d6c49",
+    "kod": "655",
+    "ad": "MENKUL KIYMET SATIŞ ZARARLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dd558206-b2fe-4890-a1de-0f89277e0baa",
+    "kod": "656",
+    "ad": "KAMBİYO ZARARLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1e92a889-e3ae-4483-87d8-186d919bbc81",
+    "kod": "656.10",
+    "ad": "KUR FARKLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "62891f59-b772-4cbd-92a9-1fbc4feba3b7",
+    "kod": "656.10.01020",
+    "ad": "KUR FARKLARI _ BANKALAR (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "46c20b03-8b99-47d3-be0b-8150500916c7",
+    "kod": "656.10.01200",
+    "ad": "KUR FARKLARI _ ALICILAR (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c5d8026c-a4b3-424a-815d-49fe84de090a",
+    "kod": "656.10.03000",
+    "ad": "KUR FARKLARI _ BANKA KREDİLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f3e4b554-d882-449c-a036-36d247abdcda",
+    "kod": "656.10.03200",
+    "ad": "KUR FARKLARI _ SATICILAR (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f4517ad8-0219-4322-b1b8-576dda652efc",
+    "kod": "657",
+    "ad": "REESKONT FAİZ GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d0246037-4427-4f3e-8ac2-8580422c62ba",
+    "kod": "658",
+    "ad": "ENFLASYON DÜZELTMESİ ZARARLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cf7971a3-b98b-42db-ba34-1889f24f9059",
+    "kod": "659",
+    "ad": "DİĞER OLAĞAN GİDER VE ZARARLAR (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "978dca8b-bc70-4aa0-8e65-8614253085e1",
+    "kod": "659.10",
+    "ad": "DİĞER OLAĞAN GİDER VE ZARARLAR (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cb2ca37d-841c-4ece-974a-93a873ced258",
+    "kod": "659.10.00010",
+    "ad": "BAKİYE YUVARLAMA (KÜSÜRAT) FARKLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a58c6e62-4ae1-4d82-bc85-1fccff24b76b",
+    "kod": "660",
+    "ad": "KISA VADELİ BORÇLANMA GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8db7700d-09c4-452e-b9c2-c0fdcf7520d4",
+    "kod": "661",
+    "ad": "UZUN VADELİ BORÇLANMA GİDERLERİ (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b0fcce72-6c39-492b-9f96-bca6ae3c097b",
+    "kod": "662",
+    "ad": "DİĞER OLAĞAN GİDER VE ZARARLAR (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bb8c4522-8eb3-40c5-8063-7dd3a152711d",
+    "kod": "671",
+    "ad": "ÖNCEKİ DÖNEM GELİR VE KARLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fee77146-c6b5-469c-829c-19bc30912ee1",
+    "kod": "679",
+    "ad": "DİĞER OLAĞANDIŞI GELİR VE KARLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7e244394-3e42-4978-8ca0-3a77b67f83a5",
+    "kod": "679.01",
+    "ad": "DURAN VARLIK SATIŞI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2937c413-a86a-4ead-83d2-11560ddbe73a",
+    "kod": "679.10",
+    "ad": "DİĞER OLAĞANDIŞI GELİR VE KARLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0744bb79-932e-4ad6-a1e9-0e6a6e0f6180",
+    "kod": "679.10.00010",
+    "ad": "BAKİYE YUVARLAMA (KÜSÜRAT) FARKLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0e130e18-5026-442e-b876-fe90a43391c4",
+    "kod": "679.10.00020",
+    "ad": "DEPOZİTO İADE FARKLARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e86924b3-1d84-461f-af3e-6e743dc8e46e",
+    "kod": "680",
+    "ad": "ÇALIŞMAYAN KISIM GİDER VE ZARARLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6d45ba3b-9324-401e-98f3-32ce6cfde115",
+    "kod": "681",
+    "ad": "ÖNCEKİ DÖNEM GİDER VE ZARARLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2959f77f-450c-4f80-970f-eebd23606676",
+    "kod": "689",
+    "ad": "DİĞER OLAĞANDIŞI GİDER VE ZARARLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7d9d673d-1d97-4c91-8ca4-f901c019b418",
+    "kod": "689.10",
+    "ad": "DİĞER OLAĞANDIŞI GİDER VE ZARARLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "db6c38c3-d321-467b-ab94-7d333eff2a35",
+    "kod": "689.10.00010",
+    "ad": "KKEG _ BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f6804423-3b23-402a-b8c0-1499eca2b873",
+    "kod": "689.10.00020",
+    "ad": "KKEG _ GECİKME ZAM VE CEZALARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2fdd6fb3-2394-40e7-b8f2-83e95b5cefa6",
+    "kod": "690",
+    "ad": "DÖNEM KARI VEYA ZARARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "89d817f9-1e26-4f5a-823e-f9e007bda38c",
+    "kod": "691",
+    "ad": "DÖN.KARI VERGİ VE DİĞ.YASAL YÜKÜM.KARŞILIKLARI (-)",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bc6f5dbe-1b81-42f8-b546-f96202e881a6",
+    "kod": "692",
+    "ad": "DÖNEM NET KARI VEYA ZARARI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fc6b9351-376a-4539-809c-7ee197443c5c",
+    "kod": "697",
+    "ad": "YILLARA YAYGIN İNŞAAT ENFLASYON DÜZELTME HESABI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "868a6ece-eab6-4983-b8a3-6435c211fc93",
+    "kod": "698",
+    "ad": "ENFLASYON DÜZELTME HESABI",
+    "anaGrup": "6 - Gelir Tablosu Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0b9a881a-6177-44e2-9f62-ac7c00641f98",
+    "kod": "700",
+    "ad": "MALİYET MUHASEBESİ BAĞLANTI HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "980371cd-2878-47eb-97e1-e20b81172584",
+    "kod": "701",
+    "ad": "MALİYET MUHASEBESİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "43465895-66bf-4b02-9e53-34de42bea709",
+    "kod": "710",
+    "ad": "DİREKT İLK MADDE VE MALZEME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "278f0de3-890a-4f54-87a4-3d73fe677c12",
+    "kod": "711",
+    "ad": "DİREKT İLK MADDE VE MALZEME GİD.YAN.HES.",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "32da73d6-0787-42b4-ab79-e9cde9af60e9",
+    "kod": "712",
+    "ad": "DİREKT İLK MADDE VE MALZEME FİYAT FARKI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c285e7a4-1bea-4186-b49d-6a26ae3baccf",
+    "kod": "713",
+    "ad": "DİREKT İLK MADDE VE MALZEME MİKTAR FARKI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a4d4d2eb-0a39-4094-bb0c-92f30249c996",
+    "kod": "720",
+    "ad": "DİREKT İŞÇİLİK GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fd59d092-7523-4b6e-8dae-fdc08bb33bd2",
+    "kod": "721",
+    "ad": "DİREKT İŞÇİLİK GİDERLERİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d9d76ab6-dbbd-4bba-b3b2-fbfab92a3e36",
+    "kod": "722",
+    "ad": "DİREKT İŞÇİLİK ÜCRET FARKLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "88f6dd61-a257-4dac-a821-1c3c5872f9c4",
+    "kod": "723",
+    "ad": "DİREKT İŞÇİLİK SÜRE (ZAMAN) FARKLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0f0720f2-3530-478e-a62c-447f52b59ca4",
+    "kod": "730",
+    "ad": "GENEL ÜRETİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "44f89206-3959-41ba-9f4a-2c2111bbe201",
+    "kod": "730.10",
+    "ad": "İŞÇİ ÜCRET VE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a2c518b2-e8f1-4737-accc-d70ee55c2499",
+    "kod": "730.10.10000",
+    "ad": "ESAS İŞÇİLİKLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ac526637-50d1-43c6-9d8c-d72313c76630",
+    "kod": "730.10.10100",
+    "ad": "HAFTA TATİLİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6b54bac3-b204-4dfd-8fba-69ebec91cb40",
+    "kod": "730.10.10200",
+    "ad": "PRİM ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0494217c-3277-4cd7-b2fc-8bb6671dd616",
+    "kod": "730.10.10300",
+    "ad": "FAZLA ÇALIŞMA ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5d4a7031-27d4-49a3-a80f-8cbe65af7944",
+    "kod": "730.10.10400",
+    "ad": "HUZUR HAKKI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "137ab4ff-3a5c-4f2c-b06a-4eec0403106c",
+    "kod": "730.10.10600",
+    "ad": "YILLIK İZİNLİ ÜCRET",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5b157ad9-8cc1-4989-8837-b7409c2c9c00",
+    "kod": "730.10.12000",
+    "ad": "SSK İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "26640b33-8e6a-416a-91ec-73b79b571262",
+    "kod": "730.10.12100",
+    "ad": "SGDP İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "df625869-9791-4788-8c3a-fc331093db2e",
+    "kod": "730.10.12200",
+    "ad": "İŞZ İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f8b10d2a-f0d9-456e-bfba-f14cea2f71fc",
+    "kod": "730.10.12700",
+    "ad": "İHBAR TAZMİNATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ba80f270-76d9-4d1c-a352-6c9f7c84a30c",
+    "kod": "730.10.12800",
+    "ad": "KIDEM TAZMİNATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0c841b84-e476-4f1a-9933-d4930613652d",
+    "kod": "730.10.13000",
+    "ad": "YEMEK PARASI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fc73ecca-20f5-4984-ab49-961012b960ba",
+    "kod": "730.10.13100",
+    "ad": "ERZAK YARDIMI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "73aaee86-99ae-4046-a6e6-ebdfc4bba227",
+    "kod": "730.10.13800",
+    "ad": "İŞ ELBİSESİ VE GİYİM YARDIMI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "35eaef09-fa72-413c-8560-ffa31d5afff9",
+    "kod": "730.10.14000",
+    "ad": "EĞİTİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "00560f42-ec01-4b49-94d8-1ef84a3473b3",
+    "kod": "730.10.14100",
+    "ad": "STAJ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7e528c1d-df59-46c6-821b-44d1aebffe53",
+    "kod": "730.10.15000",
+    "ad": "İLAÇ VE TEDAVİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9099d60e-dd95-4168-b5c8-12c5233985f5",
+    "kod": "730.30",
+    "ad": "DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "89a60387-95a0-4d0f-832c-399783c1e5b5",
+    "kod": "730.30.30000",
+    "ad": "ELEKTRİK GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d7644617-9c53-4261-84d5-374d4d4dfd9c",
+    "kod": "730.30.30100",
+    "ad": "GAZ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d01f194f-c1d6-4367-a4b1-7cd9e15b5f01",
+    "kod": "730.30.30200",
+    "ad": "SU GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ced124a3-c105-4bbe-9b7c-1e507ab53658",
+    "kod": "730.30.30300",
+    "ad": "MOTORİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "77de7657-619c-441d-90f6-44b29c889493",
+    "kod": "730.30.30310",
+    "ad": "KKEG _ MOTORİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0a867b55-9c17-4d24-832a-6b5ffceda7b0",
+    "kod": "730.30.30400",
+    "ad": "BENZİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "50a49305-ceee-4e9b-800a-f21de9222e58",
+    "kod": "730.30.30410",
+    "ad": "KKEG _ BENZİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5cecf5bd-76f2-4b1e-b318-df33617c0d1a",
+    "kod": "730.30.30500",
+    "ad": "ELEKTRİK_YAKIT",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5cce9fdd-a6a6-41de-9bae-b7ae00704194",
+    "kod": "730.30.31000",
+    "ad": "POSTA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "31df7756-adb1-444f-bb67-4f113c14be0c",
+    "kod": "730.30.31100",
+    "ad": "TELEFON GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "902a9291-0ea7-4229-af74-12207cb0d90e",
+    "kod": "730.30.31500",
+    "ad": "KARGO GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f3a0f325-12d7-40e6-92e5-4bb955948849",
+    "kod": "730.30.31700",
+    "ad": "İNTERNET  GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8ef9c793-8e24-4ca6-b2cd-a733cbc31666",
+    "kod": "730.30.31900",
+    "ad": "DİĞER HABERLEŞME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "66ab7c87-7342-419c-8314-4c1310d4e636",
+    "kod": "730.30.32100",
+    "ad": "BAKIM ONARIM GİDERLERİ _ YERALTI VE YERÜSTÜ DÜZENLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "361455b1-4c43-4081-b5cd-834d1fa06c86",
+    "kod": "730.30.32200",
+    "ad": "BAKIM ONARIM GİDERLERİ _  BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a815124a-b2d8-46d3-80a7-dd85ba60e789",
+    "kod": "730.30.32300",
+    "ad": "BAKIM ONARIM GİDERLERİ _ TESİS MAKİNE VE CİHAZLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f2c68324-aa0e-4266-a94d-3844f3af3787",
+    "kod": "730.30.32400",
+    "ad": "BAKIM ONARIM GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2afcae9c-83b5-47dc-bdbe-33e2936523f3",
+    "kod": "730.30.32410",
+    "ad": "KKEG _ BAKIM ONARIM GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "136f26b3-d021-4e88-b353-8217b70e874b",
+    "kod": "730.30.32500",
+    "ad": "BAKIM ONARIM GİDERLERİ _ DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "40553682-c73a-48bd-beb3-183ad93bb7aa",
+    "kod": "730.30.32600",
+    "ad": "BAKIM ONARIM GİDERLERİ _ DİĞER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3019001c-45e9-4741-9a20-5eb84aeb1f33",
+    "kod": "730.30.32900",
+    "ad": "GİDER KAYDEDİLEN KÜÇÜK DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3de55a01-88c8-4545-9114-1483ed01e46c",
+    "kod": "730.30.33000",
+    "ad": "PERSONEL TAŞIMA HİZMETİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9f1b33e1-50c6-4582-be5d-b3a43e52138d",
+    "kod": "730.30.33100",
+    "ad": "TEMİZLİK HİZMETİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "83e061c4-da03-4d67-8ab5-c667c9e54f3d",
+    "kod": "730.30.34000",
+    "ad": "BÖLGE DEPOLARINA TAŞIMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d0923cf7-6ed0-44ff-862d-0fcb247ae07f",
+    "kod": "730.30.34100",
+    "ad": "BAYİLERE DAĞITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4bba760e-83ef-44bb-80c2-645f521263ec",
+    "kod": "730.30.34200",
+    "ad": "İHRACAT NAVLUN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b8087825-bdf3-48df-bd5a-ef34472aea66",
+    "kod": "730.30.34300",
+    "ad": "PLATFORM HİZMET BEDELLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c2dbb2f4-03da-4cc4-8f1e-47814fb14e41",
+    "kod": "730.30.34400",
+    "ad": "YÜKLEME BOŞALTMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0e67e543-d572-43c1-9308-44517693bd5c",
+    "kod": "730.30.34500",
+    "ad": "LİMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a50e4347-1580-434d-bb8b-5c13fd1e089b",
+    "kod": "730.30.34700",
+    "ad": "SATIŞ KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ae5c275e-febd-4d95-86ef-f79048baab8b",
+    "kod": "730.30.34800",
+    "ad": "SERTİFİKA VE BELGELENDİRME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ab8d3368-4419-45d1-972b-42393482bc30",
+    "kod": "730.30.34900",
+    "ad": "SATIŞLA İLGİLİ DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "78d56006-cf53-404e-b33b-ec44e34e837b",
+    "kod": "730.30.35000",
+    "ad": "DANIŞMANLIK GİDERLERİ _ MALİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e7123ce6-4421-4aec-81f5-61a2736a02c0",
+    "kod": "730.30.35100",
+    "ad": "DANIŞMANLIK GİDERLERİ _ HUKUKİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9f9b47de-e34d-4fa5-a9ec-a4381edc489b",
+    "kod": "730.30.35200",
+    "ad": "DANIŞMANLIK GİDERLERİ _ İDARİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4c63b301-c2b4-4b68-a209-ecb075059bdf",
+    "kod": "730.30.35300",
+    "ad": "DANIŞMANLIK GİDERLERİ _ SATIŞ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c2b85d32-320a-421c-a177-f3c1db94dafc",
+    "kod": "730.30.35700",
+    "ad": "BİLİŞİM HİZMET GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2e0eca01-d3e3-4444-85ba-1795496575da",
+    "kod": "730.30.35800",
+    "ad": "İŞ SAĞLIĞI VE GÜVENLİĞİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "57216008-f2fc-4ab4-b1c0-dd32cd0779c4",
+    "kod": "730.30.36000",
+    "ad": "FASON İMALAT İŞLERİ ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "63d529b7-4b7d-40b4-b1de-b85fa5d9be08",
+    "kod": "730.30.39000",
+    "ad": "DİĞER DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9d502196-54ee-45f2-bf92-8478296add3e",
+    "kod": "730.30.39100",
+    "ad": "HGS/OGS GEÇİŞ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e95fb58e-4899-426a-9079-a7797149233c",
+    "kod": "730.30.39110",
+    "ad": "KKEG _ HGS/OGS GEÇİŞ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e0eeb1f6-03a4-451d-994d-0a8e7d30d562",
+    "kod": "730.40",
+    "ad": "ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fe3dc1aa-24f7-4dfe-b524-ba61e31092e5",
+    "kod": "730.40.40000",
+    "ad": "SİGORTA GİDERLERİ _ YANGIN",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6383a8c7-adb8-4891-b714-5e6857d5e4b1",
+    "kod": "730.40.40100",
+    "ad": "SİGORTA GİDERLERİ _ KASKO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ce593f98-d5c3-4970-8e57-6f1846ea530b",
+    "kod": "730.40.40110",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ KASKO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c89cd718-7492-4e80-a92a-a914473c0d1b",
+    "kod": "730.40.40410",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "121e3794-9993-48fb-aeec-22433107b0a6",
+    "kod": "730.40.40500",
+    "ad": "SİGORTA GİDERLERİ _ MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "02fc94d7-30d5-4bfa-b473-acc92a3fb569",
+    "kod": "730.40.40600",
+    "ad": "SİGORTA GİDERLERİ _ ZOR MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ddfec31b-b64e-4e84-b4c7-9ffc25adb8c2",
+    "kod": "730.40.40610",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ ZOR MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8762856b-70e3-4432-ac21-98fc1f071f06",
+    "kod": "730.40.41000",
+    "ad": "REKLAM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1343bdfa-b377-463a-906e-aa0deac19c17",
+    "kod": "730.40.41010",
+    "ad": "KKEG _ REKLAM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "41827e6d-10ad-4233-adf3-4ff54be08b95",
+    "kod": "730.40.41100",
+    "ad": "SERGİLERE VE FUARLARA KATILIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7f84d93b-c4d6-4f66-97ad-f4d45f3e8105",
+    "kod": "730.40.41200",
+    "ad": "HEDİYELİK EŞYA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "07f8abb7-8787-4e60-a748-8d211afe9916",
+    "kod": "730.40.41300",
+    "ad": "NUMUNE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "34ecaca0-15cf-4904-851f-b564085cb368",
+    "kod": "730.40.41400",
+    "ad": "TERMİN GECİKME BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "199c2a64-be23-4253-8b7d-225e356ff7eb",
+    "kod": "730.40.41410",
+    "ad": "KUSURLU ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b0750836-fc8a-4d64-84dd-b0037b572d3a",
+    "kod": "730.40.41420",
+    "ad": "YANLIŞ ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bd3289dc-e730-490c-a900-ba213137c113",
+    "kod": "730.40.41430",
+    "ad": "EKSİK ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "44a31503-8b61-4600-af83-478d7d079b95",
+    "kod": "730.40.41440",
+    "ad": "ÜRÜN TEDARİK EDEMEME BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5ab21331-a656-40b7-80ae-a136dc9c61c0",
+    "kod": "730.40.41900",
+    "ad": "DİĞER SATIŞLARI TEŞVİK VE TANITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4bbff8b4-4a9a-42b7-9bd7-ddd747b00a48",
+    "kod": "730.40.42100",
+    "ad": "KİRA GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1b141b4a-5a50-414b-b850-0c9372b2c91d",
+    "kod": "730.40.42300",
+    "ad": "KİRA GİDERLERİ _TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2d4b7b06-05cd-4868-8a45-92229e043e0b",
+    "kod": "730.40.42310",
+    "ad": "KKEG _ KİRA GİDERLERİ _TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cb3d966b-8f77-47a3-9141-dc1e1935d044",
+    "kod": "730.40.42500",
+    "ad": "FİNANSAL KİRALAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ba0763d5-4442-41fd-8e8d-b39dd67631ad",
+    "kod": "730.40.42900",
+    "ad": "DİĞER KİRA GİDERLERİ _ OTOPARK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9afd5cd6-33ac-4f43-b51b-fa4dc9917221",
+    "kod": "730.40.42910",
+    "ad": "KKEG _ DİĞER KİRA GİDERLERİ _ OTOPARK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dbe55041-77e5-485c-ae80-3cbca0c76d23",
+    "kod": "730.40.43000",
+    "ad": "TEMSİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3e570e8b-0799-4040-9f27-09ab0f57c88e",
+    "kod": "730.40.43100",
+    "ad": "MİSAFİR AĞIRLAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c611fbbd-d2b6-4aee-8edd-3416c485c103",
+    "kod": "730.40.43400",
+    "ad": "DİĞER KURULUŞLARIN GİDERLERİNE KATILIM PAYI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "85c2319f-4b74-4589-bdde-11a38dbad546",
+    "kod": "730.40.43500",
+    "ad": "ODA AİDATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7a24bab5-26f7-4b3b-86d3-a67c92d99ffb",
+    "kod": "730.40.44000",
+    "ad": "EĞİTİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0a9345c5-f080-4825-8104-700146630f0d",
+    "kod": "730.40.44100",
+    "ad": "TELİF TERCÜME YAYIN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "193e94ba-4446-4671-8fac-ea3c75991d31",
+    "kod": "730.40.44200",
+    "ad": "KIRTASİYE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2ebc9e23-19b0-4256-b02d-50b75c4c0315",
+    "kod": "730.40.45000",
+    "ad": "ŞEHİR İÇİ SEYEHAT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c5a9019e-1208-486a-ab0e-e5dff39a089f",
+    "kod": "730.40.45010",
+    "ad": "KKEG _ ŞEHİR İÇİ SEYEHAT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "38241885-08cd-4339-80c5-5e8756ca9a52",
+    "kod": "730.40.45300",
+    "ad": "KONAKLAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4b1de6eb-e845-4349-823f-8bef10ff295c",
+    "kod": "730.40.46000",
+    "ad": "BİNA GİDERLERİNE KATILIM PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c9db32bc-870b-4bf7-89c8-83abb149cce9",
+    "kod": "730.40.47100",
+    "ad": "NOTER TESCİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "44d78bcb-f67f-4a2f-96a5-922fa519c659",
+    "kod": "730.40.48000",
+    "ad": "HAVALE EFT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c396fe04-9ecc-4e01-a8f3-bc29945817f1",
+    "kod": "730.40.48100",
+    "ad": "SENET TAHSİL KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "97a304e2-9a75-4080-a259-cd9ffdca7756",
+    "kod": "730.40.48200",
+    "ad": "KREDİ KARTI TAHSİL KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3ca2ed94-7a89-4bcf-ab9d-aa1894669071",
+    "kod": "730.40.48300",
+    "ad": "ÇEK DEFTERİ DEĞERLİ KAĞIT",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c3f3395a-4f4b-4110-a68e-abae3122a143",
+    "kod": "730.40.48900",
+    "ad": "DİĞER TAHSİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8790a38d-5f9a-4cf4-9cb7-69398f0bdb05",
+    "kod": "730.40.48920",
+    "ad": "BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b62ac0d6-1c22-485c-a6cf-3861b55631c7",
+    "kod": "730.40.48930",
+    "ad": "KKEG _ BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "232ea162-4d17-4898-a856-1c278fa8b141",
+    "kod": "730.40.49900",
+    "ad": "DİĞER ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "45f4a78e-727c-4135-a95c-b4f2fc3ab122",
+    "kod": "730.50",
+    "ad": "VERGİ RESİM VE HARÇLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1588792c-0217-43f9-b6ca-60c92bb3e63b",
+    "kod": "730.50.50000",
+    "ad": "DAMGA VERGİSİ _ BEYANNAME",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "27fbc47a-4f78-42ee-95fe-a9bd7e8a0ee1",
+    "kod": "730.50.50100",
+    "ad": "MOTORLU TAŞIT VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "15fed85c-774f-46da-8f09-60f952caefe8",
+    "kod": "730.50.50110",
+    "ad": "KKEG _ MOTORLU TAŞIT VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8bb7ee9c-14ef-4a1f-b873-8606b6fac8b9",
+    "kod": "730.50.50191",
+    "ad": "KKEG _ İNDİRELEMEYEN KDV",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4eb43307-bc26-409b-b5c7-956d1c957f20",
+    "kod": "730.50.50300",
+    "ad": "BİNA VE ARAZİ VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ad8535f8-786a-4c2e-9a01-252f5f7f8a62",
+    "kod": "730.50.50600",
+    "ad": "GEZİ KAZANIM KATKI PAYI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "eee22aed-ca8a-4ceb-86c0-640e5d4d414f",
+    "kod": "730.50.50700",
+    "ad": "KKEG _ ÖZEL İLETİŞİM VERGİSİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4e1ea957-4e43-4633-b97c-c864f12c7935",
+    "kod": "730.50.52000",
+    "ad": "BORSA TESCİL HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c8754960-9ca4-45bc-9891-c7d6d5c24e1f",
+    "kod": "730.50.52100",
+    "ad": "İTHALAT BELGE HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c40c765f-845c-4499-bf22-74425a252410",
+    "kod": "730.50.52200",
+    "ad": "İHRACAT BELGE HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b957a758-3202-4c68-ad65-6e8ac9e7b7e5",
+    "kod": "730.50.52300",
+    "ad": "RUHSAT HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f836b52a-134f-4195-ae57-3a4156110d00",
+    "kod": "730.60",
+    "ad": "AMORTİSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "86140754-4074-41c0-a4cf-7d6a50783e74",
+    "kod": "730.60.60250",
+    "ad": "AMORTİSMAN GİDERLERİ _ ARAZİ VE ARSALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "88276595-47d1-46ab-8993-70e922a9bc6e",
+    "kod": "730.60.60251",
+    "ad": "AMORTİSMAN GİDERLERİ _ YERALTI YERÜSTÜ DÜZ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "39b3d5a9-7b2d-4a2c-b1b2-1802e1f1a47b",
+    "kod": "730.60.60252",
+    "ad": "AMORTİSMAN GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b9f48ad8-8a21-43e8-8695-a26390839961",
+    "kod": "730.60.60253",
+    "ad": "AMORTİSMAN GİDERLERİ _ TESİS MAKİNE VE CİHAZLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f84f00fb-7314-465e-9c78-b504fe6729f5",
+    "kod": "730.60.60254",
+    "ad": "AMORTİSMAN GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "43dfe839-d13f-4b3d-b4b8-915df0ba2a4e",
+    "kod": "730.60.60255",
+    "ad": "AMORTİSMAN GİDERLERİ _ DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7b3941d6-586a-4509-ad11-aec131f147da",
+    "kod": "730.60.60256",
+    "ad": "AMORTİSMAN GİDERLERİ _ DİĞER MADDİ DURAN VARLIKLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cb672824-345b-4f71-9af8-ef558b153f6a",
+    "kod": "730.60.61260",
+    "ad": "AMORTİSMAN GİDERLERİ _ HAKLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9c2bb6c5-9a32-475a-9a54-51354936d828",
+    "kod": "730.60.61261",
+    "ad": "AMORTİSMAN GİDERLERİ _ ŞEREFİYE",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8319b808-3c0d-4d26-a7bb-b128bea2cff1",
+    "kod": "730.60.61262",
+    "ad": "AMORTİSMAN GİDERLERİ _ KURULUŞ VE ÖRGÜTLENME GİD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4adc9292-2492-450e-a7db-6d03f3fb0e27",
+    "kod": "730.60.61263",
+    "ad": "AMORTİSMAN GİDERLERİ _ ARAŞTIRMA VE GELİŞTİRME GİD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ba5b4bf3-a6f4-49fa-8d68-fb0bee257897",
+    "kod": "730.60.61264",
+    "ad": "AMORTİSMAN GİDERLERİ _ ÖZEL MALİYETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dd4884a1-bee0-48df-a272-b831e66fe1f9",
+    "kod": "730.60.61267",
+    "ad": "AMORTİSMAN GİDERLERİ _ DİĞER MADDİ OLAMAYAN DURAN VAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c97e1252-8a38-428d-bd25-fe8afa2dc842",
+    "kod": "731",
+    "ad": "GENEL ÜRETİM GİDERLERİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4c8e7b33-cfa7-44cf-956e-d8aed78a16b9",
+    "kod": "732",
+    "ad": "GENEL ÜRETİM GİDERLERİ BÜTÇE FARKLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d99ff6cf-367c-4c82-8ca8-b0e035a187c2",
+    "kod": "733",
+    "ad": "GENEL ÜRETİM GİDERLERİ VERİMLİLİK FARKLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "76e3dfbd-e9c0-4c9e-ac2d-32b98fbd1a8a",
+    "kod": "734",
+    "ad": "GENEL ÜRETİM GİDERLERİ KAPASİTE FARKLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "019f6a5a-d9d3-4fbf-a4e9-daa27deae82e",
+    "kod": "740",
+    "ad": "HİZMET ÜRETİM MALİYETİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6059627c-9355-4623-9746-ba3dc79a539e",
+    "kod": "741",
+    "ad": "HİZMET ÜRETİM MALİYETİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "df853b7a-2d3e-4386-849e-d3b664a34242",
+    "kod": "742",
+    "ad": "HİZMET ÜRETİM MALİYETİ FARK HESAPLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9dda784b-b5b7-4930-8600-1e29e47c5da1",
+    "kod": "750",
+    "ad": "ARAŞTIRMA VE GELİŞTİRME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c77504d1-ac99-4447-9834-fbb7a68e857e",
+    "kod": "751",
+    "ad": "ARAŞTIRMA VE GELİŞTİRME GİDERLERİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fc7ff470-4d8c-4c63-a295-f13dc78a38f3",
+    "kod": "752",
+    "ad": "ARAŞTIRMA VE GELİŞTİRME GİDER FARKLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ce9f1ba4-ff5e-4b1b-bbbc-981b712725db",
+    "kod": "760",
+    "ad": "PAZARLAMA, SATIŞ VE DAĞITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "07144a5e-6a9e-459b-bdf5-c9c5632d317f",
+    "kod": "760.10",
+    "ad": "İŞÇİ ÜCRET VE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "910dcf41-0e8c-4a53-9a9e-701896317e86",
+    "kod": "760.10.10000",
+    "ad": "ESAS İŞÇİLİKLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "21c1bc5a-278b-4209-bf1f-066851ca3d95",
+    "kod": "760.10.10100",
+    "ad": "HAFTA TATİLİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0d18f1c3-297e-4be2-8399-407db5ad11be",
+    "kod": "760.10.10200",
+    "ad": "PRİM ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "057f13a5-fb1b-48b6-8036-5518e0ba0116",
+    "kod": "760.10.10300",
+    "ad": "FAZLA ÇALIŞMA ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "63740006-9e4e-4234-96f3-61a439c06632",
+    "kod": "760.10.10400",
+    "ad": "HUZUR HAKKI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b9013fcd-386e-478d-89e7-a0626d122cad",
+    "kod": "760.10.10600",
+    "ad": "YILLIK İZİNLİ ÜCRET",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "93ff3560-bc66-473d-b898-a56bfbcf3e2a",
+    "kod": "760.10.12000",
+    "ad": "SSK İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f83b5a3f-8606-493e-9c6d-9f7968c5183f",
+    "kod": "760.10.12100",
+    "ad": "SGDP İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "41f29543-ef02-4ac6-b1c9-36dc678aeb48",
+    "kod": "760.10.12200",
+    "ad": "İŞZ İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "504e58ec-b5c4-490c-86b2-f6a39ecbe33f",
+    "kod": "760.10.12700",
+    "ad": "İHBAR TAZMİNATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6d608c5f-927e-44f6-adb6-ae5664c66886",
+    "kod": "760.10.12800",
+    "ad": "KIDEM TAZMİNATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "344550b0-ca81-436f-9471-d75fca198781",
+    "kod": "760.10.13000",
+    "ad": "YEMEK PARASI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e8fafc32-3d6a-440a-85b4-cd51f6e02ab4",
+    "kod": "760.10.13100",
+    "ad": "ERZAK YARDIMI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2b3ce983-8ff8-4ee5-83ca-91fbb379face",
+    "kod": "760.10.13800",
+    "ad": "İŞ ELBİSESİ VE GİYİM YARDIMI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3ae0aaeb-55c0-4cab-a701-63f4e806cbcd",
+    "kod": "760.10.14000",
+    "ad": "EĞİTİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "578ca2e0-6a4e-4b45-8137-9d8436636052",
+    "kod": "760.10.14100",
+    "ad": "STAJ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dac66452-604e-40a4-893b-a30365d37c51",
+    "kod": "760.10.15000",
+    "ad": "İLAÇ VE TEDAVİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "13b8595f-471e-4740-8e2b-73908c2a615f",
+    "kod": "760.30",
+    "ad": "DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bc113c28-f410-479d-a4be-96bc232dd534",
+    "kod": "760.30.30000",
+    "ad": "ELEKTRİK GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a4282d6f-742e-4e17-9f20-c51ade15f8ee",
+    "kod": "760.30.30100",
+    "ad": "GAZ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1641db5b-ebf9-46ee-80c9-3f14460b765b",
+    "kod": "760.30.30200",
+    "ad": "SU GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "950211a1-3765-4bd9-9fb4-72d78148a871",
+    "kod": "760.30.30300",
+    "ad": "MOTORİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f5db52d0-3637-4b8b-8dbf-01625c8ea4f0",
+    "kod": "760.30.30310",
+    "ad": "KKEG _ MOTORİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "855450ce-14a0-4a7a-a894-5c93cf3da8b4",
+    "kod": "760.30.30400",
+    "ad": "BENZİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3cbb39e4-3375-413c-b5c9-d1b02c385c5b",
+    "kod": "760.30.30410",
+    "ad": "KKEG _ BENZİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "45cfe4c9-8e5d-425b-8980-906e6e56f34e",
+    "kod": "760.30.30500",
+    "ad": "ELEKTRİK_YAKIT",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "05e8d4d2-ef9b-4d09-9645-07ad8c6e7189",
+    "kod": "760.30.31000",
+    "ad": "POSTA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "64d9d24f-908c-481e-8ddf-366ed2ce7fee",
+    "kod": "760.30.31100",
+    "ad": "TELEFON GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6b84ab91-6880-4600-ac41-ed6ac4e00d13",
+    "kod": "760.30.31500",
+    "ad": "KARGO GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f07cd52c-d842-4d6e-b567-6f3b31ee8207",
+    "kod": "760.30.31700",
+    "ad": "İNTERNET  GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a725c24d-8a1e-4b6f-beb8-8fae7c67dfe5",
+    "kod": "760.30.31900",
+    "ad": "DİĞER HABERLEŞME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bb77f91a-1582-4fec-b0ff-74dd525eab1c",
+    "kod": "760.30.32100",
+    "ad": "BAKIM ONARIM GİDERLERİ _ YERALTI VE YERÜSTÜ DÜZENLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "62ac3da5-7168-42d8-aa0a-46793e91b4d8",
+    "kod": "760.30.32200",
+    "ad": "BAKIM ONARIM GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "547aed2f-40df-4dd7-bc9c-4a2579f6e389",
+    "kod": "760.30.32300",
+    "ad": "BAKIM ONARIM GİDERLERİ _ TESİS MAKİNE VE CİHAZLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e772e4e8-257e-40e5-a182-c9600208d162",
+    "kod": "760.30.32400",
+    "ad": "BAKIM ONARIM GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "464dea1d-eac9-4fce-b631-a6e01d7b1533",
+    "kod": "760.30.32410",
+    "ad": "KKEG _ BAKIM ONARIM GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1690a4db-c365-4f3c-a766-92e18829337b",
+    "kod": "760.30.32500",
+    "ad": "BAKIM ONARIM GİDERLERİ _ DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5ae6bf83-ff9b-4cf8-9e76-6cce1d10a295",
+    "kod": "760.30.32600",
+    "ad": "BAKIM ONARIM GİDERLERİ _ DİĞER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a461bba0-26c4-4134-b5f1-0efc46324f67",
+    "kod": "760.30.32900",
+    "ad": "GİDER KAYDEDİLEN KÜÇÜK DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "75f3dd5f-00aa-49b5-8e9c-5c60d46fa32b",
+    "kod": "760.30.33000",
+    "ad": "PERSONEL TAŞIMA HİZMETİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a436c2b8-1109-4460-9cc4-36059a2e01df",
+    "kod": "760.30.33100",
+    "ad": "TEMİZLİK HİZMETİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8e633b5a-9c9d-401c-a8fe-63d5bb0431c4",
+    "kod": "760.30.34000",
+    "ad": "BÖLGE DEPOLARINA TAŞIMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f274bfec-6e99-4bd3-abb7-74c4015e65fd",
+    "kod": "760.30.34100",
+    "ad": "BAYİLERE DAĞITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "59aefaa4-1e6d-4c10-a459-4f6d732d47dc",
+    "kod": "760.30.34200",
+    "ad": "İHRACAT NAVLUN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "38e1961a-0964-4f99-9b39-70eba09df039",
+    "kod": "760.30.34300",
+    "ad": "PLATFORM HİZMET BEDELLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "71a98ad9-2a81-490e-9932-2c0a0e7b0dbc",
+    "kod": "760.30.34400",
+    "ad": "YÜKLEME BOŞALTMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5d86d0c1-4a05-424e-830b-7a4872d591cc",
+    "kod": "760.30.34500",
+    "ad": "LİMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "26303a8c-a19e-49b2-93bb-efd83d1a2746",
+    "kod": "760.30.34700",
+    "ad": "SATIŞ KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3c65bb48-a172-4553-a76d-0e28dc629557",
+    "kod": "760.30.34800",
+    "ad": "SERTİFİKA VE BELGELENDİRME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d169c5c4-7d42-4788-9c55-26dec20ab577",
+    "kod": "760.30.34900",
+    "ad": "SATIŞLA İLGİLİ DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "27fc0c1d-c624-471e-b371-89438e32998b",
+    "kod": "760.30.34910",
+    "ad": "KUSURLU ÜRÜN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "57042abb-00bc-487b-97f7-8ef838172f44",
+    "kod": "760.30.35000",
+    "ad": "DANIŞMANLIK GİDERLERİ _ MALİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0f57dec4-9599-4368-8175-2979755b8883",
+    "kod": "760.30.35100",
+    "ad": "DANIŞMANLIK GİDERLERİ _ HUKUKİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d51796e3-b4fd-42ea-b139-ab384a12346a",
+    "kod": "760.30.35200",
+    "ad": "DANIŞMANLIK GİDERLERİ _ İDARİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d253d18b-1d25-4345-b311-6f58942d825b",
+    "kod": "760.30.35300",
+    "ad": "DANIŞMANLIK GİDERLERİ _ SATIŞ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "70a6522b-1f21-48e6-8fc1-6062822e5131",
+    "kod": "760.30.35700",
+    "ad": "BİLİŞİM HİZMET GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e69b9fda-2ae6-4117-b490-f1dc1d4ce0ff",
+    "kod": "760.30.35800",
+    "ad": "İŞ SAĞLIĞI VE GÜVENLİĞİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bba47a1e-a112-4bb6-928f-043ebaa1596c",
+    "kod": "760.30.36000",
+    "ad": "FASON İMALAT İŞLERİ ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "252af97c-777e-4a84-9ed6-d2f6252542e7",
+    "kod": "760.30.39000",
+    "ad": "DİĞER DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "694d1edb-bd61-4997-b62e-8a9310da16fd",
+    "kod": "760.30.39100",
+    "ad": "HGS/OGS GEÇİŞ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "defdbde2-e377-449f-baa6-02abfd316ad3",
+    "kod": "760.30.39110",
+    "ad": "KKEG _ HGS/OGS GEÇİŞ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9e5ca240-4050-489d-aeef-d0bb77d9ffa2",
+    "kod": "760.40",
+    "ad": "ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "19e128b0-d1e1-4e5b-908e-5a1aedfaaece",
+    "kod": "760.40.40000",
+    "ad": "SİGORTA GİDERLERİ _ YANGIN",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8718efe7-2345-49ff-a0fa-be45477372ef",
+    "kod": "760.40.40100",
+    "ad": "SİGORTA GİDERLERİ _ KASKO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3f7aa921-29b1-4536-8430-0e204ea53b38",
+    "kod": "760.40.40110",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ KASKO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "658804ce-258d-43c3-a1e3-01afd9c0d1a8",
+    "kod": "760.40.40400",
+    "ad": "SİGORTA GİDERLERİ _ MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "176cb5a2-e8cc-46b7-980b-7d2a9130c5b0",
+    "kod": "760.40.40410",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "06832a7c-ee19-41fb-8d21-5816c280dcd5",
+    "kod": "760.40.40500",
+    "ad": "SİGORTA GİDERLERİ _ FERDİ KAZA",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f6b7132f-6a6b-4def-b3b8-9e0494dc3d3e",
+    "kod": "760.40.40600",
+    "ad": "SİGORTA GİDERLERİ _ ZOR MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d17999ee-6b65-4daf-9d68-2f1b08399e3c",
+    "kod": "760.40.40610",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ ZOR MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "58ea1984-922c-4196-b254-35aed3dd606e",
+    "kod": "760.40.41000",
+    "ad": "REKLAM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b5c0f3c3-7e63-4fc4-a7ad-880a21910730",
+    "kod": "760.40.41010",
+    "ad": "KKEG _ REKLAM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b346cbf3-1b4e-4b11-870d-414ed2ae891a",
+    "kod": "760.40.41100",
+    "ad": "SERGİLERE VE FUARLARA KATILIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d925f8e0-504a-45b6-b1c6-21e9c724f7b9",
+    "kod": "760.40.41200",
+    "ad": "HEDİYELİK EŞYA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e230c5ce-8953-4c7a-bc9e-d7e37c76dcfc",
+    "kod": "760.40.41300",
+    "ad": "NUMUNE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "78ff52d8-de49-48a5-b54a-18da1c1081b2",
+    "kod": "760.40.41400",
+    "ad": "TERMİN GECİKME BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5f4fd599-87f8-4acd-9505-968f9078040b",
+    "kod": "760.40.41410",
+    "ad": "KUSURLU ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "22105c79-a448-497c-b19e-8baf46675df8",
+    "kod": "760.40.41420",
+    "ad": "YANLIŞ ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "639f5e89-3b90-4827-9f1b-cb36019791a5",
+    "kod": "760.40.41430",
+    "ad": "EKSİK ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e2b913d4-8ec6-4944-a2ea-2517bdc76edf",
+    "kod": "760.40.41440",
+    "ad": "ÜRÜN TEDARİK EDEMEME BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1c4b13af-0bcb-4b45-ad67-ac9d83f92feb",
+    "kod": "760.40.41900",
+    "ad": "DİĞER SATIŞLARI TEŞVİK VE TANITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a57ff62e-9d3a-40e4-a54f-7be1f5664182",
+    "kod": "760.40.42100",
+    "ad": "KİRA GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f29f9148-5990-4d01-ab5b-936277960cc3",
+    "kod": "760.40.42300",
+    "ad": "KİRA GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "978d7a87-cfe7-494f-a362-060f25eb8cf2",
+    "kod": "760.40.42310",
+    "ad": "KKEG _ KİRA GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0087917d-fc61-4080-9690-67186d7f9b5c",
+    "kod": "760.40.42500",
+    "ad": "FİNANSAL KİRALAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ec9d2019-69c4-4534-b959-84dec5e28a78",
+    "kod": "760.40.42900",
+    "ad": "DİĞER KİRA GİDERLERİ _ OTOPARK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "08e6a360-cb1b-48d7-b656-36d3d17fca2e",
+    "kod": "760.40.42910",
+    "ad": "KKEG _ DİĞER KİRA GİDERLERİ _ OTOPARK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "360a6255-1be8-42b2-823b-974967478dd8",
+    "kod": "760.40.43000",
+    "ad": "TEMSİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "335f0b7d-ac30-47c2-bbfd-44f36bfc444f",
+    "kod": "760.40.43100",
+    "ad": "MİSAFİR AĞIRLAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f1b43701-cf00-4b05-9b84-21b3a2328dc3",
+    "kod": "760.40.43400",
+    "ad": "DİĞER KURULUŞLARIN GİDERLERİNE KATILIM PAYI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4a2e831b-da8a-44c8-8e3a-a903a9e66564",
+    "kod": "760.40.43500",
+    "ad": "ODA AİDATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bfd96e86-83ca-4ba6-862d-244c6fd64332",
+    "kod": "760.40.44000",
+    "ad": "EĞİTİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fd6f7e0b-2e12-41b9-a1f9-6e9c39dc4236",
+    "kod": "760.40.44100",
+    "ad": "TELİF TERCÜME YAYIN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "74fa9c1c-bad9-4d87-b037-93f4f48172b1",
+    "kod": "760.40.44200",
+    "ad": "KIRTASİYE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4284833a-4a2a-44be-a38a-510890f22bd0",
+    "kod": "760.40.45000",
+    "ad": "ŞEHİR İÇİ SEYEHAT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "357b6d11-eda3-4bf0-b09e-5be8654dea81",
+    "kod": "760.40.45010",
+    "ad": "KKEG _ ŞEHİR İÇİ SEYEHAT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "55f5f431-e288-4ab9-a23f-02262ed2a47e",
+    "kod": "760.40.45300",
+    "ad": "KONAKLAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "950afb9c-d9c2-4dfd-8cf5-b43a37a0257b",
+    "kod": "760.40.46000",
+    "ad": "BİNA GİDERLERİNE KATILIM PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6da91e0e-2e02-483f-8a3c-94be94d5975c",
+    "kod": "760.40.47100",
+    "ad": "NOTER TESCİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "abb3b75b-f86f-463b-be65-e1664b065123",
+    "kod": "760.40.48000",
+    "ad": "HAVALE EFT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5e90d4c3-79c5-4b8b-b791-3d537962b63d",
+    "kod": "760.40.48100",
+    "ad": "SENET TAHSİL KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b4fa990a-ee3b-42ce-9f36-a7993bcbba56",
+    "kod": "760.40.48200",
+    "ad": "KREDİ KARTI TAHSİL KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f5063dfb-1789-4f35-b63d-da6c03f2918c",
+    "kod": "760.40.48300",
+    "ad": "ÇEK DEFTERİ DEĞERLİ KAĞIT",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "de75636b-6849-4e6d-bc52-8d2772a12254",
+    "kod": "760.40.48900",
+    "ad": "DİĞER TAHSİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0dfe7d9c-dd4b-4db0-82ed-d88e6e838b39",
+    "kod": "760.40.48920",
+    "ad": "BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2fc7f44f-d5e8-4f5c-9220-37d360e584bd",
+    "kod": "760.40.48930",
+    "ad": "KKEG _ BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "732bfae8-dc73-44fb-947c-7a48878465b1",
+    "kod": "760.40.49900",
+    "ad": "DİĞER ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a1f58453-64a0-4100-aab2-c5c7e58ab8d5",
+    "kod": "760.50",
+    "ad": "VERGİ RESİM VE HARÇLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dd0aa8e2-7aa3-413b-8803-9074c1a1d28c",
+    "kod": "760.50.50000",
+    "ad": "DAMGA VERGİSİ _ BEYANNAME",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4964aadb-1a68-4fcb-9609-176c95a0ffa3",
+    "kod": "760.50.50100",
+    "ad": "MOTORLU TAŞIT VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f21f1298-4e8e-4926-9831-bf573d96d65d",
+    "kod": "760.50.50110",
+    "ad": "KKEG _ MOTORLU TAŞIT VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9fc9c3b1-9a5a-4a27-9159-7e47261c32fb",
+    "kod": "760.50.50191",
+    "ad": "KKEG _ İNDİRELEMEYEN KDV",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "49a493a9-1234-43e6-a5ef-f4328091339d",
+    "kod": "760.50.50300",
+    "ad": "BİNA VE ARAZİ VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "41457cab-096b-4867-a781-251713c0a8a3",
+    "kod": "760.50.50600",
+    "ad": "GEZİ KAZANIM KATKI PAYI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6c77a895-c4a3-45db-9723-ed472a214c83",
+    "kod": "760.50.50700",
+    "ad": "KKEG _ ÖZEL İLETİŞİM VERGİSİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fd7d87d4-6cbe-40d7-81c4-79e060b9737e",
+    "kod": "760.50.52000",
+    "ad": "BORSA TESCİL HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "64912f19-4945-4b54-b6bc-8f29bec1c18f",
+    "kod": "760.50.52100",
+    "ad": "İTHALAT BELGE HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "36790e82-8627-4502-abdb-9d76ec38fc35",
+    "kod": "760.50.52200",
+    "ad": "İHRACAT BELGE HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0492e1d6-852a-4671-bc43-7534f7c0f465",
+    "kod": "760.50.52300",
+    "ad": "RUHSAT HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5127a31d-28ed-4fd9-9020-176fb5d9b4e4",
+    "kod": "760.60",
+    "ad": "AMORTİSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8f2b4090-2a5c-4c46-b177-a51e961a547c",
+    "kod": "760.60.60250",
+    "ad": "AMORTİSMAN GİDERLERİ _ ARAZİ VE ARSALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1eb68aac-963b-488f-94fe-38feab3ed91f",
+    "kod": "760.60.60251",
+    "ad": "AMORTİSMAN GİDERLERİ _ YERALTI YERÜSTÜ DÜZ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "611adefa-7e5f-4a2a-ab84-e91884bcbb0f",
+    "kod": "760.60.60252",
+    "ad": "AMORTİSMAN GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "62111db7-dcaa-4fc9-84f2-6d037ad7c023",
+    "kod": "760.60.60253",
+    "ad": "AMORTİSMAN GİDERLERİ _ TESİS MAKİNE VE CİHAZLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "343f8db8-e0ab-4d92-9e40-a22973d8385c",
+    "kod": "760.60.60254",
+    "ad": "AMORTİSMAN GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8b9c78c3-c8e3-4b13-83e5-0b0f4de5675b",
+    "kod": "760.60.60255",
+    "ad": "AMORTİSMAN GİDERLERİ _ DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "54b893f6-8206-4895-a82b-f12e0ca679f2",
+    "kod": "760.60.60256",
+    "ad": "AMORTİSMAN GİDERLERİ _ DİĞER MADDİ DURAN VARLIKLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1565c509-6eca-4af0-ae3b-747d90cd8ebf",
+    "kod": "760.60.61260",
+    "ad": "AMORTİSMAN GİDERLERİ _ HAKLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a8e0fc92-c285-44c9-a43e-13c9fe5a7bfa",
+    "kod": "760.60.61261",
+    "ad": "AMORTİSMAN GİDERLERİ _ ŞEREFİYE",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "17698394-a59b-4984-8f12-aa09671e12cc",
+    "kod": "760.60.61262",
+    "ad": "AMORTİSMAN GİDERLERİ _ KURULUŞ VE ÖRGÜTLENME GİD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cac369a2-961f-41a4-824d-6f611d9da17d",
+    "kod": "760.60.61263",
+    "ad": "AMORTİSMAN GİDERLERİ _ ARAŞTIRMA VE GELİŞTİRME GİD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3622ad6e-4b4a-44d7-8c7a-d125ce503f25",
+    "kod": "760.60.61264",
+    "ad": "AMORTİSMAN GİDERLERİ _ ÖZEL MALİYETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "62d77b1b-63bf-449d-8bd8-da6196fdcd6b",
+    "kod": "760.60.61267",
+    "ad": "AMORTİSMAN GİDERLERİ _ DİĞER MADDİ OLAMAYAN DURAN VAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5d0d6867-c45e-4ffd-b7b7-3e44a54f3ba3",
+    "kod": "761",
+    "ad": "PAZARLAMA, SATIŞ VE DAĞITIM GİD.YAN.HES.",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f85575df-f6d9-4334-8eb0-45f5a1cf8d6b",
+    "kod": "762",
+    "ad": "PAZARLAMA SATIŞ VE DAĞITIM GİDERLERİ FARK HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bf9e96d1-8a16-46a4-9d16-0d73aaa13bf1",
+    "kod": "770",
+    "ad": "GENEL YÖNETİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "392d13a9-a4b8-4d0d-a787-1d8d82ff2b73",
+    "kod": "770.10",
+    "ad": "İŞÇİ ÜCRET VE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7c5476e1-9c1b-4c3d-9de4-d9be71bf728f",
+    "kod": "770.10.10000",
+    "ad": "ESAS İŞÇİLİKLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c4918950-8491-4fb3-bd88-8e3858616bbd",
+    "kod": "770.10.10100",
+    "ad": "HAFTA TATİLİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a6407ca6-0a39-4cef-89f6-c81fc7f4cfb3",
+    "kod": "770.10.10200",
+    "ad": "PRİM ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3637afdc-4724-472c-860a-8f69a7584143",
+    "kod": "770.10.10300",
+    "ad": "FAZLA ÇALIŞMA ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dd6d363b-e118-49cd-b929-922620899b96",
+    "kod": "770.10.10400",
+    "ad": "HUZUR HAKKI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4427f31e-68e7-4e28-8a2b-90652a80b4b9",
+    "kod": "770.10.10600",
+    "ad": "YILLIK İZİNLİ ÜCRET",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5fd9033e-bb86-4601-be5c-e57093c75647",
+    "kod": "770.10.12000",
+    "ad": "SSK İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "12810f9f-c5e6-431f-b7af-6469ad5db494",
+    "kod": "770.10.12100",
+    "ad": "SGDP İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1b56adcb-443f-4ecf-b922-6fd8623c9eed",
+    "kod": "770.10.12200",
+    "ad": "İŞZ İŞVEREN PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9084f9b6-136b-45e1-8bac-eee4eb6bd509",
+    "kod": "770.10.12700",
+    "ad": "İHBAR TAZMİNATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0a3fc44f-ac7f-41ab-b244-74d542153393",
+    "kod": "770.10.12800",
+    "ad": "KIDEM TAZMİNATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bcbbe203-62df-4362-b230-485efc30e12c",
+    "kod": "770.10.13000",
+    "ad": "YEMEK PARASI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5b1792c8-6e3c-4bc7-8d09-5e568d9b6565",
+    "kod": "770.10.13100",
+    "ad": "ERZAK YARDIMI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0d38b95d-8157-4750-b2d2-e2097b077c53",
+    "kod": "770.10.13800",
+    "ad": "İŞ ELBİSESİ VE GİYİM YARDIMI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "07a0217e-c2ee-4959-bb93-8d6d0423c99e",
+    "kod": "770.10.14000",
+    "ad": "EĞİTİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "86bd99ac-535e-4461-86c2-a015ebb9f14d",
+    "kod": "770.10.14100",
+    "ad": "STAJ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6a3c939f-7828-42e7-a3d4-1e5bd0fdd957",
+    "kod": "770.10.15000",
+    "ad": "İLAÇ VE TEDAVİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ebe8f16a-0533-4e60-845e-193ec2eff72a",
+    "kod": "770.30",
+    "ad": "DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4ecba9a4-f76f-4971-a0a4-e732789fa081",
+    "kod": "770.30.30000",
+    "ad": "ELEKTRİK GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ca658431-85ac-4f4d-af7f-7f9558c26bcd",
+    "kod": "770.30.30100",
+    "ad": "GAZ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ef5be604-7505-4037-b17a-5e34a1c69a6e",
+    "kod": "770.30.30200",
+    "ad": "SU GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f1f0591c-3276-42f3-a641-43a6debcb7b0",
+    "kod": "770.30.30300",
+    "ad": "MOTORİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4f20b49b-c627-447f-8239-b88a7c1ab898",
+    "kod": "770.30.30310",
+    "ad": "KKEG _ MOTORİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a6b3178b-ae91-425e-afd9-a4c24ab805e3",
+    "kod": "770.30.30400",
+    "ad": "BENZİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2166292d-0371-47f8-92bd-0bcd173a97e3",
+    "kod": "770.30.30410",
+    "ad": "KKEG _ BENZİN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "07349d0b-d6be-4a1d-85d3-442ee831b505",
+    "kod": "770.30.30500",
+    "ad": "ELEKTRİK_YAKIT",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "565c0142-fff8-4f43-8efb-8fd94b9d3441",
+    "kod": "770.30.31000",
+    "ad": "POSTA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1c6cd525-3acf-4cf9-9eb7-0d7a19cedf0e",
+    "kod": "770.30.31100",
+    "ad": "TELEFON GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "29c9981c-320c-462e-9e38-34f1ca400104",
+    "kod": "770.30.31500",
+    "ad": "KARGO GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ce6501e5-aa9e-44e0-a853-08bc2c072cb3",
+    "kod": "770.30.31700",
+    "ad": "İNTERNET  GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6a99ab36-b4ef-49d4-8b09-15ade17da168",
+    "kod": "770.30.31900",
+    "ad": "DİĞER HABERLEŞME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "397e7b07-8e5f-45e1-a6cf-79f667687a2b",
+    "kod": "770.30.32100",
+    "ad": "BAKIM ONARIM GİDERLERİ _ YERALTI VE YERÜSTÜ DÜZENLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a34ed6f2-9922-4cbf-b628-9dabe15700a4",
+    "kod": "770.30.32200",
+    "ad": "BAKIM ONARIM GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8e538d78-3754-4ba2-afaf-6e2ac9c16a1b",
+    "kod": "770.30.32300",
+    "ad": "BAKIM ONARIM GİDERLERİ _ TESİS MAKİNE VE CİHAZLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2ef7ad0c-f7e9-4fe6-85d9-fc3126266e64",
+    "kod": "770.30.32400",
+    "ad": "BAKIM ONARIM GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "24c98092-1658-4051-a2cf-34655b28620e",
+    "kod": "770.30.32410",
+    "ad": "KKEG _ BAKIM ONARIM GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "080b2713-492f-469a-8a4b-3641f84c6913",
+    "kod": "770.30.32500",
+    "ad": "BAKIM ONARIM GİDERLERİ _ DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "bba8ac1a-5784-4ccb-b831-71efc1aa6306",
+    "kod": "770.30.32600",
+    "ad": "BAKIM ONARIM GİDERLERİ _ DİĞER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5dc32937-a38e-4599-b4f1-a970e9780da0",
+    "kod": "770.30.32900",
+    "ad": "GİDER KAYDEDİLEN KÜÇÜK DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "23727179-08d5-40a6-bf13-e0f1d70a735b",
+    "kod": "770.30.33000",
+    "ad": "PERSONEL TAŞIMA HİZMETİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d1a8a8d1-97a9-4f44-b519-e2a7b48f7942",
+    "kod": "770.30.33100",
+    "ad": "TEMİZLİK HİZMETİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0c45c613-10ae-4125-9454-32ca0678cd15",
+    "kod": "770.30.34000",
+    "ad": "BÖLGE DEPOLARINA TAŞIMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a42c2853-064e-4939-bb8c-aa5544bc2a40",
+    "kod": "770.30.34100",
+    "ad": "BAYİLERE DAĞITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a5588421-98c9-4717-956f-ea00f3929a8a",
+    "kod": "770.30.34200",
+    "ad": "İHRACAT NAVLUN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "77dd9046-f5c7-4a45-ad5a-ae96e16e8394",
+    "kod": "770.30.34300",
+    "ad": "PLATFORM HİZMET BEDELLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6c213856-35dd-4039-919d-f9778e899fb7",
+    "kod": "770.30.34400",
+    "ad": "YÜKLEME BOŞALTMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8a41b0f2-03a3-4ad7-a533-d7e20dcabe94",
+    "kod": "770.30.34500",
+    "ad": "LİMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2c86fa1d-04a8-4d9c-b959-f2659e7456f4",
+    "kod": "770.30.34700",
+    "ad": "SATIŞ KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1224679e-b929-4920-a08f-9f5b6cfdc27d",
+    "kod": "770.30.34800",
+    "ad": "SERTİFİKA VE BELGELENDİRME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cd9fb296-f3e5-4edc-952f-43319d41d3d5",
+    "kod": "770.30.34900",
+    "ad": "SATIŞLA İLGİLİ DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "532875b4-7087-4616-acd4-2f4a78e99497",
+    "kod": "770.30.35000",
+    "ad": "DANIŞMANLIK GİDERLERİ _ MALİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e3d4ee3a-5df9-481c-9557-575a50d056b3",
+    "kod": "770.30.35100",
+    "ad": "DANIŞMANLIK GİDERLERİ _ HUKUKİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dfa99f0e-d1d9-4881-8394-1746c4908051",
+    "kod": "770.30.35200",
+    "ad": "DANIŞMANLIK GİDERLERİ _ İDARİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e0e7c7ad-88d2-4bfd-9592-61e60c925d13",
+    "kod": "770.30.35300",
+    "ad": "DANIŞMANLIK GİDERLERİ _ SATIŞ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f88f693c-021d-4126-ae38-c3cc084fef4f",
+    "kod": "770.30.35700",
+    "ad": "BİLİŞİM HİZMET GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e2d7da2a-4173-4512-be57-d687484579ab",
+    "kod": "770.30.35800",
+    "ad": "İŞ SAĞLIĞI VE GÜVENLİĞİ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1761bce9-e2b7-4fb2-a95e-86217395c901",
+    "kod": "770.30.36000",
+    "ad": "FASON İMALAT İŞLERİ ÜCRETLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "239a0b2a-5a88-465d-99d2-4d2a8cba2efe",
+    "kod": "770.30.39000",
+    "ad": "DİĞER DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0c4f117d-b5cc-49ce-b9be-5d07ee81767c",
+    "kod": "770.30.39100",
+    "ad": "HGS/OGS GEÇİŞ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "938f0970-b4a9-47e1-b137-ef8bd11f94f2",
+    "kod": "770.30.39110",
+    "ad": "KKEG _ HGS/OGS GEÇİŞ GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d573dc0a-18c8-4611-9eaf-20bc7779ca08",
+    "kod": "770.40",
+    "ad": "ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c49e7bf7-12a3-4e1d-88c0-af099ac6b09a",
+    "kod": "770.40.40000",
+    "ad": "SİGORTA GİDERLERİ _ YANGIN",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7e5f5d00-6c3c-4366-a27d-2c114181c4b5",
+    "kod": "770.40.40100",
+    "ad": "SİGORTA GİDERLERİ _ KASKO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "63562f74-67c5-468e-a5b9-66c18bf7c41a",
+    "kod": "770.40.40110",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ KASKO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "67fd4b28-88d1-4938-89c5-480f92aa0cc3",
+    "kod": "770.40.40400",
+    "ad": "SİGORTA GİDERLERİ _ MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ddbb11fc-71d7-4bdc-8227-4c4787cdde99",
+    "kod": "770.40.40410",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f18a987a-6c8f-4e1d-9792-e2757c269f02",
+    "kod": "770.40.40500",
+    "ad": "SİGORTA GİDERLERİ _ FERDİ KAZA",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1dd5e83c-cd66-436d-8c4f-b890825dc112",
+    "kod": "770.40.40600",
+    "ad": "SİGORTA GİDERLERİ _ ZOR MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fe205e09-a9b5-40df-92f6-df4339916fdf",
+    "kod": "770.40.40610",
+    "ad": "KKEG _ SİGORTA GİDERLERİ _ ZOR MALİ SORUMLULUK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dd80213b-4bdc-43b1-89c9-47ae94960ea5",
+    "kod": "770.40.41000",
+    "ad": "REKLAM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "216bf252-1893-43ca-83df-7308570a1fe3",
+    "kod": "770.40.41010",
+    "ad": "KKEG _ REKLAM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7a9dbea1-c61a-4426-ab9e-0b6e1a88ec8e",
+    "kod": "770.40.41100",
+    "ad": "SERGİLERE VE FUARLARA KATILIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "2cffefa4-5a93-48c8-b12d-f9efd40cda6d",
+    "kod": "770.40.41200",
+    "ad": "HEDİYELİK EŞYA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "10e33e6c-dfcf-4cfe-a115-a316729cd86c",
+    "kod": "770.40.41300",
+    "ad": "NUMUNE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4e00664e-82ce-4672-86a4-807f06a21ae5",
+    "kod": "770.40.41400",
+    "ad": "TERMİN GECİKME BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "afda4d4f-c7d2-4557-a904-d9febccaf944",
+    "kod": "770.40.41410",
+    "ad": "KUSURLU ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "31e046db-1f72-4ff8-bc62-ab89982f30cb",
+    "kod": "770.40.41420",
+    "ad": "YANLIŞ ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "58cf88aa-5692-4e14-bef3-f5bc9260e60b",
+    "kod": "770.40.41430",
+    "ad": "EKSİK ÜRÜN BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "18a15147-0a03-47b9-acca-a5acbfe426fa",
+    "kod": "770.40.41440",
+    "ad": "ÜRÜN TEDARİK EDEMEME BEDELİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "88f598eb-2ad9-4bfa-93dc-6b9c6b42ff29",
+    "kod": "770.40.41900",
+    "ad": "DİĞER SATIŞLARI TEŞVİK VE TANITIM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "59e8fa87-3ff6-4db1-b5cd-3de4bd0a952a",
+    "kod": "770.40.42100",
+    "ad": "KİRA GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b22be8a9-cb19-4a38-aaa3-ed0b52f1228b",
+    "kod": "770.40.42300",
+    "ad": "KİRA GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7ee8f415-5de2-440e-a35e-08bb0265cf57",
+    "kod": "770.40.42310",
+    "ad": "KKEG _ KİRA GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b6f36c1b-0e08-4e35-83ab-d19dd37c0fa6",
+    "kod": "770.40.42500",
+    "ad": "FİNANSAL KİRALAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9e52b854-35c3-4117-8f5f-d61f39be7cbb",
+    "kod": "770.40.42900",
+    "ad": "DİĞER KİRA GİDERLERİ _ OTOPARK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "79229bcd-b821-4aad-92ee-d21371c714c1",
+    "kod": "770.40.42910",
+    "ad": "KKEG _ DİĞER KİRA GİDERLERİ _ OTOPARK",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "dd516634-07b5-46a6-9810-cbb9f0d942c6",
+    "kod": "770.40.43000",
+    "ad": "TEMSİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9045d7c6-36df-4131-8399-0a6132a221d1",
+    "kod": "770.40.43100",
+    "ad": "MİSAFİR AĞIRLAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f489be3f-789b-4f8e-98d8-00d2db3e5d95",
+    "kod": "770.40.43400",
+    "ad": "DİĞER KURULUŞLARIN GİDERLERİNE KATILIM PAYI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "956f2b5e-3274-4bc7-bbb5-e78e7a40ebc8",
+    "kod": "770.40.43500",
+    "ad": "ODA AİDATLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "95370abe-d954-43ee-bae5-4548698fefa4",
+    "kod": "770.40.44000",
+    "ad": "EĞİTİM GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "318c0d5c-3a15-4a66-8bf4-ed447f25406f",
+    "kod": "770.40.44100",
+    "ad": "TELİF TERCÜME YAYIN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7b2861d0-6784-4f00-8fe6-e48b23c4153a",
+    "kod": "770.40.44200",
+    "ad": "KIRTASİYE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c1ec6f04-486c-4958-ab8d-c448f90662e6",
+    "kod": "770.40.45000",
+    "ad": "ŞEHİR İÇİ SEYEHAT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1e3aa4e2-cb69-4265-96e8-49e2d12fb7d6",
+    "kod": "770.40.45010",
+    "ad": "KKEG _ ŞEHİR İÇİ SEYEHAT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6740a6ae-90c6-45c5-868a-d624fcc225b0",
+    "kod": "770.40.45300",
+    "ad": "KONAKLAMA GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7a19ef5a-162d-4b5d-a696-ef3ddbafcfea",
+    "kod": "770.40.46000",
+    "ad": "BİNA GİDERLERİNE KATILIM PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3edc4a03-45f8-4eec-bd5c-b86edc8773b8",
+    "kod": "770.40.47100",
+    "ad": "NOTER TESCİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "401db883-2dd7-49cc-908a-bd2eeb2192ed",
+    "kod": "770.40.48000",
+    "ad": "HAVALE EFT GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a498dcf0-5ae9-4718-b7d2-43fc8c531636",
+    "kod": "770.40.48100",
+    "ad": "SENET TAHSİL KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "0412b180-3dfd-40dd-8378-7c436a423504",
+    "kod": "770.40.48200",
+    "ad": "KREDİ KARTI TAHSİL KOMİSYONLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1e2e3053-11d2-4991-a22d-d49879c2e2a9",
+    "kod": "770.40.48300",
+    "ad": "ÇEK DEFTERİ DEĞERLİ KAĞIT",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "56b17568-8acf-4b8f-aad5-618fb4e7427a",
+    "kod": "770.40.48900",
+    "ad": "DİĞER TAHSİL GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "060f42c6-bc5c-427f-ae84-2558a79d58e1",
+    "kod": "770.40.48910",
+    "ad": "KKEG _ TRAFİK PARA CEZALARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "526cf4bc-055f-4490-a08e-2285154cb0db",
+    "kod": "770.40.48920",
+    "ad": "BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9608bad7-e66b-4398-bb1d-682c51963fda",
+    "kod": "770.40.48930",
+    "ad": "KKEG _ BAĞIŞ VE YARDIMLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3fff90e8-8e04-4a60-b2d2-f7ba2dabff79",
+    "kod": "770.40.49900",
+    "ad": "DİĞER ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "d37cbede-d1ba-4737-8510-900c0348defc",
+    "kod": "770.50",
+    "ad": "VERGİ RESİM VE HARÇLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a10e851c-242a-4bf3-995c-873c73f57b97",
+    "kod": "770.50.50000",
+    "ad": "DAMGA VERGİSİ _ BEYANNAME",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1bb05eaf-f89a-4395-8d77-cb1428a65f34",
+    "kod": "770.50.50100",
+    "ad": "MOTORLU TAŞIT VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5846d128-8c1a-4956-b121-ff9e70b6775f",
+    "kod": "770.50.50110",
+    "ad": "KKEG _ MOTORLU TAŞIT VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "11e381ef-bd71-4015-a1b7-5c466c231d74",
+    "kod": "770.50.50191",
+    "ad": "KKEG _ İNDİRELEMEYEN KDV",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "84b8ddff-529d-4bbf-a35c-af49485f8f20",
+    "kod": "770.50.50300",
+    "ad": "BİNA VE ARAZİ VERGİLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1e15945e-cebd-41b0-8847-08e7bef458a3",
+    "kod": "770.50.50600",
+    "ad": "GEZİ KAZANIM KATKI PAYI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "34fd8563-9c73-42c3-9bc8-310729c9e4eb",
+    "kod": "770.50.50700",
+    "ad": "KKEG _ ÖZEL İLETİŞİM VERGİSİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c79ceec0-afef-4bf7-bd5c-63d5199f5434",
+    "kod": "770.50.52000",
+    "ad": "BORSA TESCİL HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4467ace6-bdd5-443e-9b5b-0ec2f9e304de",
+    "kod": "770.50.52100",
+    "ad": "İTHALAT BELGE HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "52406804-bb89-4eaa-a493-290170ba0567",
+    "kod": "770.50.52200",
+    "ad": "İHRACAT BELGE HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: DGS",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3b8be97e-62f1-4065-991f-080f0ffb167d",
+    "kod": "770.50.52300",
+    "ad": "RUHSAT HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "14ed5a7e-f044-4e50-9914-893c5ffe879b",
+    "kod": "770.50.52400",
+    "ad": "TİCARET SİCİL HARÇLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f18a0127-b3dc-4f00-8be9-3faaf445f055",
+    "kod": "770.60",
+    "ad": "AMORTİSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f4dfad19-d4e1-4884-9523-3e0bd6ca0dd8",
+    "kod": "770.60.60250",
+    "ad": "AMORTİSMAN GİDERLERİ _ ARAZİ VE ARSALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9a90e4be-6622-45b0-a935-4d5a93e3a89f",
+    "kod": "770.60.60251",
+    "ad": "AMORTİSMAN GİDERLERİ _ YERALTI YERÜSTÜ DÜZ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "cacfdb3c-388d-4925-93bc-191aaccecd0b",
+    "kod": "770.60.60252",
+    "ad": "AMORTİSMAN GİDERLERİ _ BİNALAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7e037ac2-108d-43a5-88f2-f3ffa2ccf041",
+    "kod": "770.60.60253",
+    "ad": "AMORTİSMAN GİDERLERİ _ TESİS MAKİNE VE CİHAZLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6fbc06fe-932a-4cc5-a42c-c15e28481a8a",
+    "kod": "770.60.60254",
+    "ad": "AMORTİSMAN GİDERLERİ _ TAŞITLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e163723c-e38e-4c29-bb58-83dda3cb599e",
+    "kod": "770.60.60255",
+    "ad": "AMORTİSMAN GİDERLERİ _ DEMİRBAŞLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "925d875d-caca-4267-a3b8-370917d82a2a",
+    "kod": "770.60.60256",
+    "ad": "AMORTİSMAN GİDERLERİ _ DİĞER MADDİ DURAN VARLIKLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "baa04825-72f5-44e9-ab9e-224b15cb5e4c",
+    "kod": "770.60.61260",
+    "ad": "AMORTİSMAN GİDERLERİ _ HAKLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "c061336e-c372-4b6d-aa1f-f8b18730405f",
+    "kod": "770.60.61261",
+    "ad": "AMORTİSMAN GİDERLERİ _ ŞEREFİYE",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e6824a65-970d-42fb-849c-69bbbe48bf12",
+    "kod": "770.60.61262",
+    "ad": "AMORTİSMAN GİDERLERİ _ KURULUŞ VE ÖRGÜTLENME GİD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f0a55f81-1f33-461e-bd78-a08e8f13b03e",
+    "kod": "770.60.61263",
+    "ad": "AMORTİSMAN GİDERLERİ _ ARAŞTIRMA VE GELİŞTİRME GİD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "10491a4e-7950-4c67-b402-43e6400ca8ec",
+    "kod": "770.60.61264",
+    "ad": "AMORTİSMAN GİDERLERİ _ ÖZEL MALİYETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "e933e859-8d38-4231-b8bf-7836b9b2cf59",
+    "kod": "770.60.61267",
+    "ad": "AMORTİSMAN GİDERLERİ _ DİĞER MADDİ OLAMAYAN DURAN VAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "Özel Kodu: SBT",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3a9813c4-e619-4791-bcda-8b795519f747",
+    "kod": "770.99",
+    "ad": "KKGE NİTELİKTE GİDER VE ZARARLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9bc21c71-69d9-476f-90d6-955cb64af2d6",
+    "kod": "770.99.001",
+    "ad": "Kanunen Kabul Edilmeyen Giderler",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6348efe5-5352-4897-86f3-6bd0357f861d",
+    "kod": "771",
+    "ad": "GENEL YÖNETİM GİDERLERİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5f1733f3-6031-44be-ac4c-80c6eecf964f",
+    "kod": "772",
+    "ad": "GENEL YÖNETİM GİDER FARKLARI HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9a2da6cb-34b5-4cd2-a658-7ebb09d211e8",
+    "kod": "780",
+    "ad": "FİNANSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3128c80d-5859-48a1-a92f-54d3e8ca2686",
+    "kod": "780.10",
+    "ad": "KISA VADELİ FİNANSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "91602f68-4547-4c3a-8e96-75ff7319c28d",
+    "kod": "780.10.71000",
+    "ad": "KREDİ FAİZLERİ _ TL",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6da3be52-2799-4da5-ab0f-55fa211790d5",
+    "kod": "780.10.72000",
+    "ad": "KREDİ FAİZLERİ _ USD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "ed401be9-5eb5-452e-a14c-084250cf9133",
+    "kod": "780.10.72100",
+    "ad": "KREDİ KUR FARKLARI _ USD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "5ef3b5eb-db10-47cd-813d-ea5d5f179c95",
+    "kod": "780.10.73000",
+    "ad": "KREDİ FAİZLERİ _ EURO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "fca4eea9-2034-40c1-ad7c-e452668cb1fd",
+    "kod": "780.10.73100",
+    "ad": "KREDİ KUR FARKLARI _ EURO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "b4d9849e-1575-43a6-963b-0c429f4fa14e",
+    "kod": "780.10.74000",
+    "ad": "TEMİNAT MEKTUP MASRAFLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9c820e27-6179-48bb-bedf-bdcbd4b64731",
+    "kod": "780.10.75000",
+    "ad": "KREDİ DOSYA MASRAFLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "609d1e87-294b-4dbf-a0d8-6a64a00b3870",
+    "kod": "780.20",
+    "ad": "UZUN VADELİ FİNANSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1a7f7ca8-eb58-4869-aa81-fe0ce3ea06dd",
+    "kod": "780.20.71000",
+    "ad": "KREDİ FAİZLERİ _ TL",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "061ed64b-0f43-4291-a339-8b6e2dbbe786",
+    "kod": "780.20.72000",
+    "ad": "KREDİ FAİZLERİ _ USD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "6e503235-6693-4806-b370-9bf3ca8ef79a",
+    "kod": "780.20.72100",
+    "ad": "KREDİ KUR FARKLARI _ USD",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "26f5d812-0751-49ca-9e93-3f8f417a1370",
+    "kod": "780.20.73000",
+    "ad": "KREDİ FAİZLERİ _ EURO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "21a1f2a8-4c16-4e89-93e3-c14974bd6212",
+    "kod": "780.20.73100",
+    "ad": "KREDİ KUR FARKLARI _ EURO",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "67846097-78b5-4c69-a3ed-62a8577567a7",
+    "kod": "780.20.74000",
+    "ad": "TEMİNAT MEKTUP MASRAFLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8c7c9d49-114f-4c79-94bb-93dcea247164",
+    "kod": "780.20.75000",
+    "ad": "KREDİ DOSYA MASRAFLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "332a04ad-6236-4ade-83cf-3c9851255d9d",
+    "kod": "781",
+    "ad": "FİNANSMAN GİDERLERİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "59e72713-ae8c-4426-8e42-5407f49b882e",
+    "kod": "782",
+    "ad": "FİNANSMAN GİDERLERİ FARK HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "9e41d974-86c6-4cbb-a64b-b5381804b9cf",
+    "kod": "790",
+    "ad": "İLK MADDE VE MALZEME GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "4ba8e867-162f-4982-8d8b-19ad59f15e18",
+    "kod": "791",
+    "ad": "İŞÇİ ÜCRET VE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "8fcc1d67-0260-45df-b67f-6ecc1db64caf",
+    "kod": "792",
+    "ad": "MEMUR ÜCRET VE GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "f79aee82-7667-42d7-ba50-dacc3d0f6b7b",
+    "kod": "793",
+    "ad": "DIŞARIDAN SAĞLANAN FAYDA VE HİZMETLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "769d6a9b-0855-48d0-8f97-73dd89b2cf16",
+    "kod": "794",
+    "ad": "ÇEŞİTLİ GİDERLER",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "51de6876-caf8-4c0e-99b4-0dbb18eb6c76",
+    "kod": "795",
+    "ad": "VERGİ, RESİM VE HARÇLAR",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "7b10730e-de62-4fd0-9025-f18b0590c765",
+    "kod": "796",
+    "ad": "AMORTİSMANLAR VE TÜKENME PAYLARI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "1be50ed2-85fb-47f0-8795-673e65357d1c",
+    "kod": "797",
+    "ad": "FİNANSMAN GİDERLERİ",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "3e45eb20-1668-43f1-be5b-45d354040b67",
+    "kod": "798",
+    "ad": "GİDER ÇEŞİTLERİ YANSITMA HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  },
+  {
+    "id": "a865d35b-75e3-4484-b721-efea9a368409",
+    "kod": "799",
+    "ad": "ÜRETİM MALİYET HESABI",
+    "anaGrup": "7 - Maliyet Hesapları",
+    "tanim": "",
+    "olusturmaTarihi": "2026-08-28T21:07:43.032Z",
+    "guncellemeTarihi": "2026-08-28T21:07:43.032Z"
+  }
+]

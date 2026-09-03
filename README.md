@@ -323,6 +323,40 @@ kırılım (yığılmış çubuk grafik + ayrı tablo).
   varsa, yıllık karşılaştırma o kadar geriye gidebilir — kart bunu açıkça
   belirtir.
 
+## Hesap Planı
+
+Üst menüdeki **Hesap Planı** bağlantısı ayrı bir sayfaya (`/hesap-plani`) götürür.
+Bu, Logo'dan otomatik çekilen bir veri DEĞİL — hesap kodu, hesap adı, ana grup
+(Tekdüzen Hesap Planı sınıflarına göre: 1-Dönen Varlıklar ... 7-Maliyet
+Hesapları), dashboard'daki hangi rapor kategorisine karşılık geldiği
+(Pazaryeri/E-Ticaret/Cari Satış/Grup Firmalar vb., opsiyonel) ve serbest
+metin bir **tanım** (bu hesap neyi kapsar, hangi cariler/kanallar/kurallar
+buraya girer) alanlarından oluşan, sayfa üzerinden ekle/düzenle/sil
+yapabileceğiniz bir referans listesidir.
+
+**Amaç:** Şu an gelir raporundaki kategori kırılımı (`src/lib/logo-category.ts`)
+cari unvanına bakan anahtar kelime kurallarıyla en iyi çaba (best-effort)
+tahmin yapıyor. Buraya girdiğiniz kesin hesap planı tanımları, ileride gelir
+tablosu ve diğer finansal kalemler hesaplanırken (ör. bir sohbette bu
+tanımlar referans gösterilerek) tahmine değil, sizin belirlediğiniz kesin
+kurallara dayanılmasını sağlamak içindir.
+
+- Yeni dosyalar: `src/lib/hesap-plani-types.ts` (veri sözleşmesi),
+  `src/lib/hesap-plani-store.ts` (dosya tabanlı CRUD), `src/lib/hesap-plani-validate.ts`
+  (ortak doğrulama), `src/app/api/hesap-plani/route.ts` (liste + ekleme),
+  `src/app/api/hesap-plani/[id]/route.ts` (güncelleme + silme),
+  `src/components/HesapPlaniYonetimi.tsx` (tablo + ekle/düzenle formu),
+  `src/app/hesap-plani/page.tsx`.
+- **Depolama:** Bu sayfanın kendi bir veritabanı yok — kalemler proje içinde
+  `src/data/hesap-plani.json` dosyasında saklanır. Bu bilgisayarda (yerel
+  geliştirmede) yaptığınız ekleme/düzenleme/silme kalıcıdır; canlı siteye
+  (finszeka.com/Vercel) yansıması için bu dosyanın **git'e commit edilip
+  deploy edilmesi** gerekir. Vercel'in kendisi üzerinde (canlıdayken)
+  doğrudan sayfadan yapılan bir ekleme, dosya commit edilmediği sürece bir
+  sonraki deploy'da kaybolur — bilinçli bir basitleştirme; ileride çok
+  kullanıcılı/kalıcı canlı düzenleme gerekirse gerçek bir veritabanına
+  (ör. Vercel Postgres/KV) taşınabilir.
+
 ## Yeni firma eklemek
 
 Firma listesi tamamen `/logo/durum`'dan geldiği için Logo'da yeni bir
