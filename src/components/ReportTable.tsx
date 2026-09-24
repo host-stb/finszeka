@@ -304,27 +304,37 @@ export default function ReportTable({
           );
         })}
 
-        {/* Toplam satırı */}
+        {/* Toplam satırı (+ varsa iade ve net gelir) */}
         {total && (
-          <div
-            className="sticky bottom-0 z-20 grid items-center border-t border-[var(--brass)]/40 bg-[var(--ink)] text-[var(--paper)]"
-            style={{ gridTemplateColumns: gridTemplate }}
-          >
-            <div className="truncate px-2 py-3 font-[family-name:var(--font-display)] text-[13px] font-semibold tracking-tight sm:px-3 sm:text-[15px]">
-              {total.label}
-            </div>
-            <AmountCell
-              value={sumRowValues(total, months)}
-              className="font-[family-name:var(--font-mono)] text-[11px] font-bold text-[var(--brass-soft)] sm:text-[12.5px]"
-            />
-            {months.map((m) => (
-              <AmountCell
-                key={m}
-                value={total.values[m as Month]}
-                className="font-[family-name:var(--font-mono)] text-[11px] font-bold text-[var(--brass-soft)] sm:text-[12.5px]"
-              />
-            ))}
-            <div />
+          <div className="sticky bottom-0 z-20 border-t border-[var(--brass)]/40 bg-[var(--ink)] text-[var(--paper)]">
+            {[total, ...(report.netRows ?? [])].map((row) => {
+              const isIade = row.kind !== "total";
+              const amountClass = `font-[family-name:var(--font-mono)] text-[11px] sm:text-[12.5px] ${
+                isIade ? "font-medium text-[var(--paper)]/70" : "font-bold text-[var(--brass-soft)]"
+              }`;
+              return (
+                <div
+                  key={row.id}
+                  className={`grid items-center ${row.id === "net" ? "border-t border-[var(--brass)]/40" : ""}`}
+                  style={{ gridTemplateColumns: gridTemplate }}
+                >
+                  <div
+                    className={`truncate px-2 font-[family-name:var(--font-display)] tracking-tight sm:px-3 ${
+                      isIade
+                        ? "py-2 text-[12px] text-[var(--paper)]/70 sm:text-[13px]"
+                        : "py-3 text-[13px] font-semibold sm:text-[15px]"
+                    }`}
+                  >
+                    {row.label}
+                  </div>
+                  <AmountCell value={sumRowValues(row, months)} className={amountClass} />
+                  {months.map((m) => (
+                    <AmountCell key={m} value={row.values[m as Month]} className={amountClass} />
+                  ))}
+                  <div />
+                </div>
+              );
+            })}
           </div>
         )}
       </div>

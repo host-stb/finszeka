@@ -40,6 +40,8 @@ export interface LogoSatislarOzet {
     toplam_matrah: number;
     toplam_kdv: number;
     toplam_tutar: number;
+    /** İade faturalarının toplamı (danışmandan talep edildi; henüz gelmeyebilir). */
+    iade_tutar?: number;
   };
   en_cok_satan_urunler: unknown[];
   en_cok_alan_cariler: LogoCariOzet[];

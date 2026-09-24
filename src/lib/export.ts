@@ -14,7 +14,7 @@ export async function exportReportToXlsx(report: CompanyReport, months: readonly
 
   const totalLabel = months.length === MONTHS.length ? `Toplam ${report.period}` : "Toplam";
   const header = ["Gelir Kalemi", "Faaliyet", ...months, totalLabel];
-  const rows = report.rows.map((r) => [
+  const rows = [...report.rows, ...(report.netRows ?? [])].map((r) => [
     r.label,
     r.faaliyet ?? "",
     ...months.map((m) => r.values[m as Month] ?? ""),

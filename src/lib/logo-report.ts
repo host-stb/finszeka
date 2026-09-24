@@ -58,12 +58,22 @@ export async function fetchCompanyReportFromLogo(
 
   const categoryMap = new Map<string, Map<string, Partial<Record<Month, number>>>>();
   const totalPerMonth: Partial<Record<Month, number>> = {};
+  const iadePerMonth: Partial<Record<Month, number>> = {};
+  const netPerMonth: Partial<Record<Month, number>> = {};
 
   MONTHS.forEach((m, i) => {
     const ozet = ozetResults[i];
     if (!ozet || !ozet.genel || ozet.genel.fatura_adedi === 0) return; // bu ay için veri yok
 
     totalPerMonth[m] = ozet.genel.toplam_tutar;
+
+    // toplam_tutar iadeleri içermez; iade_tutar gelirse brütten düşülür.
+    // İşareti ne olursa olsun (Logo'da iade satırları eksi) eksi olarak gösterilir.
+    if (typeof ozet.genel.iade_tutar === "number") {
+      const iade = -Math.abs(ozet.genel.iade_tutar);
+      iadePerMonth[m] = iade;
+      netPerMonth[m] = ozet.genel.toplam_tutar + iade;
+    }
 
     let classifiedSum = 0;
     for (const cari of ozet.en_cok_alan_cariler) {
@@ -116,7 +126,16 @@ export async function fetchCompanyReportFromLogo(
 
   rows.push({ id: "total", label: "GİRDİLER TOPLAM", kind: "total", values: totalPerMonth });
 
+  const netRows: ReportRow[] | undefined =
+    Object.keys(iadePerMonth).length > 0
+      ? [
+          { id: "iade", label: "İADELER", kind: "item", values: iadePerMonth },
+          { id: "net", label: "NET GELİR", kind: "total", values: netPerMonth },
+        ]
+      : undefined;
+
   return {
+    netRows,
     companyId: sirket,
     companyName: sirket,
     period: String(year),
