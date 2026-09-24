@@ -45,9 +45,11 @@ export interface LogoSatislarOzet {
   en_cok_alan_cariler: LogoCariOzet[];
 }
 
+// FastAPI (2026-09-23 itibarıyla) her istekte X-Integration-Key başlığı bekler.
+// Finszeka için sunucudaki LOGO_READ_API_KEY kullanılır (sadece GET /logo/*).
 function authHeaders(): HeadersInit {
   const token = process.env.FASTAPI_API_KEY;
-  return token ? { Authorization: `Bearer ${token}` } : {};
+  return token ? { "X-Integration-Key": token } : {};
 }
 
 export async function fetchLogoDurum(base: string): Promise<LogoDurum> {
