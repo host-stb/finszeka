@@ -16,6 +16,7 @@ const CATEGORY_RULES: { category: string; keywords: string[] }[] = [
       "n11",
       "pazarama",
       "pttavm",
+      "ptt holistik",
       "pazar yeri",
       "pazaryeri",
     ],
@@ -35,7 +36,15 @@ const CATEGORY_RULES: { category: string; keywords: string[] }[] = [
   },
   {
     category: "E-Ticaret",
-    keywords: ["ticimax", "holistik.com", "holistikmarket.com", "destekurunleri", "e-ticaret"],
+    keywords: [
+      "ticimax",
+      "holistik.com",
+      "holistikmarket.com",
+      "holistik market.com", // 9.TICIMAX carisi (Mart 2026'dan beri)
+      "destekurunleri",
+      "destek ürünleri",
+      "e-ticaret",
+    ],
   },
 ];
 
