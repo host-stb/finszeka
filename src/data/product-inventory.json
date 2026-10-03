@@ -1,0 +1,1553 @@
+{
+  "sourceFile": "Urun_Listesi_Sade.xlsx",
+  "sourceSheet": "Ürün Listesi",
+  "importedAt": "2026-10-03",
+  "comparisonThrough": "2026-10-02",
+  "sourceRows": 93,
+  "physicalProductCount": 79,
+  "products": [
+    {
+      "code": "152MM.04.01.003",
+      "name": "Hava Nemlendirici Buhar Makinesi (Aroma Difüzörü)",
+      "category": "Aksesuar",
+      "sourceIds": [
+        85
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "HAVA NEMLENDİRİCİ BUHAR MAKİNESİ",
+        "MORE THAN HAVA NEMLENDİRİCİ BUHAR MAKİNESİ"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.04.01.004",
+      "name": "Kılıflı Cam Su Matarası | 400 ml",
+      "category": "Aksesuar",
+      "sourceIds": [
+        87
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN KILIFLI SU MATARASI"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.02.001",
+      "name": "Eternamix Yeşil Çay Yaprak Ekstresi 60 Kapsül (L-Lysine, L-Prolin ve L-Arjinin)",
+      "category": "Antioksidan",
+      "sourceIds": [
+        35
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ETERNAMİX YEŞİL ÇAY EKSTRESİ 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.02.003",
+      "name": "Koenzim Q10 30 Kapsül",
+      "category": "Antioksidan",
+      "sourceIds": [
+        71
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS KOENZİM Q10 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.02.004",
+      "name": "Quercetin 30 Kapsül (Kuersetin, Bromelain)",
+      "category": "Antioksidan",
+      "sourceIds": [
+        65
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS QUERCETİN 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.02.002",
+      "name": "İnflex C3 Kurkumin 30 Kapsül | Curcumin, Zerdeçal, Karabiber Ekstresi",
+      "category": "Antioksidan",
+      "sourceIds": [
+        66
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS İNFLEX C3 KURKUMİN 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.05.01.001",
+      "name": "Adek Kids Multivitamin 30 ml - Smart Caps Probiyotik & Prebiyotik 30 Saşe",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        10
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "ADEK KİDS MULTİVİTAMİN 30 ML - SMART CAPS PROBİYOT"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.09.001",
+      "name": "Adek Kids Multivitamin Damla 30 ml (A, D3, E, K2 Vitaminleri)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        20
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ADEK KİDS MULTİVİTAMİN DAMLA 30 ML"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.05.001",
+      "name": "Avokado D3K2 20 ml Damla (1000 IU D3 + 25 mcg K2 Vitamini)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        45
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN AVOKADO D3K2 20 ML DAMLA"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.05.01.002",
+      "name": "BIOTIN - Smart Caps ZincUP Çinko 60 Tablet",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        9
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "BIOTIN - SMART CAPS ZİNCUP ÇİNKO 60 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.07.005",
+      "name": "Magnemax MGT Magnezyum Complex 30 Tablet (Malat, Taurat, Bisglisinat)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        74
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS MAGNEMAX MGT MAGNEZYUM KOMPLEKS 30 TABL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.07.006",
+      "name": "Magnemax MGT Magnezyum Complex 60 Tablet (Malat, Taurat, Bisglisinat)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        81
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS MAGNEMAX MGT MAGNEZYUM KOMPLEKS 60 TABL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.07.001",
+      "name": "Magnezyum ATP MAG 60 Kapsül (Gliserofosfat, Malat, ATP)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        14
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN MAGNEZYUM ATP MAG 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.07.002",
+      "name": "Magnezyum L-Threonate 90 Tablet (L-Treonat)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        28
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN MAGNEZYUM L-THREONATE 90 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.07.004",
+      "name": "Quattromag Magnezyum Kompleks (Klorür - Bisglisinat - Sitrat - Malat ve B6) 60 Kapsül",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        49
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN QUATTROMAG MAGNEZYUM KOMPLEKS 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.09.002",
+      "name": "Unique Multivitamin/Multimineral 30 Kapsül (12 vitamin, 10 mineral, Koenzim Q10)",
+      "category": "Gıda Takviyesi",
+      "sourceIds": [
+        21
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS UNİQUE MULTİVİTAMİN/MULTİMİNERAL 30 KAP"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.05.007",
+      "name": "Ginkgo Biloba + B12 60 Kapsül",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        60
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS GİNKGO BİLOBA + B12 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.04.003",
+      "name": "Livasis 60 Kapsül (Devedikeni, Enginar, Alfa Lipoik Asit)",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        55
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS LİVASİS 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.04.004",
+      "name": "Panax Korean Ginseng 60 Tablet",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        63
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS PANAX GİNSENG  60 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.10.004",
+      "name": "SLM Akkermansia Muciniphila & Garcinia Cambogia Extract 60 Kapsül | Probiyotik + Prebiyotik + İnülin",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        40
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS SLM AKKERMANSİA MUCİNİPHİLA & GARCİNİA"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.10.005",
+      "name": "SLM ID Garcinia Cambogia Extract 60 Kapsül | L-Karnitin, Probiyotik, İnositol, Garsiniya",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        39
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS SLM ID GARCİNİA CAMBOGİA EXTRACT 60 KAP"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.04.001",
+      "name": "Safran Ekstresi 30 Kapsül",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        13
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN SAFRAN EKSTRESİ 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.04.005",
+      "name": "Wellberry Cranberry 30 Kapsül (Vaksiniyum Meyve Ekstresi, C vitamini)",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        64
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS WELLBERRY CRANBERRY 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.04.002",
+      "name": "Çörek Otu Yağı 60 Softjel (Helal Sertifikalı, Soğuk Press)",
+      "category": "Gıda Takviyesi>Bitkisel Ekstreler",
+      "sourceIds": [
+        33
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS ÇÖREK OTU YAĞI 60 SOFTJEL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.03.001",
+      "name": "Collagen (Type I-II-III) 100 gr",
+      "category": "Gıda Takviyesi>Kolajenler",
+      "sourceIds": [
+        38
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL COLLAGEN (TYPE I-II-III) 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.06.002",
+      "name": "Glukozamin Tip II Kolajen 60 Tablet",
+      "category": "Gıda Takviyesi>Kolajenler",
+      "sourceIds": [
+        59
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS GLUKOZAMİN TİP II KOLAJEN 60 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.06.001",
+      "name": "Kakaolu Kolajen Peptit Msm & Reişi Mantarı 30 Saşe | Collagen Type I-II-III| Collagen Type I-II-III",
+      "category": "Gıda Takviyesi>Kolajenler",
+      "sourceIds": [
+        29
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN KAKAOLU KOLAJEN PEPTİT MSM & REİŞİ MANTA"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.08.004",
+      "name": "ChromUP Krom Pikolinat 200 Mcg 180 Tablet",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        30
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS CHROMUP 180 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "153TG.04.03.001",
+      "name": "Dr. Hasan Hüsnü Eren - C Vitamini, İmkânsızı Tedavi Etmek",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        16
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "C VİTAMİNİ, İMKÂNSIZI TEDAVİ ETMEK"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "153TG.04.03.003",
+      "name": "Dr. Hasan Hüsnü Eren - Zeolit Tabiatın Kadim Taşı",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        88
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "ZEOLİT TABİATIN KADİM ŞİFA TAŞI"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "153TG.04.03.002",
+      "name": "Dr. Hasan Hüsnü Eren - İyot Giren Eve Doktor Girmez",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        22
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "İYOT GİREN EVE DOKTOR GİRMEZ"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "153TG.04.03.006",
+      "name": "Dr. Hasan Hüsnü Eren | Alerji: Bağırsağın İmdat Çığlığı",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        91
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "ALERJİ: BAĞIRSAĞIN İMDAT ÇIĞLIĞI"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "153TG.04.03.007",
+      "name": "Dr. Hasan Hüsnü Eren | Halojenler: İyotun Düşman Kardeşleri",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        92
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "HALOJENLER: İYOTUN DÜŞMAN KARDEŞLERİ"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "153TG.04.03.005",
+      "name": "Dr. Hasan Hüsnü Eren | Kolesterol Paradoksu",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        90
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "KOLESTEROL PARADOKSU"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "153TG.04.03.004",
+      "name": "Dr. Hasan Hüsnü Eren | Multivitaminler Neden Yetmez ? Multimikrobesin Çağı",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        89
+      ],
+      "included": false,
+      "excludedReason": "Kitap",
+      "logoNames": [
+        "MULTİVİTAMİNLER NEDEN YETMEZ? MULTİMİKROBESİN ÇAĞI"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "600.02.016",
+      "name": "International Orthomolecular Medicine Congress 2026",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        95
+      ],
+      "included": false,
+      "excludedReason": "Kongre / eğitim",
+      "logoNames": [
+        "OMT TIP KONGRESİ 2026 _ PEPTİT SERTİFİKA"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "600.02.017",
+      "name": "International Orthomolecular Medicine Congress 2026 Advanced Peptide Certification",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        96
+      ],
+      "included": false,
+      "excludedReason": "Kongre / eğitim",
+      "logoNames": [
+        "FASON İŞÇİLİK (FULL) IRON UP 60 KAPSUL"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "600.02.019",
+      "name": "International Orthomolecular Medicine Congress 2026 Live Stream",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        98
+      ],
+      "included": false,
+      "excludedReason": "Kongre / eğitim",
+      "logoNames": [],
+      "observedCompanies": []
+    },
+    {
+      "code": "152MM.01.08.005",
+      "name": "Ironup Demir Bisglisinat 60 Kapsül | Yüksek Biyoyararlanım",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        69
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS IRONUP DEMİR 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.08.001",
+      "name": "Lugowith Multimineral/Multivitamin 60 Kapsül (7 mineral, 6 vitamin, Kuersetin, L-tirozin)",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        56
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN LUGOWİTH 60 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.08.002",
+      "name": "MHA Zeolit 45 Saşe",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        61
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN MHA ZEOLİT 45 SAŞE"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.05.002",
+      "name": "Msm & Vitamin C 30 Saşe (Metilsülfonilmetan, Vitamin C)",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        37
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN MSM & VİTAMİN C 30 SAŞE"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.05.003",
+      "name": "Pure C Vitamini (Ascorbic Acid) 500 gr",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        44
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN PURE C VİTAMİNİ (ASCORBİC ACİD) 500 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.05.004",
+      "name": "Pure C Vitamini 100 Saşe (Ascorbic Acid)",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        62
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN PURE C VİTAMİNİ 100 SAŞE (ASCORBİC ACİD)"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.08.006",
+      "name": "Selonomax Selenyum 200 Tablet",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        46
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS SELONOMAX SELENYUM 200 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "600.02.015",
+      "name": "Uluslararası Ortomoleküler Tıp Kongresi 2026 | İleri Peptit Sertifikasyon Eğitimi",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        94
+      ],
+      "included": false,
+      "excludedReason": "Kongre / eğitim",
+      "logoNames": [
+        "OMT TIP KONGRESİ 2026 _ YABANCI"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "600.02.018",
+      "name": "Uluslararası Ortomoleküler Tıp Kongresi 2026 Çevrimiçi Katılım",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        97
+      ],
+      "included": false,
+      "excludedReason": "Kongre / eğitim",
+      "logoNames": [
+        "FASON İŞÇLK (FULL) SMARTS CAPS OMEGA DAILY 60 KAPS",
+        "OMT TIP KONGRESİ 2026 _ ÇEVRİM İÇİ KATILIM"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.05.009",
+      "name": "Vitamin B12 60 Tablet | Metilkobalamin",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        72
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS VİTAMİN B12 60 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.08.003",
+      "name": "Zeogum (Zeolit & Arap Zamkı) 30 Saşe | Prebiyotik Destek",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        24
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ZEOGUM (ZEOLİT & ARAP ZAMKI) 30 SAŞE"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.08.007",
+      "name": "ZincUP Çinko 60 Tablet | L-Metiyonin, Pikolinat | Saç & Cilt & Tırnak & Bağışıklık",
+      "category": "Gıda Takviyesi>Mineraller",
+      "sourceIds": [
+        70
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS ZİNCUP ÇİNKO 60 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.03.001",
+      "name": "Krill Oil 30 Kapsül (EPA, DHA, Omega 3, Kolin, Astaksantin)",
+      "category": "Gıda Takviyesi>Omega 3 Takviyeleri",
+      "sourceIds": [
+        15
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN KRİLL OİL 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.03.003",
+      "name": "Omega 3 Daily 60 Softjel - Balık Yağı, EPA, DHA",
+      "category": "Gıda Takviyesi>Omega 3 Takviyeleri",
+      "sourceIds": [
+        32
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS OMEGA 3 DAİLY 60 SOFTJEL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.03.002",
+      "name": "Omega 3 EA 30 Softjel - Balık Yağı, EPA, DHA, Vitamin E, Vitamin A",
+      "category": "Gıda Takviyesi>Omega 3 Takviyeleri",
+      "sourceIds": [
+        19
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN OMEGA 3 EA 30 SOFTJEL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.03.004",
+      "name": "Omega 3 Koenzim Q10 & Vitamin D3 30 Softjel",
+      "category": "Gıda Takviyesi>Omega 3 Takviyeleri",
+      "sourceIds": [
+        68
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS OMEGA 3 KOENZİM Q10 & VİTAMİN D3 30 SOF"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.03.005",
+      "name": "Omega 3 Premium 30 Softgels - Balık Yağı, EPA, DHA",
+      "category": "Gıda Takviyesi>Omega 3 Takviyeleri",
+      "sourceIds": [
+        11
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS OMEGA 3 PREMİUM 30 SOFTGELS"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.10.001",
+      "name": "Antiwith 30 Kapsül (10 milyar Kob, L-glutamin, Zeolit) | Probiyotik",
+      "category": "Gıda Takviyesi>Probiyotikler",
+      "sourceIds": [
+        57
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ANTİWİTH 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.10.003",
+      "name": "Probiyotik & Prebiyotik 10 Milyar Cfu 30 Saşe",
+      "category": "Gıda Takviyesi>Probiyotikler",
+      "sourceIds": [
+        76
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS PROBİYOTİK & PREBİYOTİK 30 SAŞE"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.10.002",
+      "name": "Zeobiotic Probiyotik 30 Kapsül (L-glutamin + Zeolit)",
+      "category": "Gıda Takviyesi>Probiyotikler",
+      "sourceIds": [
+        82
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ZEOBİOTİC 30 KAPSÜL"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.05.01.003",
+      "name": "Baba Destek Paketi (Panax Ginseng | Krill Oil | ATP Mag)",
+      "category": "Gıda Takviyesi>Vitaminler",
+      "sourceIds": [
+        86
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "GİNSENG - ATP - KRİLL"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.05.005",
+      "name": "Biotin 60 Tablet 2500 μg (D-Biotin) | Saç & Cilt",
+      "category": "Gıda Takviyesi>Vitaminler",
+      "sourceIds": [
+        67
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS BİOTİN 60 TABLET"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.05.006",
+      "name": "D3K2 Mixup 20 ml Damla (1000 IU D3 + 30 mcg K2 Vitamini)",
+      "category": "Gıda Takviyesi>Vitaminler",
+      "sourceIds": [
+        8
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS D3K2 MİXUP 20 ML DAMLA"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.05.01.005",
+      "name": "Kreş Bağışıklık Destek Paketi | Pure C + Zeolit + ADEK + Lugol %2 + 3 Kitap Hediye",
+      "category": "Gıda Takviyesi>Vitaminler",
+      "sourceIds": [
+        103
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "KREŞ BAĞIŞIKLIK DESTEK PAKETİ"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.05.008",
+      "name": "MethylUP Active B Comlex + TMG 60 Kapsül",
+      "category": "Gıda Takviyesi>Vitaminler",
+      "sourceIds": [
+        75
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS METHYLUP ACTİVE B COMLEX + TMG 60 KAPSÜ"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.05.01.004",
+      "name": "Okul Bağışıklık Destek Paketi | D3K2 + Pure C + Lugol %2 + 3 Kitap Hediye",
+      "category": "Gıda Takviyesi>Vitaminler",
+      "sourceIds": [
+        102
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "OKUL BAĞIŞIKLIK DESTEK PAKETİ"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.04.01.002",
+      "name": "Lugol Kullanım Seti (50 ml Cam Şişe, Roll-On, Sprey Başlık)",
+      "category": "Ham Madde",
+      "sourceIds": [
+        18
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "LUGOL KULLANIM SETİ"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.01.001",
+      "name": "Glycine 100 gr",
+      "category": "Ham Madde>Aminoasitler",
+      "sourceIds": [
+        36
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL GLYCİNE 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.01.002",
+      "name": "L-Carnitine & L-Tartarate 100 Gr",
+      "category": "Ham Madde>Aminoasitler",
+      "sourceIds": [
+        83
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL L-CARNİTİNE & L-TARTARATE 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.01.003",
+      "name": "L-Glutamine 100 Gr",
+      "category": "Ham Madde>Aminoasitler",
+      "sourceIds": [
+        84
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL L-GLUTAMİNE 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.02.001",
+      "name": "D-Ribose 100 gr",
+      "category": "Ham Madde>Diğer Aktifler",
+      "sourceIds": [
+        48
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL D-RİBOSE 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.02.002",
+      "name": "MSM (Metilsülfonilmetan) 100 gr",
+      "category": "Ham Madde>Diğer Aktifler",
+      "sourceIds": [
+        42
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL MSM (METİLSÜLFONİLMETAN) 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.02.003",
+      "name": "Myo Inositol 100 gr",
+      "category": "Ham Madde>Diğer Aktifler",
+      "sourceIds": [
+        52
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL MYO INOSİTOL 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.02.004",
+      "name": "Niacine 100 gr",
+      "category": "Ham Madde>Diğer Aktifler",
+      "sourceIds": [
+        25
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL NİACİNE 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.02.005",
+      "name": "Sodium L-Ascorbate 100 gr",
+      "category": "Ham Madde>Diğer Aktifler",
+      "sourceIds": [
+        51
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL SODİUM L-ASCORBATE 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.02.006",
+      "name": "Spirulina 100 gr",
+      "category": "Ham Madde>Diğer Aktifler",
+      "sourceIds": [
+        53
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL SPİRULİNA 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.05.001",
+      "name": "Lugol Solüsyon 1000 İyot Damlası 30 ml | % 0,8 İyot & %1,6 Potasyum İyodür |",
+      "category": "Ham Madde>Lugol Solüsyon",
+      "sourceIds": [
+        17
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL LUGOL SOLÜSYON 1000 İYOT DAMLASI 30"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.05.002",
+      "name": "Lugol's Solution İyot %2 Damla 30 ml | %2 İyot & %4 Potasyum İyodür |",
+      "category": "Ham Madde>Lugol Solüsyon",
+      "sourceIds": [
+        73,
+        78
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL LUGOL'S SOLUTİON İYOT %2 DAMLA 30 ML"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.05.003",
+      "name": "Lugol's Solution İyot %5 Damla 20 ml | %5 İyot & %10 Potasyum İyodür |",
+      "category": "Ham Madde>Lugol Solüsyon",
+      "sourceIds": [
+        58
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL LUGOL'S SOLUTİON İYOT %5 DAMLA 20 ML"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.04.001",
+      "name": "Magnezyum Malat 100 gr",
+      "category": "Ham Madde>Toz Magnezyumlar",
+      "sourceIds": [
+        50
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL MAGNEZYUM MALAT 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.04.002",
+      "name": "Premix Magnezyum Malat-Sitrat-Taurat 100 gr",
+      "category": "Ham Madde>Toz Magnezyumlar",
+      "sourceIds": [
+        31
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL PREMİX MAGNEZYUM MALAT-SİTRAT-TAURAT"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.02.04.003",
+      "name": "Premix Magnezyum Sitrat P5P 100 gr",
+      "category": "Ham Madde>Toz Magnezyumlar",
+      "sourceIds": [
+        54
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "RAW MATERİAL PREMİX MAGNEZYUM SİTRAT P5P 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "600.02.014",
+      "name": "Uluslararası Ortomoleküler Tıp Kongresi 2026",
+      "category": "Kitaplar  ve Eğitimler",
+      "sourceIds": [
+        93
+      ],
+      "included": false,
+      "excludedReason": "Kongre / eğitim",
+      "logoNames": [
+        "OMT TIP KONGRESİ 2026 _ YERLİ"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.04.01.001",
+      "name": "CollaWell Shaker 400 ml",
+      "category": "Kişisel Bakım",
+      "sourceIds": [
+        41
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS COLLAWELL SHAKER 400 ML"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.02.002",
+      "name": "Iodent Diş Macunu 100 gr",
+      "category": "Kişisel Bakım>Ağız ve Diş Bakım",
+      "sourceIds": [
+        43
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN IODENT DİŞ MACUNU 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.02.003",
+      "name": "Zeodent Diş Macunu 100 gr",
+      "category": "Kişisel Bakım>Ağız ve Diş Bakım",
+      "sourceIds": [
+        26
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ZEODENT DİŞ MACUNU 100 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.02.004",
+      "name": "Zeodent Seyahat Boy 4'lü Diş Macunu 80 gr",
+      "category": "Kişisel Bakım>Ağız ve Diş Bakım",
+      "sourceIds": [
+        23
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN ZEODENT SEYAHAT BOY 4'LÜ DİŞ MACUNU 80 G"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.01.001",
+      "name": "Hindistan Cevizi Yağı 300 gr - (%100 Bitkisel, Virgin Coconut Oil)",
+      "category": "Kişisel Bakım>Bakım Yağı",
+      "sourceIds": [
+        12
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS HİNDİSTAN CEVİZİ YAĞI 300 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.01.002",
+      "name": "Kekik Yağı 10 ml - %100 Bitkisel ve Doğal (Oregano Essential Oil)",
+      "category": "Kişisel Bakım>Bakım Yağı",
+      "sourceIds": [
+        34
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "SMART CAPS KEKİK YAĞI 10 ML"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.01.003",
+      "name": "Magnezyum Yağı Vücut Spreyi 200 ml | Doğal & Saf Magnezyum",
+      "category": "Kişisel Bakım>Bakım Yağı",
+      "sourceIds": [
+        47
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "MORE THAN MAGNEZYUM YAĞI 200 ML"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.03.02.001",
+      "name": "(Pudra) Zeolit Pudra 85 gr",
+      "category": "Kişisel Bakım>Kozmetik",
+      "sourceIds": [
+        27
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "(PUDRA) MORE THAN ZEOLİT PUDRA 85 GR"
+      ],
+      "observedCompanies": [
+        "Holimer",
+        "Fw İlaç"
+      ]
+    },
+    {
+      "code": "152MM.01.11.003",
+      "name": "Tuzy Tuz | Sofrada Öğütme Doğal Kaya Tuzu – İyot İlavesiz 500g",
+      "category": "Tamamlayıcı Sağlık",
+      "sourceIds": [
+        101
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "TUZY KAPADOKYA SFR ÖĞT DOĞAL KAYA SOFRA TUZ 500 G"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.11.002",
+      "name": "Tuzy Tuz | İnce Öğütülmüş Doğal Kaya Sofra Tuzu – İyot İlavesiz 250g",
+      "category": "Tamamlayıcı Sağlık",
+      "sourceIds": [
+        100
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "TUZY KAPADOKYA İNCE ÖĞÜT DOĞAL KAYA SOFRA TUZ 250"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    },
+    {
+      "code": "152MM.01.11.001",
+      "name": "ZEOPAK Doğal Meyve ve Sebze Yıkama Tozu 400 gr",
+      "category": "Tamamlayıcı Sağlık",
+      "sourceIds": [
+        99
+      ],
+      "included": true,
+      "excludedReason": null,
+      "logoNames": [
+        "ZEOMOL ZEOPAK 400 GR KAVANOZ"
+      ],
+      "observedCompanies": [
+        "Holimer"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { fetchProductSalesReport } from "@/lib/product-sales-report";
 import { SALES_WINDOWS, shiftDate } from "@/lib/product-sales";
+import { PHYSICAL_PRODUCTS } from "@/lib/product-inventory";
 
 export const dynamic = "force-dynamic";
 const money = new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" });
@@ -23,7 +24,8 @@ async function SalesTables() {
       <p>Rapor bitişi: <b className="text-[var(--ink)]">{date(report.endDate)}</b> · Son tamamlanmış gün esas alınır.</p>
       <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" }).format(new Date(report.lastTransfer))}</p>
       {report.stale && <p className="mt-2 text-[var(--brass-strong)]">Havuzda dünün faturaları henüz yok. Dönemler son mevcut fatura tarihine göre hesaplandı.</p>}
-      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Yalnızca ADET birimli ürün satışları gösterilir.</p>
+      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Referans envanterdeki {PHYSICAL_PRODUCTS.length} fiziki ürünün ADET birimli satışları gösterilir.</p>
+      <Link href="/envanter" className="mt-2 inline-block text-[var(--ink)] underline">Ürün envanteri ve Logo eşleşmeleri</Link>
     </div>
     {report.companies.map(company => <section key={company.company} className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">
       <div className="flex items-center justify-between border-b border-[var(--line)] p-5">
