@@ -1,6 +1,6 @@
 import { unstable_cache } from "next/cache";
 import { fetchLogoDurum, fetchSatislar, type LogoSatisSatiri } from "./logo-api";
-import { aggregateProductSales, shiftDate } from "./product-sales";
+import { aggregateProductSales, combineCompanySales, shiftDate } from "./product-sales";
 
 /** Existing read-only mirror connection; no additional Logo endpoint is required. */
 async function readCompany(base: string, company: string, endDate: string) {
@@ -13,7 +13,7 @@ async function readCompany(base: string, company: string, endDate: string) {
     if (page.adet !== page.satirlar.length) throw new Error("Satış sayfası eksik geldi.");
     if (page.satirlar.length < limit) {
       rows.push(...page.satirlar);
-      return aggregateProductSales(rows, company, endDate);
+      return aggregateProductSales(rows, company, endDate, undefined, null);
     }
     // Existing service sorts by date + invoice, but not by unique line ID.
     // Never keep a partial invoice at a page boundary: refetch its whole group.
@@ -37,7 +37,7 @@ const readCompanies = unstable_cache(
     void transfer; // Transfer time participates in the cache key.
     return Promise.all(["Holimer", "Fw İlaç"].map(company => readCompany(base, company, endDate)));
   },
-  ["product-sales-44-days-inventory-2026-10-03-v4-evaluated"], { revalidate: 3600 },
+  ["product-sales-44-days-inventory-2026-10-03-v5-combined-all"], { revalidate: 3600 },
 );
 
 export async function fetchProductSalesReport() {
@@ -55,9 +55,11 @@ export async function fetchProductSalesReport() {
   if (status.en_eski_fatura.slice(0, 10) > startDate) throw new Error("Havuzda 44 günlük geçmiş henüz bulunmuyor.");
   const missing = ["Holimer", "Fw İlaç"].filter(company => !status.sirketler.some(item => item.sirket === company));
   if (missing.length) throw new Error(`Şirket verisi bulunamadı: ${missing.join(", ")}`);
+  const allCompanies = await readCompanies(base, endDate, status.son_aktarim);
   return {
     endDate, startDate, lastTransfer: status.son_aktarim,
     stale: latest < yesterday,
-    companies: await readCompanies(base, endDate, status.son_aktarim),
+    products: combineCompanySales(allCompanies),
+    companies: allCompanies.map(company => ({ ...company, products: company.products.filter(product => product.periods[44].revenue > 0).slice(0,50) })),
   };
 }

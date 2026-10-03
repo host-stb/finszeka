@@ -28,6 +28,7 @@ const INVOICE_TYPES = new Set([
 export function aggregateProductSales(
   rows: LogoSatisSatiri[], company: string, endDate: string,
   inventory: ReadonlyMap<string, { name: string }> = EVALUATED_PRODUCT_MAP,
+  limit: number | null = 50,
 ): CompanyProductSales {
   const products = new Map<string, ProductSales>();
   const starts = Object.fromEntries(SALES_WINDOWS.map(days => [days, shiftDate(endDate, 1 - days)])) as Record<SalesWindow, string>;
@@ -61,11 +62,34 @@ export function aggregateProductSales(
     }
   }
   const ranked = [...products.values()]
-    .filter(product => product.periods[44].revenue > 0)
+    .filter(product => limit === null || product.periods[44].revenue > 0)
     .sort((a, b) => b.periods[44].revenue - a.periods[44].revenue || a.code.localeCompare(b.code))
-    .slice(0, 50);
+    .slice(0, limit ?? products.size);
   for (const product of ranked) {
     for (const days of SALES_WINDOWS) product.periods[days].revenue /= 100;
   }
   return { company, products: ranked };
+}
+
+export function combineCompanySales(companies: CompanyProductSales[]) {
+  const combined = new Map<string, ProductSales & { companies: CompanyProductSales[] }>();
+  for (const company of companies) for (const product of company.products) {
+    let total = combined.get(product.code);
+    if (!total) {
+      total = { code: product.code, name: product.name, periods: Object.fromEntries(
+        SALES_WINDOWS.map(days => [days, { quantity: 0, revenue: 0 }])
+      ) as ProductSales["periods"], companies: [] };
+      combined.set(product.code, total);
+    }
+    total.companies.push({ company: company.company, products: [product] });
+    for (const days of SALES_WINDOWS) {
+      total.periods[days].quantity += product.periods[days].quantity;
+      total.periods[days].revenue = Math.round((total.periods[days].revenue + product.periods[days].revenue) * 100) / 100;
+    }
+  }
+  return [...combined.values()].filter(product => product.periods[44].revenue > 0)
+    .sort((a,b) => b.periods[44].revenue - a.periods[44].revenue || a.code.localeCompare(b.code)).slice(0,50);
+}
+export function companySalesLabel(company: string) {
+  return company === "Holimer" ? "holistikmarket.com (Holimer)" : "destekurunleri.com (FW)";
 }
