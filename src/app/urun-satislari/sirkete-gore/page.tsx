@@ -2,10 +2,11 @@ import Link from "next/link";
 import SalesTabs from "../sales-tabs";
 import { Suspense } from "react";
 import { fetchProductSalesReport } from "@/lib/product-sales-report";
-import { SALES_WINDOWS, shiftDate, companySalesLabel } from "@/lib/product-sales";
+import { SALES_PERIODS, shiftDate, companySalesLabel } from "@/lib/product-sales";
 import { groupProductsByBrand, EVALUATED_PRODUCTS } from "@/lib/product-inventory";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 300;
 const money = new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" });
 const number = new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 });
 const date = (value: string) => value.split("-").reverse().join(".");
@@ -22,6 +23,7 @@ async function SalesTables() {
   }
   return <>
     <div className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-4 text-sm text-[var(--muted)]">
+      <p>Yılbaşından bugüne sütunu: {date(report.yearStartDate)} – {date(report.yearEndDate)}; son aktarımda mevcut güncel tarihe kadar hesaplanır.</p>
       <p>Rapor bitişi: <b className="text-[var(--ink)]">{date(report.endDate)}</b> · Son tamamlanmış gün esas alınır.</p>
       <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" }).format(new Date(report.lastTransfer))}</p>
       {report.stale && <p className="mt-2 text-[var(--brass-strong)]">Havuzda dünün faturaları henüz yok. Dönemler son mevcut fatura tarihine göre hesaplandı.</p>}
@@ -36,25 +38,25 @@ async function SalesTables() {
       {groupProductsByBrand(company.products).map(group => <div key={group.key}>
       <div className="flex items-center justify-between border-b border-[var(--line)] px-5 py-4"><h3 className="text-lg font-medium">{group.label}</h3><span className="text-sm text-[var(--muted)]">{group.products.length} ürün</span></div>
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[1200px] text-sm">
-          <caption className="sr-only">{company.company} · {group.label} ürünlerinin 4, 14, 30 ve 44 günlük net satışları</caption>
+        <table className="w-full min-w-[1450px] text-sm">
+          <caption className="sr-only">{company.company} · {group.label} ürünlerinin 4, 14, 30, 44 günlük ve yılbaşından bugüne net satışları</caption>
           <thead className="bg-[var(--paper)] text-[var(--muted)]">
             <tr>
               <th rowSpan={2} scope="col" className="px-3 py-4 text-left">Sıra</th>
               <th rowSpan={2} scope="col" className="min-w-[280px] px-3 py-4 text-left">Ürün</th>
-              {SALES_WINDOWS.map(days => <th key={days} scope="colgroup" colSpan={2} className="border-l border-[var(--line)] px-3 py-3 text-center">
-                Son {days} gün<span className="mt-1 block text-xs font-normal">{date(shiftDate(report.endDate, 1-days))} – {date(report.endDate)}</span>
+              {SALES_PERIODS.map(days => <th key={days} scope="colgroup" colSpan={2} className="border-l border-[var(--line)] px-3 py-3 text-center">
+                {days === "year" ? "Yılbaşından bugüne" : `Son ${days} gün`}<span className="mt-1 block text-xs font-normal">{date(days === "year" ? report.yearStartDate : shiftDate(report.endDate,1-days))} – {date(days === "year" ? report.yearEndDate : report.endDate)}</span>
               </th>)}
             </tr>
-            <tr>{SALES_WINDOWS.map(days => <ReactColumns key={days} />)}</tr>
+            <tr>{SALES_PERIODS.map(days => <ReactColumns key={days} />)}</tr>
           </thead>
           <tbody>
             {group.products.map((product, index) => <tr key={product.code} className="border-t border-[var(--line)] hover:bg-[var(--paper)]">
               <td className="px-3 py-3 text-[var(--muted)]">{index+1}</td>
               <th scope="row" className="px-3 py-3 text-left font-medium">{product.name}<span className="block text-xs font-normal text-[var(--muted)]">{product.code}</span></th>
-              {SALES_WINDOWS.map(days => <SalesCells key={days} quantity={product.periods[days].quantity} revenue={product.periods[days].revenue} />)}
+              {SALES_PERIODS.map(days => <SalesCells key={days} quantity={product.periods[days].quantity} revenue={product.periods[days].revenue} />)}
             </tr>)}
-            {group.products.length === 0 && <tr><td colSpan={10} className="p-6">Şirketin ilk 50 ürünü arasında bu gruba ait ürün bulunmuyor.</td></tr>}
+            {group.products.length === 0 && <tr><td colSpan={12} className="p-6">Şirketin ilk 50 ürünü arasında bu gruba ait ürün bulunmuyor.</td></tr>}
           </tbody>
         </table>
       </div>

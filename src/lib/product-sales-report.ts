@@ -1,19 +1,20 @@
 import { unstable_cache } from "next/cache";
-import { fetchLogoDurum, fetchSatislar, type LogoSatisSatiri } from "./logo-api";
-import { aggregateProductSales, combineCompanySales, shiftDate } from "./product-sales";
+import { fetchLogoDurum, fetchSatislar } from "./logo-api";
+import { aggregateProductSales, combineCompanySales, mergeProductSales, shiftDate } from "./product-sales";
 
 /** Existing read-only mirror connection; no additional Logo endpoint is required. */
-async function readCompany(base: string, company: string, endDate: string) {
-  const rows: LogoSatisSatiri[] = [];
+async function readCompany(base: string, company: string, endDate: string, yearEndDate: string) {
+  const parts: ReturnType<typeof aggregateProductSales>[] = [];
+  const start = shiftDate(endDate,-43) < `${yearEndDate.slice(0,4)}-01-01` ? shiftDate(endDate,-43) : `${yearEndDate.slice(0,4)}-01-01`;
   const limit = 1000;
-  for (let offset = 0, pages = 0; pages < 200; pages++) {
+  for (let offset = 0, pages = 0; pages < 600; pages++) {
     const page = await fetchSatislar(base, {
-      sirket: company, baslangic: shiftDate(endDate, -43), bitis: endDate, limit, offset,
+      sirket: company, baslangic: start, bitis: yearEndDate, limit, offset,
     });
     if (page.adet !== page.satirlar.length) throw new Error("Satış sayfası eksik geldi.");
     if (page.satirlar.length < limit) {
-      rows.push(...page.satirlar);
-      return aggregateProductSales(rows, company, endDate, undefined, null);
+      parts.push(aggregateProductSales(page.satirlar, company, endDate, undefined, null, yearEndDate));
+      return mergeProductSales(parts, company);
     }
     // Existing service sorts by date + invoice, but not by unique line ID.
     // Never keep a partial invoice at a page boundary: refetch its whole group.
@@ -25,19 +26,19 @@ async function readCompany(base: string, company: string, endDate: string) {
       complete--;
     }
     if (complete === 0) throw new Error("Tek fatura sayfa sınırını aşıyor; eksik rapor gösterilmiyor.");
-    rows.push(...page.satirlar.slice(0, complete));
+    parts.push(aggregateProductSales(page.satirlar.slice(0,complete), company, endDate, undefined, null, yearEndDate));
     offset += complete;
   }
   throw new Error("Satış verisi sınırı aşıldı; eksik rapor gösterilmiyor.");
 }
 
-// Cache only completed reports; avoid pulling 44 days of invoice lines on every page load.
+// Cache only completed reports; avoid pulling the full year of invoice lines on every page load.
 const readCompanies = unstable_cache(
-  async (base: string, endDate: string, transfer: string) => {
+  async (base: string, endDate: string, yearEndDate: string, transfer: string) => {
     void transfer; // Transfer time participates in the cache key.
-    return Promise.all(["Holimer", "Fw İlaç"].map(company => readCompany(base, company, endDate)));
+    return Promise.all(["Holimer", "Fw İlaç"].map(company => readCompany(base, company, endDate, yearEndDate)));
   },
-  ["product-sales-44-days-inventory-2026-10-03-v5-combined-all"], { revalidate: 3600 },
+  ["product-sales-ytd-2026-10-04-v6"], { revalidate: 3600 },
 );
 
 export async function fetchProductSalesReport() {
@@ -51,13 +52,15 @@ export async function fetchProductSalesReport() {
   const yesterday = shiftDate(today, -1);
   const latest = status.en_yeni_fatura.slice(0, 10);
   const endDate = latest < yesterday ? latest : yesterday;
+  const yearEndDate = latest < today ? latest : today;
+  const yearStartDate = `${yearEndDate.slice(0,4)}-01-01`;
   const startDate = shiftDate(endDate, -43);
-  if (status.en_eski_fatura.slice(0, 10) > startDate) throw new Error("Havuzda 44 günlük geçmiş henüz bulunmuyor.");
+  if (status.en_eski_fatura.slice(0, 10) > (startDate < yearStartDate ? startDate : yearStartDate)) throw new Error("Havuzda yılbaşından itibaren ve 44 günlük dönemi kapsayan geçmiş bulunmuyor.");
   const missing = ["Holimer", "Fw İlaç"].filter(company => !status.sirketler.some(item => item.sirket === company));
   if (missing.length) throw new Error(`Şirket verisi bulunamadı: ${missing.join(", ")}`);
-  const allCompanies = await readCompanies(base, endDate, status.son_aktarim);
+  const allCompanies = await readCompanies(base, endDate, yearEndDate, status.son_aktarim);
   return {
-    endDate, startDate, lastTransfer: status.son_aktarim,
+    endDate, startDate, yearEndDate, yearStartDate, lastTransfer: status.son_aktarim,
     stale: latest < yesterday,
     products: combineCompanySales(allCompanies),
     companies: allCompanies.map(company => ({ ...company, products: company.products.filter(product => product.periods[44].revenue > 0).slice(0,50) })),
