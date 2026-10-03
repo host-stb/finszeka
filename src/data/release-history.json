@@ -1,0 +1,176 @@
+[
+  {
+    "revision": "7028e35e41a6eba6af54bc1e2a33c5461f5708c1",
+    "date": "2026-10-04T00:58:47+03:00",
+    "version": "1.0.0",
+    "summary": "Her güncellemede değişen uygulama sürümü tüm sayfalarda gösterildi."
+  },
+  {
+    "revision": "4d8167a0d154f8f640595c4cb47c76ee5db9fa62",
+    "date": "2026-10-04T00:55:06+03:00",
+    "version": null,
+    "summary": "Ürün raporları Web Ürün Satışları olarak adlandırıldı."
+  },
+  {
+    "revision": "175dc60a77a319a4c3dde64fd683af9167a533d2",
+    "date": "2026-10-04T00:49:07+03:00",
+    "version": null,
+    "summary": "Ürün sıralaması ve tüm dönemler yalnızca holistikmarket.com ve destekurunleri.com satışlarıyla sınırlandı."
+  },
+  {
+    "revision": "f3acceb7385c11fc8fe180f11562ebecc301038e",
+    "date": "2026-10-04T00:16:43+03:00",
+    "version": null,
+    "summary": "Ürün satışlarına yılbaşından bugüne adet ve net ciro sütunları eklendi."
+  },
+  {
+    "revision": "0969e2811fd7acdd2eb5f06a8d9cc130ba3528c6",
+    "date": "2026-10-03T23:34:28+03:00",
+    "version": null,
+    "summary": "Excel hesap listesine göre web, bayi ve cihaz ciroları ile bayi meslek detayları eklendi."
+  },
+  {
+    "revision": "1ddb2bb702c079f7a2742e895f9f81219ed52339",
+    "date": "2026-10-03T14:08:50+03:00",
+    "version": null,
+    "summary": "Birleşik ilk 50 ürün ve şirkete göre ayrı satış sekmesi eklendi."
+  },
+  {
+    "revision": "37d8049f0aaf27108514ecba1b1684ef3c033249",
+    "date": "2026-10-03T13:57:07+03:00",
+    "version": null,
+    "summary": "Diğer ürünlerde değerlendirme Tuzy tuz ve ZEOPAK ile sınırlandı."
+  },
+  {
+    "revision": "1fa8c27b7567a0b794fa528e7c889eccef0aeac4",
+    "date": "2026-10-03T10:43:25Z",
+    "version": null,
+    "summary": "İlk 50 sıralamasından önce değerlendirmeye uygun ürünler seçildi."
+  },
+  {
+    "revision": "6c05037e2b27e66d242b88817b0977be1af385a8",
+    "date": "2026-10-03T12:54:09+03:00",
+    "version": null,
+    "summary": "ADEK ve probiyotik paket Smart Caps altında sınıflandırıldı."
+  },
+  {
+    "revision": "2fd159873f6921d05e74b11e7d0896964d1ca359",
+    "date": "2026-10-03T12:30:46+03:00",
+    "version": null,
+    "summary": "Hava nemlendirici diğer ürünlere taşındı."
+  },
+  {
+    "revision": "104949b21c9408455663b83afdc30ea319eea05c",
+    "date": "2026-10-03T12:26:28+03:00",
+    "version": null,
+    "summary": "Raw Material ayrıldı; su matarası diğer ürünlere taşındı."
+  },
+  {
+    "revision": "2e21ec564d7941b8a7f346c4d241bba45f2d034f",
+    "date": "2026-10-03T12:20:12+03:00",
+    "version": null,
+    "summary": "Envanter ve satışlar markalara göre ayrıldı."
+  },
+  {
+    "revision": "346e69b9898a09291cc6ed0f36c6e164a7daa1fc",
+    "date": "2026-10-03T12:13:05+03:00",
+    "version": null,
+    "summary": "Fiziki ürün envanteri Logo ile eşleştirilerek ilk 50 hesabında kullanıldı."
+  },
+  {
+    "revision": "b5c630cdf30df557ee720741056bd5c85b7c7c46",
+    "date": "2026-10-03T11:38:35+03:00",
+    "version": null,
+    "summary": "Veri sayfaları arasında faturaların bütünlüğü korundu; ürün dışı gelirler ayrıldı."
+  },
+  {
+    "revision": "b2ef8a26457fd466d46992b9e8f9406b5e5b800d",
+    "date": "2026-10-03T11:29:34+03:00",
+    "version": null,
+    "summary": "Holimer ve FW için 4, 14, 30 ve 44 günlük ilk 50 ürün raporları eklendi."
+  },
+  {
+    "revision": "49023470e6a14cdcd8be3704e5207b105b360e67",
+    "date": "2026-09-24T13:11:41+03:00",
+    "version": null,
+    "summary": "Kaynak iade tutarı sağladığında iadeler ve net gelir satırları gösterildi."
+  },
+  {
+    "revision": "0b95ca0946503810abfcc9dba41b50e866c5c330",
+    "date": "2026-09-24T13:06:57+03:00",
+    "version": null,
+    "summary": "Ticimax, Destek Ürünleri ve PTT hesaplarının gelir kategorileri düzeltildi."
+  },
+  {
+    "revision": "b6084cbe4139b97334f15b1678b5da5fc8ea6798",
+    "date": "2026-09-24T12:30:11+03:00",
+    "version": null,
+    "summary": "Veri bağlantısında entegrasyon anahtarı başlığı düzenlendi."
+  },
+  {
+    "revision": "d8d437ee8f47a2d745e9e888f5ba7f7e129fd00c",
+    "date": "2026-09-03T22:00:40+03:00",
+    "version": null,
+    "summary": "Hesap planı yönetimi ve hesap düzenleme ekranları eklendi."
+  },
+  {
+    "revision": "d8be8ffd6e7aca2de0adecafb4c743d0763fa64c",
+    "date": "2026-08-15T10:52:32+03:00",
+    "version": null,
+    "summary": "Web mağaza dönem raporlarına kanal bazında kutu adedi ve kutu başına ciro eklendi."
+  },
+  {
+    "revision": "074948a756d1fc5657de32d24c0d699cac62ac2f",
+    "date": "2026-08-15T10:32:31+03:00",
+    "version": null,
+    "summary": "Web mağaza günlük detayına kutu adedi eklendi."
+  },
+  {
+    "revision": "921e1eb0d6c68177f563e97d0124a08db5d95afd",
+    "date": "2026-08-14T19:37:22+03:00",
+    "version": null,
+    "summary": "Kutu trendine e-ticaret payı kırılımı eklendi."
+  },
+  {
+    "revision": "80cd0fe9231b0b80d545e19731add258098a41eb",
+    "date": "2026-08-09T19:25:40+03:00",
+    "version": null,
+    "summary": "Web mağaza günlük detayları, trendler ve pazaryeri karşılaştırmaları geliştirildi."
+  },
+  {
+    "revision": "0172fbca23c8df16c8f10fc1c21b42e7213d6b8d",
+    "date": "2026-08-04T20:11:29+03:00",
+    "version": null,
+    "summary": "Holistikmarket web mağaza cirosu dönem ve kanal bazında gösterildi."
+  },
+  {
+    "revision": "90a4d8661b0515fc8c31e24c39055450f664bfe5",
+    "date": "2026-08-03T15:38:24+03:00",
+    "version": null,
+    "summary": "Tahsilatlara gerçek aylık toplamlar ve fiş detayları eklendi."
+  },
+  {
+    "revision": "5392b67e09fea617f2d533e9612d81e306164a31",
+    "date": "2026-08-03T00:13:37+03:00",
+    "version": null,
+    "summary": "Örnek finans özeti; trend, vade, banka ve Excel dışa aktarma alanlarıyla genişletildi."
+  },
+  {
+    "revision": "3e5b0b4a39c91e12d69670dae82ef5877870cc33",
+    "date": "2026-08-02T23:42:39+03:00",
+    "version": null,
+    "summary": "Canlı site adresi proje belgesine eklendi."
+  },
+  {
+    "revision": "14999753ec859dc23c048c86fb80c85623de4a22",
+    "date": "2026-08-02T23:02:03+03:00",
+    "version": null,
+    "summary": "Google ile giriş ve gelir panosu güncellemeleri eklendi."
+  },
+  {
+    "revision": "24ecc587adfe9e823135edf59c763b6a042cd157",
+    "date": "2026-08-02T22:48:50+03:00",
+    "version": null,
+    "summary": "İlk gelir raporu uygulaması oluşturuldu."
+  }
+]

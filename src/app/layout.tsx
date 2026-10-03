@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { APP_VERSION } from "@/lib/app-version";
 import { auth, signOut } from "@/auth";
@@ -23,7 +24,7 @@ export default async function RootLayout({
     <html lang="tr" className="h-full antialiased">
       <body className="min-h-full flex flex-col font-sans">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--line)] bg-[var(--paper-card)] px-4 py-1.5 text-xs text-[var(--muted)]">
-          <span title="Yayımlanan uygulama sürümü" className="whitespace-nowrap">Finszeka · v{APP_VERSION}</span>
+          <Link href="/surum-defteri" title="Sürüm defterini aç" className="whitespace-nowrap hover:underline">Finszeka · v{APP_VERSION} · Sürüm defteri</Link>
           {session?.user && (
           <div className="flex items-center gap-3">
             <span>{session.user.email}</span>
