@@ -190,5 +190,11 @@
     "date": "2026-10-04T01:21:14+03:00",
     "version": "1.0.0",
     "summary": "Web Ürün Satışlarına her dönem için site payları ile marka ve ürünlerin toplam ciroya katkı yüzdeleri eklendi."
+  },
+  {
+    "revision": "c613d04a6c2daff71e9d1e5aed5fe96a512512e0",
+    "date": "2026-10-04T01:33:13+03:00",
+    "version": "1.0.0",
+    "summary": "Web Ürün Satışları tabloları ekran genişliğine uyarlanarak yazılar ve boşluklar küçültüldü; adet, ciro ve paylar dönem başına tek sütunda toplandı."
   }
 ]
