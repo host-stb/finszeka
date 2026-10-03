@@ -24,7 +24,7 @@ async function CombinedTable() {
       <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR",{timeZone:"Europe/Istanbul",dateStyle:"short",timeStyle:"short"}).format(new Date(report.lastTransfer))}</p>
       {report.stale && <p className="mt-2">Dünün faturaları havuzda henüz yok; son mevcut fatura tarihi esas alındı.</p>}
       <p className="mt-2">Yalnızca holistikmarket.com (Holimer) ve destekurunleri.com (FW) web sitesi satışları ürün koduyla birleştirilir; son 44 günlük toplam net ciroya göre ilk 50 seçilir. Ciro KDV hariçtir; iptaller hariç, iadeler düşülmüştür. More Than, Smart Caps, Raw Material ve yalnızca Tuzy Tuz / ZEOPAK değerlendirilir.</p>
-      <p className="mt-2">Pazaryeri, bayi ve bayi/site bilgisi çelişen kartların satışları bu rapora ve ilk 50 seçimine dahil edilmez. Web satışı, sitenin torba cari kodu veya Excel’de açıkça site adresi belirtilen müşteri kartıyla eşleştirilir.</p>
+      <p className="mt-2">Pazaryeri, bayi, cihaz ve bayi/site bilgisi çelişen kartların satışları bu rapora ve ilk 50 seçimine dahil edilmez. Web satışı, sitenin torba cari kodu veya Excel’de açıkça site adresi belirtilen müşteri kartıyla eşleştirilir.</p>
       <Link href="/ciro-kanallari" className="mt-2 mr-4 inline-block underline">Tüm gelirler ve ciro kanalları</Link>
       <Link href="/envanter" className="mt-2 inline-block underline">Ürün envanteri</Link>
     </div>
@@ -53,5 +53,5 @@ function Rows({product,rank}:{product:Awaited<ReturnType<typeof fetchProductSale
   </>;
 }
 export default function ProductSalesPage() {
- return <main className="mx-auto flex max-w-[1760px] flex-col gap-6 px-4 py-8 sm:px-6"><header><Link href="/" className="text-sm text-[var(--muted)] hover:underline">← Ana sayfaya dön</Link><h1 className="mt-3 text-3xl font-medium">Ürün Satışları</h1><p className="mt-2 text-sm text-[var(--muted)]">İki web sitesinin toplam net cirosuna göre ilk 50 ürün.</p></header><SalesTabs /><Suspense fallback={<p role="status">Ürün satışları hazırlanıyor…</p>}><CombinedTable /></Suspense></main>;
+ return <main className="mx-auto flex max-w-[1760px] flex-col gap-6 px-4 py-8 sm:px-6"><header><Link href="/" className="text-sm text-[var(--muted)] hover:underline">← Ana sayfaya dön</Link><h1 className="mt-3 text-3xl font-medium">Web Ürün Satışları</h1><p className="mt-2 text-sm text-[var(--muted)]">İki web sitesinin toplam net cirosuna göre ilk 50 ürün.</p></header><SalesTabs /><Suspense fallback={<p role="status">Ürün satışları hazırlanıyor…</p>}><CombinedTable /></Suspense></main>;
 }

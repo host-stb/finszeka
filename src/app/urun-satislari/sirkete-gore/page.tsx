@@ -27,7 +27,7 @@ async function SalesTables() {
       <p>Rapor bitişi: <b className="text-[var(--ink)]">{date(report.endDate)}</b> · Son tamamlanmış gün esas alınır.</p>
       <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" }).format(new Date(report.lastTransfer))}</p>
       {report.stale && <p className="mt-2 text-[var(--brass-strong)]">Havuzda dünün faturaları henüz yok. Dönemler son mevcut fatura tarihine göre hesaplandı.</p>}
-      <p className="mt-2">Her şirketin yalnızca kendi web sitesindeki satışlarından son 44 günlük net ciroya göre ilk 50 ürün. Pazaryeri, bayi ve bayi/site bilgisi çelişen kartların satışları hesaplara ve sıralamaya dahil edilmez. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Değerlendirmeye alınan {EVALUATED_PRODUCTS.length} fiziki ürünün ADET birimli satışları gösterilir. İlk 50 seçildikten sonra More Than, Smart Caps, Raw Material ve Diğer Ürünler tablolarına ayrılır. Diğer Ürünler grubundan yalnızca Tuzy Tuz 250 g, Tuzy Tuz 500 g ve ZEOPAK değerlendirilir; diğer kalemler hesaplara ve ilk 50 seçimine dahil edilmez.</p>
+      <p className="mt-2">Her şirketin yalnızca kendi web sitesindeki satışlarından son 44 günlük net ciroya göre ilk 50 ürün. Pazaryeri, bayi, cihaz ve bayi/site bilgisi çelişen kartların satışları hesaplara ve sıralamaya dahil edilmez. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Değerlendirmeye alınan {EVALUATED_PRODUCTS.length} fiziki ürünün ADET birimli satışları gösterilir. İlk 50 seçildikten sonra More Than, Smart Caps, Raw Material ve Diğer Ürünler tablolarına ayrılır. Diğer Ürünler grubundan yalnızca Tuzy Tuz 250 g, Tuzy Tuz 500 g ve ZEOPAK değerlendirilir; diğer kalemler hesaplara ve ilk 50 seçimine dahil edilmez.</p>
       <Link href="/ciro-kanallari" className="mt-2 mr-4 inline-block underline">Tüm gelirler ve ciro kanalları</Link>
       <Link href="/envanter" className="mt-2 inline-block text-[var(--ink)] underline">Ürün envanteri ve Logo eşleşmeleri</Link>
     </div>
@@ -76,7 +76,7 @@ export default function ProductSalesPage() {
     <header>
       <Link href="/" className="text-sm text-[var(--muted)] hover:underline">← Ana sayfaya dön</Link>
       <p className="mt-3 text-xs uppercase tracking-[0.2em] text-[var(--brass)]">Holimer · Fw İlaç</p>
-      <h1 className="mt-1 text-3xl font-medium">Ürün Satışları</h1>
+      <h1 className="mt-1 text-3xl font-medium">Web Ürün Satışları</h1>
       <p className="mt-2 text-sm text-[var(--muted)]">holistikmarket.com ve destekurunleri.com web sitesi satışlarını şirket ve marka bazında karşılaştırın.</p>
     </header>
     <SalesTabs companyView />

@@ -8,7 +8,7 @@ export default function InventoryPage() {
       <Link href="/" className="text-sm text-[var(--muted)] hover:underline">← Ana sayfaya dön</Link>
       <h1 className="mt-3 text-3xl font-medium">Ürün Envanteri</h1>
       <p className="mt-2 text-sm text-[var(--muted)]">{PHYSICAL_PRODUCTS.length} fiziki ürünün referans listesi; {EVALUATED_PRODUCTS.length} ürün satış hesaplarına dahil edilir.</p>
-      <Link href="/urun-satislari" className="mt-3 inline-block underline">Ürün Satışları raporunu aç</Link>
+      <Link href="/urun-satislari" className="mt-3 inline-block underline">Web Ürün Satışları raporunu aç</Link>
     </header>
     <div className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-5 text-sm text-[var(--muted)]">
       <p>Kaynak: {PRODUCT_INVENTORY.sourceFile} · Eklenme: 03.10.2026 · Logo havuzunda kontrol edilen son fatura: 02.10.2026.</p>
