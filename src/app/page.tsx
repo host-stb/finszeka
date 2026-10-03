@@ -146,6 +146,12 @@ export default function Home() {
             </button>
           ))}
           <Link
+            href="/urun-satislari"
+            className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--paper-card)] hover:text-[var(--ink-soft)]"
+          >
+            Ürün Satışları
+          </Link>
+          <Link
             href="/kutu-trend"
             className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--paper-card)] hover:text-[var(--ink-soft)]"
           >

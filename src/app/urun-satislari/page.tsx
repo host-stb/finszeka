@@ -1,0 +1,75 @@
+import Link from "next/link";
+import { Suspense } from "react";
+import { fetchProductSalesReport } from "@/lib/product-sales-report";
+import { SALES_WINDOWS, shiftDate } from "@/lib/product-sales";
+
+export const dynamic = "force-dynamic";
+const money = new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" });
+const number = new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 });
+const date = (value: string) => value.split("-").reverse().join(".");
+
+async function SalesTables() {
+  let report;
+  try {
+    report = await fetchProductSalesReport();
+  } catch {
+    return <div role="alert" className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-6">
+      <p>Ürün satışları alınamadı. Havuz bağlantısını ve 44 günlük veri kapsamını kontrol edip yeniden deneyin.</p>
+      <Link href="/urun-satislari" className="mt-3 inline-block underline">Yeniden dene</Link>
+    </div>;
+  }
+  return <>
+    <div className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-4 text-sm text-[var(--muted)]">
+      <p>Rapor bitişi: <b className="text-[var(--ink)]">{date(report.endDate)}</b> · Son tamamlanmış gün esas alınır.</p>
+      <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" }).format(new Date(report.lastTransfer))}</p>
+      {report.stale && <p className="mt-2 text-[var(--brass-strong)]">Havuzda dünün faturaları henüz yok. Dönemler son mevcut fatura tarihine göre hesaplandı.</p>}
+      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Yalnızca ADET birimli ürün satışları gösterilir.</p>
+    </div>
+    {report.companies.map(company => <section key={company.company} className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">
+      <div className="flex items-center justify-between border-b border-[var(--line)] p-5">
+        <h2 className="text-xl font-medium">{company.company}</h2>
+        <span className="text-sm text-[var(--muted)]">{company.products.length} ürün · 44 günlük ciro sırası</span>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[1200px] text-sm">
+          <caption className="sr-only">{company.company} ürünlerinin 4, 14, 30 ve 44 günlük net satışları</caption>
+          <thead className="bg-[var(--paper)] text-[var(--muted)]">
+            <tr>
+              <th rowSpan={2} scope="col" className="px-3 py-4 text-left">Sıra</th>
+              <th rowSpan={2} scope="col" className="min-w-[280px] px-3 py-4 text-left">Ürün</th>
+              {SALES_WINDOWS.map(days => <th key={days} scope="colgroup" colSpan={2} className="border-l border-[var(--line)] px-3 py-3 text-center">
+                Son {days} gün<span className="mt-1 block text-xs font-normal">{date(shiftDate(report.endDate, 1-days))} – {date(report.endDate)}</span>
+              </th>)}
+            </tr>
+            <tr>{SALES_WINDOWS.map(days => <ReactColumns key={days} />)}</tr>
+          </thead>
+          <tbody>
+            {company.products.map((product, index) => <tr key={product.code} className="border-t border-[var(--line)] hover:bg-[var(--paper)]">
+              <td className="px-3 py-3 text-[var(--muted)]">{index+1}</td>
+              <th scope="row" className="px-3 py-3 text-left font-medium">{product.name}<span className="block text-xs font-normal text-[var(--muted)]">{product.code}</span></th>
+              {SALES_WINDOWS.map(days => <SalesCells key={days} quantity={product.periods[days].quantity} revenue={product.periods[days].revenue} />)}
+            </tr>)}
+            {company.products.length === 0 && <tr><td colSpan={10} className="p-6">Bu dönemde uygun ürün satışı bulunamadı.</td></tr>}
+          </tbody>
+        </table>
+      </div>
+    </section>)}
+  </>;
+}
+function ReactColumns() {
+  return <><th scope="col" className="border-l border-[var(--line)] px-3 pb-3 text-right">Adet</th><th scope="col" className="px-3 pb-3 text-right">Net ciro</th></>;
+}
+function SalesCells({ quantity, revenue }: { quantity: number; revenue: number }) {
+  return <><td className="border-l border-[var(--line)] px-3 py-3 text-right tabular-nums">{number.format(quantity)}</td><td className="whitespace-nowrap px-3 py-3 text-right tabular-nums">{money.format(revenue)}</td></>;
+}
+export default function ProductSalesPage() {
+  return <div className="mx-auto flex max-w-[1760px] flex-col gap-6 px-4 py-8 sm:px-6">
+    <header>
+      <Link href="/" className="text-sm text-[var(--muted)] hover:underline">← Ana sayfaya dön</Link>
+      <p className="mt-3 text-xs uppercase tracking-[0.2em] text-[var(--brass)]">Holimer · Fw İlaç</p>
+      <h1 className="mt-1 text-3xl font-medium">Ürün Satışları</h1>
+      <p className="mt-2 text-sm text-[var(--muted)]">Her şirketin en çok ciro getiren 50 ürününü dört dönemde karşılaştırın.</p>
+    </header>
+    <Suspense fallback={<p role="status">Ürün satışları hazırlanıyor…</p>}><SalesTables /></Suspense>
+  </div>;
+}
