@@ -20,7 +20,7 @@ export default function CompanyTabs({
       {(onBasisSelect ? ["gross-after", "gross-before", "net-after"] as RevenueBasis[] : ["gross-after"] as RevenueBasis[]).flatMap(value => companies.map((c) => {
         const active = c.id === activeId && (!onBasisSelect || basis === value);
         const companyName = c.id === "Fw İlaç" ? "FW" : c.name;
-        const label = value === "gross-before" ? `${companyName} (KDV Dahil-İade Öncesi)` : value === "net-after" ? `${companyName} (KDV Hariç-İadeler Sonrası)` : companyName;
+        const label = value === "gross-before" ? `${companyName} (KDV Dahil-İade Öncesi)` : value === "net-after" ? `${companyName} (KDV Hariç-İadeler Sonrası)` : onBasisSelect ? `${companyName} (KDV Dahil-İadeler Sonrası)` : companyName;
         return (
           <button
             key={`${c.id}-${value}`}

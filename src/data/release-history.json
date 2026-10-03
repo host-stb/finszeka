@@ -220,5 +220,11 @@
     "date": "2026-10-04T02:24:10+03:00",
     "version": "1.0.0",
     "summary": "FW raporundaki ek aylık istekler kaldırıldı; şirket değişiminde eski rakamlar gizlendi ve geciken yanıtların seçili şirketi değiştirmesi önlendi."
+  },
+  {
+    "revision": "eaf83e812489b5167baa5dddf86e67883868dd4a",
+    "date": "2026-10-04T02:29:48+03:00",
+    "version": "1.0.0",
+    "summary": "FW rapor isteği sabit şirket koduna geçirildi; Logo şirket adı sunucuda eşleştirilerek Türkçe karakterli adres bağımlılığı kaldırıldı."
   }
 ]
