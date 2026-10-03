@@ -35,3 +35,6 @@ const fw=revenueReportTotals(entries,'Fw İlaç','2026-10-03');
 assert.equal(Object.values(fw.gross).reduce((a,b)=>a+b,0),0); // Full return.
 assert.equal(displayTotalRow({rows:report.rows}),report.rows[0]); // Existing mock reports retain their basis.
 console.log('İade KDV’si, iade-only ay, iptaller, şirket ayrımı ve çeyrek/yıl toplamları doğrulandı.');
+
+assert.equal(sumRowValues(displayTotalRow({...report,displayBasis:'gross-before'})),1200);
+assert.equal(sumRowValues(displayTotalRow({...report,displayBasis:'net-after',rows:[{kind:'total',values:totals.net}]})),700);

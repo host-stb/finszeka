@@ -20,7 +20,11 @@ export function RevenueCards({entries,allEntries,period="year",category,segment}
   const companyTotal=sumRevenue(allEntries.filter(entry=>entry.company===company),period).revenue;
   const selected=entries.filter(entry=>entry.company===company);
   return <section key={company} className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-4">
-   <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><h2 className="text-lg font-medium">{company==="Fw İlaç"?"FW":company}</h2><div className="text-right text-sm"><p>Net şirket cirosu: <strong>{currency(companyTotal)}</strong></p><p className="text-[var(--muted)]">İki şirket toplamındaki payı: {formatRevenueShare(companyTotal,grandTotal)}</p></div></div>
+   <h2 className="mb-3 text-lg font-medium">{company==="Fw İlaç"?"FW":company}</h2>
+   <div className="mb-4 grid gap-3 sm:grid-cols-2">
+    <div className="rounded-xl border border-[var(--line)] bg-[var(--paper)] p-3"><h3 className="text-sm font-medium">Net şirket cirosu · KDV hariç</h3><p className="mt-1 text-lg font-medium">{currency(companyTotal)}</p><p className="mt-1 text-xs text-[var(--muted)]">İadeler düşülmüş · İki şirket toplamındaki payı: {formatRevenueShare(companyTotal,grandTotal)}</p></div>
+    <div className="rounded-xl border border-[var(--line)] bg-[var(--paper)] p-3"><h3 className="text-sm font-medium">Net tahsilat · KDV dahil</h3><p className="mt-1 font-medium">Veri bekleniyor</p><p className="mt-1 text-xs text-[var(--muted)]">Mevcut havuzda şirket bazında tahsilat ve müşteri geri ödeme kayıtları bulunmuyor. Net tahsilat, gerçekten alınan ödemelerden müşteriye yapılan geri ödemeler düşülerek hesaplanır; fatura cirosundan türetilmez. Seçili dönem için tutar hesaplanamadı.</p></div>
+   </div>
    <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">{REVENUE_CATEGORIES.filter(value=>!category||value===category).map(value=>{
     const scoped=selected.filter(entry=>entry.category===value);
     const amount=sumRevenue(scoped,period).revenue;

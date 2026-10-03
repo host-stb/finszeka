@@ -1,7 +1,7 @@
 "use client";
 
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { displayTotalRow } from "@/lib/report-utils";
+import { displayTotalRow, revenueBasisLabel } from "@/lib/report-utils";
 import { CompanyReport, Month, MONTHS } from "@/lib/types";
 import { formatCompactCurrency } from "@/lib/format";
 import { MONTH_SHORT } from "@/lib/report-utils";
@@ -44,7 +44,7 @@ export default function RevenueChart({ report }: { report: CompanyReport }) {
   return (
     <div className="animate-rise-in rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-4 shadow-[0_1px_2px_rgba(28,25,23,0.04)] sm:p-5">
       <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
-        {report.totalBasis ? "Aylık Satış Trendi · KDV dahil, iadeler düşülmüş" : "Aylık Toplam Gelir Trendi"}
+        {report.totalBasis ? `Aylık ${report.displayBasis === "net-after" ? "Net Ciro" : "Satış"} Trendi · ${revenueBasisLabel(report)}` : "Aylık Toplam Gelir Trendi"}
       </p>
       {hasData ? (
         <div className="h-56 w-full sm:h-64">

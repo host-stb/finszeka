@@ -1,6 +1,6 @@
 "use client";
 
-import { displayTotalRow } from "@/lib/report-utils";
+import { displayTotalRow, revenueBasisLabel } from "@/lib/report-utils";
 import { CompanyReport } from "@/lib/types";
 import { formatCompactCurrency } from "@/lib/format";
 import { QUARTERS, quarterHasData, sumRowValues } from "@/lib/report-utils";
@@ -17,7 +17,7 @@ export default function QuarterCompareCards({ report }: { report: CompanyReport 
   return (
     <div>
       <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
-        Çeyrekler Arası Karşılaştırma{report.totalBasis && " · KDV dahil, iadeler düşülmüş"}
+        Çeyrekler Arası Karşılaştırma{report.totalBasis && ` · ${revenueBasisLabel(report)}`}
       </p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {quarters.map((q, i) => {

@@ -11,8 +11,8 @@ import SummaryCards from "@/components/SummaryCards";
 import WebstoreOverview from "@/components/WebstoreOverview";
 import { AlertIcon, RefreshIcon } from "@/components/icons";
 import { formatTimestamp } from "@/lib/format";
-import { QUARTERS } from "@/lib/report-utils";
-import { ApiEnvelope, CompanyReport, CompanySummary } from "@/lib/types";
+import { QUARTERS, revenueBasisLabel } from "@/lib/report-utils";
+import { ApiEnvelope, CompanyReport, CompanySummary, RevenueBasis } from "@/lib/types";
 
 type View = "gelir" | "finans" | "webmagaza";
 
@@ -26,6 +26,7 @@ export default function Home() {
   const [view, setView] = useState<View>(baslangicGorunumu);
   const [companies, setCompanies] = useState<CompanySummary[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [revenueBasis, setRevenueBasis] = useState<RevenueBasis>("gross-after");
   const [report, setReport] = useState<CompanyReport | null>(null);
   const [source, setSource] = useState<"live" | "mock" | null>(null);
   const [fetchedAt, setFetchedAt] = useState<string | null>(null);
@@ -71,6 +72,13 @@ export default function Home() {
       loadReport(activeId);
     }
   }, [activeId, loadReport]);
+
+  const displayedReport = report ? {
+    ...report,
+    displayBasis: revenueBasis,
+    rows: revenueBasis === "net-after" && report.netRevenueRows ? report.netRevenueRows : report.rows,
+    netRows: revenueBasis === "gross-after" ? report.netRows : [],
+  } : null;
 
   return (
     <div className="min-h-screen">
@@ -175,7 +183,7 @@ export default function Home() {
         {/* Firma sekmeleri — Web Mağaza sekmesi belirli bir markaya (holistikmarket.com) bağlı olduğu için firma seçiciden bağımsız */}
         {view !== "webmagaza" && (
           <div className="border-b border-[var(--line)]">
-            <CompanyTabs companies={companies} activeId={activeId} onSelect={setActiveId} />
+            <CompanyTabs companies={companies} activeId={activeId} onSelect={setActiveId} basis={revenueBasis} onBasisSelect={view === "gelir" && report?.totalBasis ? setRevenueBasis : undefined} />
           </div>
         )}
 
@@ -190,12 +198,12 @@ export default function Home() {
           <WebstoreOverview />
         ) : view === "finans" ? (
           <FinanceOverview companyName={report?.companyName ?? "Firma"} />
-        ) : report ? (
+        ) : displayedReport ? (
           <>
-            {report.totalBasis && <p className="rounded-xl border border-[var(--line)] bg-[var(--paper-card)] p-3 text-sm text-[var(--muted)]">Kartlar, grafik ve çeyrek toplamları KDV dahil, iadeler düşülmüş satış tutarıdır. Tabloda satış ve iadeler ayrı gösterilir; net ciro KDV hariçtir. Veri bitişi: {report.endDate?.split("-").reverse().join(".")}.</p>}
-            <SummaryCards report={report} />
-            <QuarterCompareCards report={report} />
-            <RevenueChart report={report} />
+            {displayedReport.totalBasis && <p className="rounded-xl border border-[var(--line)] bg-[var(--paper-card)] p-3 text-sm text-[var(--muted)]">Kartlar, grafik, tablo ve çeyrek toplamlarının görünümü: {revenueBasisLabel(displayedReport)}. Veri bitişi: {displayedReport.endDate?.split("-").reverse().join(".")}.</p>}
+            <SummaryCards report={displayedReport} />
+            <QuarterCompareCards report={displayedReport} />
+            <RevenueChart report={displayedReport} />
 
             <div className="flex flex-col gap-5">
               {QUARTERS.map((q) => (
@@ -210,14 +218,14 @@ export default function Home() {
                   </div>
                   <div className="mb-3">
                     <SummaryCards
-                      report={report}
+                      report={displayedReport}
                       months={q.months}
-                      periodLabel={`${q.label} · ${report.period}`}
+                      periodLabel={`${q.label} · ${displayedReport.period}`}
                       compact
                     />
                   </div>
                   <ReportTable
-                    report={report}
+                    report={displayedReport}
                     months={q.months}
                     totalLabel={`Toplam ${q.label}`}
                   />

@@ -40,6 +40,8 @@ export interface ReportRow {
   values: Partial<Record<Month, number | null>>;
 }
 
+export type RevenueBasis = "gross-after" | "gross-before" | "net-after";
+
 export interface CompanyReport {
   /** Firma kimliği (ör. "holimer"). Logo'daki cari/firma koduyla eşleşebilir. */
   companyId: string;
@@ -52,6 +54,8 @@ export interface CompanyReport {
   rows: ReportRow[];
   /** Gross returns, after-return gross total and VAT-exclusive net revenue. */
   netRows?: ReportRow[];
+  displayBasis?: RevenueBasis;
+  netRevenueRows?: ReportRow[];
   totalBasis?: "vat-included-after-returns";
   endDate?: string;
   /** Verinin backend tarafında en son ne zaman üretildiği (ISO 8601). */

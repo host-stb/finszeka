@@ -202,5 +202,11 @@
     "date": "2026-10-04T01:44:59+03:00",
     "version": "1.0.0",
     "summary": "Ciro Kanallarına Holimer ve FW toplamları, tüm kanal ve alt kalemlerin ciro/yüzde kartları ve hesap detaylarında toplam ciro payları eklendi."
+  },
+  {
+    "revision": "81e095a69c53dbad8b8a984bfbbd265f3b255f81",
+    "date": "2026-10-04T01:59:54+03:00",
+    "version": "1.0.0",
+    "summary": "Ana satış toplamları, aylık trend ve çeyrekler KDV dahil ve iadeler düşülmüş olarak düzenlendi; KDV hariç net ciro ayrıca gösterildi."
   }
 ]

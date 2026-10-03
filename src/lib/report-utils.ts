@@ -44,7 +44,14 @@ export function quarterHasData(row: ReportRow | undefined, months: readonly Mont
 
 /** Cards, monthly trend and quarters must use one consistent after-return total. */
 export function displayTotalRow(report: CompanyReport): ReportRow | undefined {
+ if (report.displayBasis === "gross-before" || report.displayBasis === "net-after") return report.rows.find(row => row.kind === "total");
  return report.totalBasis === "vat-included-after-returns"
   ? report.netRows?.find(row => row.id === "net")
   : report.rows.find(row => row.kind === "total");
+}
+
+export function revenueBasisLabel(report: CompanyReport): string {
+ if (report.displayBasis === "gross-before") return "KDV dahil · İade öncesi";
+ if (report.displayBasis === "net-after") return "KDV hariç · İadeler sonrası";
+ return "KDV dahil · İadeler sonrası";
 }

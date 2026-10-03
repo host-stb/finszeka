@@ -115,8 +115,36 @@ export async function fetchCompanyReportFromLogo(
     { id: "net-ciro", label: "NET CİRO · KDV HARİÇ · İADELER DÜŞÜLMÜŞ", kind: "total", values: totals.net },
   ];
 
+  const netGroups = new Map<string, Map<string, Partial<Record<Month, number>>>>();
+  for (const entry of channelReport.entries.filter(entry => entry.company === sirket)) {
+    const category = classifyCari(entry.name);
+    if (!netGroups.has(category)) netGroups.set(category,new Map());
+    const items = netGroups.get(category)!;
+    const label = `${entry.name} · ${entry.code}`;
+    const values = items.get(label) ?? {};
+    for (let i=0; i<Number(channelReport.endDate.slice(5,7)); i++) {
+      const period = `${year}-${String(i+1).padStart(2,"0")}`;
+      if (entry.periods[period]) values[MONTHS[i]] = Math.round(((values[MONTHS[i]] ?? 0) + entry.periods[period].revenue) * 100) / 100;
+    }
+    items.set(label,values);
+  }
+  const netRevenueRows: ReportRow[] = [];
+  for (const category of CATEGORY_ORDER) {
+    const items = netGroups.get(category);
+    if (!items) continue;
+    const values: Partial<Record<Month,number>> = {};
+    const children: ReportRow[] = [];
+    for (const [label, amounts] of items) {
+      children.push({id:`net-${category}-${children.length}`,label,kind:"item",values:amounts});
+      for (const month of MONTHS) if (amounts[month]!=null) values[month]=Math.round(((values[month]??0)+amounts[month]!) * 100)/100;
+    }
+    netRevenueRows.push({id:`net-cat-${category}`,label:category.toLocaleUpperCase("tr"),kind:"category",values},...children);
+  }
+  netRevenueRows.push({id:"net-ciro",label:"NET CİRO · KDV HARİÇ · İADELER SONRASI",kind:"total",values:totals.net});
+
   return {
     netRows,
+    netRevenueRows,
     totalBasis: "vat-included-after-returns",
     endDate: channelReport.endDate,
     companyId: sirket,
