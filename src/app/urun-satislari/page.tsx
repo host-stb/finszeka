@@ -24,7 +24,7 @@ async function SalesTables() {
       <p>Rapor bitişi: <b className="text-[var(--ink)]">{date(report.endDate)}</b> · Son tamamlanmış gün esas alınır.</p>
       <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" }).format(new Date(report.lastTransfer))}</p>
       {report.stale && <p className="mt-2 text-[var(--brass-strong)]">Havuzda dünün faturaları henüz yok. Dönemler son mevcut fatura tarihine göre hesaplandı.</p>}
-      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Referans envanterdeki {PHYSICAL_PRODUCTS.length} fiziki ürünün ADET birimli satışları gösterilir. İlk 50 seçildikten sonra More Than, Smart Caps, Raw Material ve Diğer Ürünler tablolarına ayrılır. Karma marka paketleri ve su matarası Diğer Ürünler içinde yer alır.</p>
+      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Referans envanterdeki {PHYSICAL_PRODUCTS.length} fiziki ürünün ADET birimli satışları gösterilir. İlk 50 seçildikten sonra More Than, Smart Caps, Raw Material ve Diğer Ürünler tablolarına ayrılır. Karma marka paketleri, su matarası ve hava nemlendirici Diğer Ürünler içinde yer alır.</p>
       <Link href="/envanter" className="mt-2 inline-block text-[var(--ink)] underline">Ürün envanteri ve Logo eşleşmeleri</Link>
     </div>
     {report.companies.map(company => <section key={company.company} className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">

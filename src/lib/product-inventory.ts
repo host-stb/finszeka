@@ -16,7 +16,7 @@ export function productBrand(code: string): ProductBrand {
   const product = PHYSICAL_PRODUCT_MAP.get(code);
   if (!product) return "other";
   // ADEK + Smart Caps probiotic is a mixed-brand bundle.
-  if (code === "152MM.05.01.001" || code === "152MM.04.01.004") return "other";
+  if (code === "152MM.05.01.001" || code === "152MM.04.01.004" || code === "152MM.04.01.003") return "other";
   const names = product.logoNames.join(" ");
   if (/RAW\s+MATER[Iİ]AL/i.test(names)) return "raw-material";
   const moreThan = /MORE\s+THAN/i.test(names);
