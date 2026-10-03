@@ -14,7 +14,7 @@ export default function InventoryPage() {
       <p>Kaynak: {PRODUCT_INVENTORY.sourceFile} · Eklenme: 03.10.2026 · Logo havuzunda kontrol edilen son fatura: 02.10.2026.</p>
       <p className="mt-2">93 kaynak satırından 6 kongre / eğitim ve 7 kitap çıkarıldı. Aynı Lugol %2 koduna bağlı iki kayıt tek üründe birleştirildi. {PHYSICAL_PRODUCTS.length} ürünün tamamı Logo havuzunda koduyla eşleşti.</p>
       <p className="mt-2">Holimer geçmişinde 79, FW geçmişinde 70 ürün kodu görüldü. “Kayıt yok” o şirkette fatura geçmişi bulunmadığını belirtir; stok kartının bulunmadığı anlamına gelmez. Bu liste depodaki stok miktarını göstermez.</p>
-      <p className="mt-2">Ürünler More Than, Smart Caps, Raw Material ve Diğer Ürünler olarak ayrılmıştır. Logo açıklamaları esas alınır; su matarası, hava nemlendirici, marka belirtilmeyen ürünler ve karma marka paketleri Diğer Ürünler tablosundadır.</p>
+      <p className="mt-2">Ürünler More Than, Smart Caps, Raw Material ve Diğer Ürünler olarak ayrılmıştır. Logo açıklamaları ve doğrulanan marka düzeltmeleri esas alınır; ADEK Kids ve ADEK–probiyotik paketi Smart Caps altında yer alır; su matarası, hava nemlendirici, marka belirtilmeyen ürünler ve karma marka paketleri Diğer Ürünler tablosundadır.</p>
     </div>
     {groupProductsByBrand(PHYSICAL_PRODUCTS).map(group => <section key={group.key} className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">
       <div className="flex items-center justify-between border-b border-[var(--line)] p-5"><h2 className="text-xl font-medium">{group.label}</h2><span className="text-sm text-[var(--muted)]">{group.products.length} ürün</span></div>
