@@ -6,13 +6,27 @@ import { aggregateProductSales, shiftDate } from "./product-sales";
 async function readCompany(base: string, company: string, endDate: string) {
   const rows: LogoSatisSatiri[] = [];
   const limit = 1000;
-  for (let offset = 0; offset < 200000; offset += limit) {
+  for (let offset = 0, pages = 0; pages < 200; pages++) {
     const page = await fetchSatislar(base, {
       sirket: company, baslangic: shiftDate(endDate, -43), bitis: endDate, limit, offset,
     });
     if (page.adet !== page.satirlar.length) throw new Error("Satış sayfası eksik geldi.");
-    rows.push(...page.satirlar);
-    if (page.satirlar.length < limit) return aggregateProductSales(rows, company, endDate);
+    if (page.satirlar.length < limit) {
+      rows.push(...page.satirlar);
+      return aggregateProductSales(rows, company, endDate);
+    }
+    // Existing service sorts by date + invoice, but not by unique line ID.
+    // Never keep a partial invoice at a page boundary: refetch its whole group.
+    const last = page.satirlar[page.satirlar.length - 1];
+    let complete = page.satirlar.length;
+    while (complete > 0) {
+      const row = page.satirlar[complete - 1];
+      if (row.tarihi !== last.tarihi || row.fatura_numarasi !== last.fatura_numarasi) break;
+      complete--;
+    }
+    if (complete === 0) throw new Error("Tek fatura sayfa sınırını aşıyor; eksik rapor gösterilmiyor.");
+    rows.push(...page.satirlar.slice(0, complete));
+    offset += complete;
   }
   throw new Error("Satış verisi sınırı aşıldı; eksik rapor gösterilmiyor.");
 }
@@ -23,7 +37,7 @@ const readCompanies = unstable_cache(
     void transfer; // Transfer time participates in the cache key.
     return Promise.all(["Holimer", "Fw İlaç"].map(company => readCompany(base, company, endDate)));
   },
-  ["product-sales-44-days-v1"], { revalidate: 3600 },
+  ["product-sales-44-days-v2"], { revalidate: 3600 },
 );
 
 export async function fetchProductSalesReport() {

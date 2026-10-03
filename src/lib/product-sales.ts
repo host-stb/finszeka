@@ -32,6 +32,7 @@ export function aggregateProductSales(
   for (const row of rows) {
     if (row.sirket !== company || !INVOICE_TYPES.has(row.fatura_turu)
       || row.fatura_iptal_durumu === "İptal Edilmiş"
+      || row.hizmet_kodu?.startsWith("600.")
       || row.birim?.trim().toLocaleUpperCase("tr-TR") !== "ADET") continue;
     const date = row.tarihi.slice(0, 10);
     if (date < starts[44] || date > endDate) continue;
