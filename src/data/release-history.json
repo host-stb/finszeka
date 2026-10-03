@@ -184,5 +184,11 @@
     "date": "2026-10-04T01:13:59+03:00",
     "version": "1.0.0",
     "summary": "Web Ürün Satışları düğmeleri Holistik vs FW ve Markaya göre olarak değiştirildi."
+  },
+  {
+    "revision": "1defe1bf49d871d1bca10f1476557ee8ed34ce8a",
+    "date": "2026-10-04T01:21:14+03:00",
+    "version": "1.0.0",
+    "summary": "Web Ürün Satışlarına her dönem için site payları ile marka ve ürünlerin toplam ciroya katkı yüzdeleri eklendi."
   }
 ]

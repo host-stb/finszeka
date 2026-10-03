@@ -30,5 +30,6 @@
   "Gelir raporu dashboard - ilk commit": "İlk gelir raporu uygulaması oluşturuldu.",
   "Add persistent Turkish release history": "Sürüm defteri eklendi; geçmiş değişiklikler tarih ve kısa açıklamalarıyla kaydedildi.",
   "Rename web product sales tab buttons": "Web Ürün Satışları düğmeleri Holistik vs FW ve Markaya göre olarak değiştirildi.",
-  "Add website brand and product revenue percentages": "Web Ürün Satışlarına her dönem için site payları ile marka ve ürünlerin toplam ciroya katkı yüzdeleri eklendi."
+  "Add website brand and product revenue percentages": "Web Ürün Satışlarına her dönem için site payları ile marka ve ürünlerin toplam ciroya katkı yüzdeleri eklendi.",
+  "Compact web sales tables to fit screen width": "Web Ürün Satışları tabloları ekran genişliğine uyarlanarak yazılar ve boşluklar küçültüldü; adet, ciro ve paylar dönem başına tek sütunda toplandı."
 }
