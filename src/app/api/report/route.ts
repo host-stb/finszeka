@@ -1,3 +1,4 @@
+import { companyNameFromCode } from "@/lib/company-code";
 import { NextRequest, NextResponse } from "next/server";
 import { fetchCompanyReportFromLogo } from "@/lib/logo-report";
 import { getMockReport } from "@/lib/mock-data";
@@ -8,7 +9,8 @@ export const maxDuration = 300;
 
 /** Company reports use the complete invoice mirror. Live errors never substitute sample figures. */
 export async function GET(req: NextRequest) {
-  const companyId = req.nextUrl.searchParams.get("company");
+  const requestedCompany = req.nextUrl.searchParams.get("company");
+  const companyId = requestedCompany ? companyNameFromCode(requestedCompany) : null;
 
   if (!companyId) {
     return NextResponse.json({ error: "company parametresi zorunludur" }, { status: 400 });

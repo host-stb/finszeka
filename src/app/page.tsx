@@ -1,4 +1,5 @@
 "use client";
+import { companyRequestCode } from "@/lib/company-code";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -56,7 +57,7 @@ export default function Home() {
     setFetchedAt(null);
     setError(null);
     try {
-      const res = await fetch(`/api/report?company=${encodeURIComponent(companyId)}`, {
+      const res = await fetch(`/api/report?company=${encodeURIComponent(companyRequestCode(companyId))}`, {
         cache: "no-store",
         signal: controller.signal,
       });

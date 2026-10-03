@@ -214,5 +214,11 @@
     "date": "2026-10-04T02:17:31+03:00",
     "version": "1.0.0",
     "summary": "Gelir Raporuna KDV dahil/iade öncesi ve KDV hariç/iade sonrası şirket sekmeleri eklendi; net tahsilat kartlarında eksik kaynak açıkça belirtildi."
+  },
+  {
+    "revision": "8d338e983860113f4c2cc79b6799f2a0d61b5d8e",
+    "date": "2026-10-04T02:24:10+03:00",
+    "version": "1.0.0",
+    "summary": "FW raporundaki ek aylık istekler kaldırıldı; şirket değişiminde eski rakamlar gizlendi ve geciken yanıtların seçili şirketi değiştirmesi önlendi."
   }
 ]
