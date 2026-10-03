@@ -6,19 +6,7 @@ import { ApiEnvelope, CompanyReport } from "@/lib/types";
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
-/**
- * Bir firmanın gelir raporunu döndürür.
- *
- * Query: ?company=<sirket adı, ör. "Holimer">
- *
- * FASTAPI_BASE_URL tanımlıysa gerçek Logo entegrasyonundan (satzeka'nın
- * beslediği FastAPI) /logo/satislar/ozet uç noktası ay ay çekilip
- * CompanyReport'a dönüştürülür (bkz. src/lib/logo-report.ts). Toplamlar tam fatura havuzundan, iadeler dahil hesaplanır; kategori kırılımı en çok satış
- * yapılan carilerden türetilen en iyi çaba (best-effort) bir tahmindir —
- * detay için README.md'deki "Gerçek veri kaynağı" bölümüne bakın.
- *
- * Tanımlı değilse veya istek başarısız olursa mock veri döner.
- */
+/** Company reports use the complete invoice mirror. Live errors never substitute sample figures. */
 export async function GET(req: NextRequest) {
   const companyId = req.nextUrl.searchParams.get("company");
 
@@ -38,7 +26,8 @@ export async function GET(req: NextRequest) {
       };
       return NextResponse.json(envelope);
     } catch (err) {
-      console.error("[api/report] FastAPI'ye erişilemedi, mock veriye düşülüyor:", err);
+      console.error("[api/report] Canlı şirket raporu alınamadı:", err);
+      return NextResponse.json({error:"Canlı şirket raporu alınamadı. Lütfen yeniden deneyin."},{status:502});
     }
   }
 

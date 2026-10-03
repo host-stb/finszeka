@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import CompanyTabs from "@/components/CompanyTabs";
 import FinanceOverview from "@/components/FinanceOverview";
@@ -42,22 +42,39 @@ export default function Home() {
     }
   }, []);
 
+  const requestId = useRef(0);
+  const reportAbort = useRef<AbortController | null>(null);
+
   const loadReport = useCallback(async (companyId: string) => {
+    const id = ++requestId.current;
+    reportAbort.current?.abort();
+    const controller = new AbortController();
+    reportAbort.current = controller;
     setLoading(true);
+    setReport(null);
+    setSource(null);
+    setFetchedAt(null);
     setError(null);
     try {
       const res = await fetch(`/api/report?company=${encodeURIComponent(companyId)}`, {
         cache: "no-store",
+        signal: controller.signal,
       });
-      if (!res.ok) throw new Error(`Rapor alınamadı (HTTP ${res.status})`);
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || `Rapor alınamadı (HTTP ${res.status})`);
+      }
       const envelope: ApiEnvelope<CompanyReport> = await res.json();
+      if (id !== requestId.current) return;
+      if (envelope.data.companyId !== companyId) throw new Error("Yanıt seçili şirketle eşleşmiyor.");
       setReport(envelope.data);
       setSource(envelope.source);
       setFetchedAt(envelope.fetchedAt);
     } catch (err) {
+      if (id !== requestId.current || controller.signal.aborted) return;
       setError(err instanceof Error ? err.message : "Bilinmeyen hata");
     } finally {
-      setLoading(false);
+      if (id === requestId.current) setLoading(false);
     }
   }, []);
 
@@ -90,7 +107,7 @@ export default function Home() {
               Gelir Defteri
             </p>
             <h1 className="mt-1 font-[family-name:var(--font-display)] text-3xl font-medium tracking-tight text-[var(--ink)]">
-              {report ? report.companyName : "Yükleniyor..."}
+              {report ? report.companyName : companies.find(company => company.id === activeId)?.name ?? "Yükleniyor..."}
             </h1>
             <p className="mt-1 text-sm text-[var(--muted)]">
               {report ? `${report.period} dönemi gelir kırılımı` : "Rapor hazırlanıyor"}
@@ -183,7 +200,7 @@ export default function Home() {
         {/* Firma sekmeleri — Web Mağaza sekmesi belirli bir markaya (holistikmarket.com) bağlı olduğu için firma seçiciden bağımsız */}
         {view !== "webmagaza" && (
           <div className="border-b border-[var(--line)]">
-            <CompanyTabs companies={companies} activeId={activeId} onSelect={setActiveId} basis={revenueBasis} onBasisSelect={view === "gelir" && report?.totalBasis ? setRevenueBasis : undefined} />
+            <CompanyTabs companies={companies} activeId={activeId} onSelect={setActiveId} basis={revenueBasis} onBasisSelect={view === "gelir" ? setRevenueBasis : undefined} />
           </div>
         )}
 
@@ -235,7 +252,7 @@ export default function Home() {
           </>
         ) : (
           <div className="flex flex-1 items-center justify-center rounded-2xl border border-dashed border-[var(--line-strong)] py-24 text-sm text-[var(--muted)]">
-            Rapor yükleniyor...
+            {loading ? "Seçili şirketin raporu yükleniyor…" : "Rapor alınamadı. Güncelle düğmesiyle yeniden deneyin."}
           </div>
         )}
       </div>

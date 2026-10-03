@@ -208,5 +208,11 @@
     "date": "2026-10-04T01:59:54+03:00",
     "version": "1.0.0",
     "summary": "Ana satış toplamları, aylık trend ve çeyrekler KDV dahil ve iadeler düşülmüş olarak düzenlendi; KDV hariç net ciro ayrıca gösterildi."
+  },
+  {
+    "revision": "759edf8b0d8c839bf66e8a7de428c83d552eaccf",
+    "date": "2026-10-04T02:17:31+03:00",
+    "version": "1.0.0",
+    "summary": "Gelir Raporuna KDV dahil/iade öncesi ve KDV hariç/iade sonrası şirket sekmeleri eklendi; net tahsilat kartlarında eksik kaynak açıkça belirtildi."
   }
 ]

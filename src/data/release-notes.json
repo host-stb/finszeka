@@ -34,5 +34,6 @@
   "Compact web sales tables to fit screen width": "Web Ürün Satışları tabloları ekran genişliğine uyarlanarak yazılar ve boşluklar küçültüldü; adet, ciro ve paylar dönem başına tek sütunda toplandı.",
   "Add complete company channel revenue shares and detail cards": "Ciro Kanallarına Holimer ve FW toplamları, tüm kanal ve alt kalemlerin ciro/yüzde kartları ve hesap detaylarında toplam ciro payları eklendi.",
   "Align annual monthly and quarterly totals after returns": "Ana satış toplamları, aylık trend ve çeyrekler KDV dahil ve iadeler düşülmüş olarak düzenlendi; KDV hariç net ciro ayrıca gösterildi.",
-  "Add company revenue basis tabs and collection source status": "Gelir Raporuna KDV dahil/iade öncesi ve KDV hariç/iade sonrası şirket sekmeleri eklendi; net tahsilat kartlarında eksik kaynak açıkça belirtildi."
+  "Add company revenue basis tabs and collection source status": "Gelir Raporuna KDV dahil/iade öncesi ve KDV hariç/iade sonrası şirket sekmeleri eklendi; net tahsilat kartlarında eksik kaynak açıkça belirtildi.",
+  "Fix company report loading and stale company figures": "FW raporundaki ek aylık istekler kaldırıldı; şirket değişiminde eski rakamlar gizlendi ve geciken yanıtların seçili şirketi değiştirmesi önlendi."
 }
