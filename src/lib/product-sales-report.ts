@@ -1,3 +1,5 @@
+import { totalRevenue } from "./sales-shares";
+import { groupProductsByBrand } from "./product-inventory";
 import { unstable_cache } from "next/cache";
 import { fetchLogoDurum, fetchSatislar } from "./logo-api";
 import { aggregateProductSales, combineCompanySales, mergeProductSales, shiftDate } from "./product-sales";
@@ -63,6 +65,6 @@ export async function fetchProductSalesReport() {
     endDate, startDate, yearEndDate, yearStartDate, lastTransfer: status.son_aktarim,
     stale: latest < yesterday,
     products: combineCompanySales(allCompanies),
-    companies: allCompanies.map(company => ({ ...company, products: company.products.filter(product => product.periods[44].revenue > 0).slice(0,50) })),
+    companies: allCompanies.map(company => ({ ...company, totals: totalRevenue(company.products), brandTotals: Object.fromEntries(groupProductsByBrand(company.products).map(group => [group.key, totalRevenue(group.products)])), products: company.products.filter(product => product.periods[44].revenue > 0).slice(0,50) })),
   };
 }

@@ -178,5 +178,11 @@
     "date": "2026-10-04T01:05:30+03:00",
     "version": "1.0.0",
     "summary": "Sürüm defteri eklendi; geçmiş değişiklikler tarih ve kısa açıklamalarıyla kaydedildi."
+  },
+  {
+    "revision": "78c4516383af6963bf084b42db83259a5c6dc17b",
+    "date": "2026-10-04T01:13:59+03:00",
+    "version": "1.0.0",
+    "summary": "Web Ürün Satışları düğmeleri Holistik vs FW ve Markaya göre olarak değiştirildi."
   }
 ]

@@ -29,5 +29,6 @@
   "Google ile giris (2 kisi) + ciro-dashboard guncellemeleri": "Google ile giriş ve gelir panosu güncellemeleri eklendi.",
   "Gelir raporu dashboard - ilk commit": "İlk gelir raporu uygulaması oluşturuldu.",
   "Add persistent Turkish release history": "Sürüm defteri eklendi; geçmiş değişiklikler tarih ve kısa açıklamalarıyla kaydedildi.",
-  "Rename web product sales tab buttons": "Web Ürün Satışları düğmeleri Holistik vs FW ve Markaya göre olarak değiştirildi."
+  "Rename web product sales tab buttons": "Web Ürün Satışları düğmeleri Holistik vs FW ve Markaya göre olarak değiştirildi.",
+  "Add website brand and product revenue percentages": "Web Ürün Satışlarına her dönem için site payları ile marka ve ürünlerin toplam ciroya katkı yüzdeleri eklendi."
 }
