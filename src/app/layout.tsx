@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { APP_VERSION } from "@/lib/app-version";
 import { auth, signOut } from "@/auth";
 import "./globals.css";
 
@@ -21,8 +22,10 @@ export default async function RootLayout({
   return (
     <html lang="tr" className="h-full antialiased">
       <body className="min-h-full flex flex-col font-sans">
-        {session?.user && (
-          <div className="flex items-center justify-end gap-3 border-b border-[var(--line)] bg-[var(--paper-card)] px-4 py-1.5 text-xs text-[var(--muted)]">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--line)] bg-[var(--paper-card)] px-4 py-1.5 text-xs text-[var(--muted)]">
+          <span title="Yayımlanan uygulama sürümü" className="whitespace-nowrap">Finszeka · v{APP_VERSION}</span>
+          {session?.user && (
+          <div className="flex items-center gap-3">
             <span>{session.user.email}</span>
             <form
               action={async () => {
@@ -35,7 +38,8 @@ export default async function RootLayout({
               </button>
             </form>
           </div>
-        )}
+          )}
+        </div>
         {children}
       </body>
     </html>
