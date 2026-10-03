@@ -145,6 +145,7 @@ export default function Home() {
               )}
             </button>
           ))}
+          <Link href="/ciro-kanallari" className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] hover:underline">Ciro Kanalları</Link>
           <Link
             href="/envanter"
             className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] transition-colors hover:bg-[var(--paper-card)] hover:text-[var(--ink-soft)]"

@@ -1,0 +1,49 @@
+import Link from "next/link";
+import { DEALER_SEGMENTS, REVENUE_ACCOUNT_SOURCE, REVENUE_CATEGORIES, REVENUE_WINDOWS, emptyRevenue, segmentSlug, sumRevenue, type RevenueEntry } from "@/lib/revenue-channels";
+import type { fetchRevenueChannelReport } from "@/lib/revenue-channel-report";
+export type ChannelReport = Awaited<ReturnType<typeof fetchRevenueChannelReport>>;
+export const categoryPath:Record<string,string>={Web:"web",Bayi:"bayi",Cihazlar:"cihazlar","Eşleme bekleyen / Diğer":"esleme-bekleyen"};
+const money=new Intl.NumberFormat("tr-TR",{style:"currency",currency:"TRY"});
+export const currency=(value:number)=>money.format(value);
+export const dateLabel=(value:string)=>value.split("-").reverse().join(".");
+export function ReportNotes({report}:{report:ChannelReport}){
+ const missing=new Set(report.entries.filter(entry=>!entry.matched).map(entry=>`${entry.company}|${entry.code}`));
+ const fwDealer=report.entries.filter(entry=>entry.company==="Fw İlaç"&&entry.category==="Bayi");
+ const holimerDevices=report.entries.filter(entry=>entry.company==="Holimer"&&entry.category==="Cihazlar");
+ return <div className="space-y-2 rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-5 text-sm text-[var(--muted)]">
+  <p>Kaynak: {REVENUE_ACCOUNT_SOURCE.sourceFile} · {REVENUE_ACCOUNT_SOURCE.sourceRows} cari kart · {dateLabel(report.startDate)} – {dateLabel(report.endDate)}.</p>
+  <p>Son aktarım: {new Intl.DateTimeFormat("tr-TR",{timeZone:"Europe/Istanbul",dateStyle:"short",timeStyle:"short"}).format(new Date(report.lastTransfer))}. {report.stale&&"Dünün verisi henüz yok; son mevcut fatura tarihi esas alındı."}</p>
+  <p>Ciro KDV hariç net matrahtır; satış iadeleri düşülür, iptaller ve satınalma/gider faturaları çıkarılır. Bu rapor tüm gelir kalemlerini tarar; ilk 50 ürün veya envanter filtresi kullanılmaz.</p>
+  <p>Excel cari kart listesidir; parasal toplam içermez. Eşleşme şirket + cari koduyla yapılır. Aynı kodun iki şirkette bulunması iki ayrı hesap kabul edilir.</p>
+  <p>Bugünkü dağılım: Holimer → holistikmarket.com ve bayi; FW → destekurunleri.com ve cihazlar. Tarihsel faturalar kesildikleri şirkette kalır; şirket değişimi tarihi dosyada yoktur.</p>
+  {sumRevenue(fwDealer,"year").revenue!==0&&<p className="text-[var(--brass-strong)]">Dağılım çelişkisi: FW&apos;de yıl içinde bayi cirosu var ({currency(sumRevenue(fwDealer,"year").revenue)}).</p>}
+  {sumRevenue(holimerDevices,"year").revenue!==0&&<p className="text-[var(--brass-strong)]">Dağılım çelişkisi: Holimer&apos;de yıl içinde cihaz / teknik servis cirosu var ({currency(sumRevenue(holimerDevices,"year").revenue)}).</p>}
+  {sumRevenue(report.entries.filter(entry=>entry.company==="Fw İlaç"&&entry.category==="Cihazlar"),"year").revenue===0&&<p className="text-[var(--brass-strong)]">FW&apos;de bu yıl cihaz / bakım / onarım gelir kaydı bulunamadı. Bugünkü şirket dağılımıyla havuz arasındaki farkın teyidi gerekiyor.</p>}
+  {!!missing.size&&<p className="text-[var(--brass-strong)]">Excel&apos;de bulunmayan {missing.size} satış hesabı var. Tutarları kaybolmaz; eşleme kontrolünde ve ilgili detaylarda işaretlenir.</p>}
+  <p>Meslek kodu veya açık unvanı olmayan 120.02, 120.04 ve 120.05 hesapları “Meslek teyidi bekleyen bayi” altında ayrı tutulur; eczacı, doktor veya diyetisyen olarak tahmin edilmez. 120.14 ve tıbbi sarf kayıtları kesin eşleme olmadan bayi/cihaz cirosuna aktarılmaz.</p>
+  <p>Fizyoterapist için bağımsız bir meslek kodu yoktur; açık fizyoterapi unvanları esas alınır. Gelir kaydı olmayan alt gruplar sıfır gösterilir, müşteri türü belirsiz kayıtlar eşleme bekleyen listesinde kalır.</p>
+  <p>Pazaryerleri Web altında ayrı alt kalemlerdir. Holimer&apos;deki 9.DESTEK.COM hesabı destekurunleri.com (Holimer kaydı) olarak ayrı tutulur.</p>
+ </div>;
+}
+export function RevenueSummary({report}:{report:ChannelReport}){
+ const groups=REVENUE_CATEGORIES.flatMap(category=>["Holimer","Fw İlaç"].flatMap(company=>{
+  const entries=report.entries.filter(entry=>entry.category===category&&entry.company===company);
+  const segments=[...new Set([...entries.map(entry=>entry.segment),...(category==="Bayi"?DEALER_SEGMENTS:[])])].sort((a,b)=>a.localeCompare(b,"tr"));
+  return [{category,company,segment:"Toplam",entries,subtotal:true},...segments.map(segment=>({category,company,segment,entries:entries.filter(entry=>entry.segment===segment),subtotal:false}))];
+ }));
+ const periods=["year",...REVENUE_WINDOWS.map(String)];
+ return <>
+ <div className="grid gap-4 sm:grid-cols-3">{REVENUE_CATEGORIES.slice(0,3).map(category=><Link key={category} href={`/ciro-kanallari/${categoryPath[category]}`} className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-5"><h2 className="text-lg">{category}</h2><p className="mt-2 text-2xl font-medium">{currency(sumRevenue(report.entries.filter(entry=>entry.category===category),"year").revenue)}</p><p className="mt-2 text-xs text-[var(--muted)]">Yılbaşından rapor bitişine · Detayları aç →</p></Link>)}</div>
+ <div className="rounded-xl border border-[var(--line)] p-4 text-sm"><Link href="/ciro-kanallari/esleme-bekleyen" className="underline">Eşleme bekleyen / diğer gelirler: {currency(sumRevenue(report.entries.filter(entry=>entry.category===REVENUE_CATEGORIES[3]),"year").revenue)}</Link><p className="mt-2 text-[var(--muted)]">Web + Bayi + Cihazlar + bu kalem = tüm satış/hizmet faturalarının net toplamı. Belirsiz tutarlar ana üç gruba tahminle dağıtılmaz.</p></div>
+ <section className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]"><h2 className="p-5 text-xl font-medium">Kanal ve şirket kırılımı</h2><div className="overflow-x-auto"><table className="w-full min-w-[1200px] text-sm"><thead className="bg-[var(--paper)] text-left"><tr><th className="p-3">Kanal / Alt kalem</th><th className="p-3">Şirket</th>{periods.map(period=><th key={period} className="p-3 text-right">{period==="year"?"Yılbaşından bugüne":`Son ${period} gün`}</th>)}</tr></thead><tbody>
+ {groups.map(group=><tr key={`${group.category}|${group.company}|${group.segment}`} className={`border-t border-[var(--line)] ${group.subtotal?"bg-[var(--paper)] font-medium":""}`}><th scope="row" className="p-3 text-left"><Link href={`/ciro-kanallari/${categoryPath[group.category]}${group.subtotal?"":`/${segmentSlug(group.segment)}`}`} className="hover:underline">{group.subtotal?group.category:group.segment}</Link></th><td className="p-3">{group.company}</td>{periods.map(period=><td key={period} className="whitespace-nowrap p-3 text-right tabular-nums">{currency(sumRevenue(group.entries,period).revenue)}</td>)}</tr>)}
+ <tr className="border-t border-[var(--line)] font-medium"><th className="p-3 text-left">Tüm gelirler · Kontrol toplamı</th><td className="p-3">İki şirket</td>{periods.map(period=><td key={period} className="whitespace-nowrap p-3 text-right">{currency(sumRevenue(report.entries,period).revenue)}</td>)}</tr>
+ </tbody></table></div></section>
+ <details className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-5"><summary className="cursor-pointer font-medium">Aylık ciro kırılımı</summary><div className="mt-4 overflow-x-auto"><table className="w-full min-w-[1600px] text-sm"><thead><tr><th className="p-3 text-left">Kanal / Şirket</th>{Array.from({length:Number(report.endDate.slice(5,7))},(_,i)=><th key={i} className="p-3 text-right">{new Intl.DateTimeFormat("tr-TR",{month:"short",timeZone:"UTC"}).format(new Date(`${report.endDate.slice(0,4)}-${String(i+1).padStart(2,"0")}-01T00:00:00Z`))}</th>)}</tr></thead><tbody>{groups.filter(group=>group.subtotal).map(group=><tr key={group.category+group.company} className="border-t border-[var(--line)]"><th className="p-3 text-left">{group.category} · {group.company}</th>{Array.from({length:Number(report.endDate.slice(5,7))},(_,i)=><td key={i} className="whitespace-nowrap p-3 text-right">{currency(sumRevenue(group.entries,`${report.endDate.slice(0,4)}-${String(i+1).padStart(2,"0")}`).revenue)}</td>)}</tr>)}</tbody></table></div></details>
+ </>;
+}
+export function AccountDetails({entries,period}:{entries:RevenueEntry[];period:string}){
+ const total=sumRevenue(entries,period);
+ const sorted=entries.filter(entry=>entry.periods[period]).sort((a,b)=>(b.periods[period]?.revenue??0)-(a.periods[period]?.revenue??0));
+ return <><div className="rounded-xl border border-[var(--line)] p-4 text-sm">Net ciro: <b>{currency(total.revenue)}</b> · KDV: {currency(total.vat)} · KDV dahil: {currency(total.gross)}<p className="mt-2 text-[var(--muted)]">Satış/hizmet matrahı: {currency(total.sales)} · İade matrahı: {currency(total.returns)}</p></div><div className="overflow-x-auto rounded-xl border border-[var(--line)]"><table className="w-full min-w-[1400px] text-sm"><thead className="bg-[var(--paper)] text-left"><tr>{["Şirket","Cari / Excel satırı","Müşteri","Alt kalem / Eşleme gerekçesi","Net ciro","KDV","KDV dahil"].map(label=><th key={label} className="p-3">{label}</th>)}</tr></thead><tbody>{sorted.map(entry=>{const amount=entry.periods[period]??emptyRevenue();return <tr key={[entry.company,entry.code,entry.segment,entry.basis].join("|")} className="border-t border-[var(--line)]"><td className="p-3">{entry.company}</td><td className="p-3">{entry.code}<span className="block text-xs text-[var(--muted)]">{entry.matched?`Excel satırı ${entry.sourceRow}`:"Excel'de bulunamadı"}</span></td><th scope="row" className="p-3 text-left font-normal">{entry.name}</th><td className="p-3">{entry.segment}<span className="block text-xs text-[var(--muted)]">{entry.basis}</span></td>{[amount.revenue,amount.vat,amount.gross].map((value,i)=><td key={i} className="whitespace-nowrap p-3 text-right tabular-nums">{currency(value)}</td>)}</tr>;})}{!sorted.length&&<tr><td colSpan={7} className="p-6">Bu dönemde satış kaydı yok.</td></tr>}</tbody></table></div></>;
+}
