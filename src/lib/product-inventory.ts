@@ -33,18 +33,14 @@ export function groupProductsByBrand<T extends { code: string }>(products: reado
   }));
 }
 
-/**
- * Ürün Satışları kapsam kuralı (03.10.2026, Aydın): sıralama havuzuna yalnızca More Than,
- * Smart Caps ve Raw Material ürünleri ile Diğer Ürünler'den Zeopak ve Tuzy Tuz girer.
- * Filtre ilk 50 seçilmeden önce uygulanır; boşalan yerler sıradaki uygun ürünlerle dolar.
- */
-export const SALES_RANKING_OTHER_CODES: ReadonlySet<string> = new Set([
-  "152MM.01.11.001", // ZEOPAK Doğal Meyve ve Sebze Yıkama Tozu 400 gr
-  "152MM.01.11.002", // Tuzy Tuz İnce Öğütülmüş 250 g
-  "152MM.01.11.003", // Tuzy Tuz Sofrada Öğütme 500 g
+const EVALUATED_OTHER_CODES = new Set([
+  "152MM.01.11.001", // ZEOPAK
+  "152MM.01.11.002", // Tuzy Tuz 250 g
+  "152MM.01.11.003", // Tuzy Tuz 500 g
 ]);
-
-export function isSalesRankingEligible(code: string): boolean {
-  if (!PHYSICAL_PRODUCT_MAP.has(code)) return false;
-  return productBrand(code) !== "other" || SALES_RANKING_OTHER_CODES.has(code);
+export function isEvaluatedProduct(code: string) {
+  return PHYSICAL_PRODUCT_MAP.has(code)
+    && (productBrand(code) !== "other" || EVALUATED_OTHER_CODES.has(code));
 }
+export const EVALUATED_PRODUCTS = PHYSICAL_PRODUCTS.filter(product => isEvaluatedProduct(product.code));
+export const EVALUATED_PRODUCT_MAP = new Map(EVALUATED_PRODUCTS.map(product => [product.code, product]));

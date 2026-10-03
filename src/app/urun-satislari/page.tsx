@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { fetchProductSalesReport } from "@/lib/product-sales-report";
 import { SALES_WINDOWS, shiftDate } from "@/lib/product-sales";
-import { groupProductsByBrand, PHYSICAL_PRODUCTS } from "@/lib/product-inventory";
+import { groupProductsByBrand, EVALUATED_PRODUCTS } from "@/lib/product-inventory";
 
 export const dynamic = "force-dynamic";
 const money = new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" });
@@ -24,7 +24,7 @@ async function SalesTables() {
       <p>Rapor bitişi: <b className="text-[var(--ink)]">{date(report.endDate)}</b> · Son tamamlanmış gün esas alınır.</p>
       <p>Son veri aktarımı: {new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" }).format(new Date(report.lastTransfer))}</p>
       {report.stale && <p className="mt-2 text-[var(--brass-strong)]">Havuzda dünün faturaları henüz yok. Dönemler son mevcut fatura tarihine göre hesaplandı.</p>}
-      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Referans envanterdeki {PHYSICAL_PRODUCTS.length} fiziki üründen sıralamaya uygun olanların ADET birimli satışları gösterilir. Sıralamaya yalnızca More Than, Smart Caps ve Raw Material ürünleri ile Diğer Ürünler&apos;den Zeopak ve Tuzy Tuz girer. Bağışıklık ve destek paketleri, Lugol kullanım seti, su matarası ve hava nemlendirici hesaba katılmaz; bu ürünler ilk 50 seçilmeden önce elendiği için yerlerini sıradaki uygun ürünler alır. İlk 50 seçildikten sonra More Than, Smart Caps, Raw Material ve Diğer Ürünler tablolarına ayrılır.</p>
+      <p className="mt-2">Her şirket için son 44 günlük net ciroya göre ilk 50 ürün. Ciro KDV hariçtir; iptaller hariç, satış iadeleri düşülmüştür. Değerlendirmeye alınan {EVALUATED_PRODUCTS.length} fiziki ürünün ADET birimli satışları gösterilir. İlk 50 seçildikten sonra More Than, Smart Caps, Raw Material ve Diğer Ürünler tablolarına ayrılır. Diğer Ürünler grubundan yalnızca Tuzy Tuz 250 g, Tuzy Tuz 500 g ve ZEOPAK değerlendirilir; diğer kalemler hesaplara ve ilk 50 seçimine dahil edilmez.</p>
       <Link href="/envanter" className="mt-2 inline-block text-[var(--ink)] underline">Ürün envanteri ve Logo eşleşmeleri</Link>
     </div>
     {report.companies.map(company => <section key={company.company} className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">
