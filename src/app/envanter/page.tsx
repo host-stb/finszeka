@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PHYSICAL_PRODUCTS, PRODUCT_INVENTORY } from "@/lib/product-inventory";
+import { groupProductsByBrand, PHYSICAL_PRODUCTS, PRODUCT_INVENTORY } from "@/lib/product-inventory";
 
 export default function InventoryPage() {
   const excluded = PRODUCT_INVENTORY.products.filter(product => !product.included);
@@ -14,21 +14,23 @@ export default function InventoryPage() {
       <p>Kaynak: {PRODUCT_INVENTORY.sourceFile} · Eklenme: 03.10.2026 · Logo havuzunda kontrol edilen son fatura: 02.10.2026.</p>
       <p className="mt-2">93 kaynak satırından 6 kongre / eğitim ve 7 kitap çıkarıldı. Aynı Lugol %2 koduna bağlı iki kayıt tek üründe birleştirildi. {PHYSICAL_PRODUCTS.length} ürünün tamamı Logo havuzunda koduyla eşleşti.</p>
       <p className="mt-2">Holimer geçmişinde 79, FW geçmişinde 70 ürün kodu görüldü. “Kayıt yok” o şirkette fatura geçmişi bulunmadığını belirtir; stok kartının bulunmadığı anlamına gelmez. Bu liste depodaki stok miktarını göstermez.</p>
+      <p className="mt-2">Markalar Logo açıklamalarına göre ayrılmıştır. Marka belirtilmeyen ürünler ve karma marka paketleri Diğer Ürünler tablosundadır.</p>
     </div>
-    <section className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">
+    {groupProductsByBrand(PHYSICAL_PRODUCTS).map(group => <section key={group.key} className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper-card)]">
+      <div className="flex items-center justify-between border-b border-[var(--line)] p-5"><h2 className="text-xl font-medium">{group.label}</h2><span className="text-sm text-[var(--muted)]">{group.products.length} ürün</span></div>
       <div className="overflow-x-auto"><table className="w-full min-w-[1000px] text-sm">
-        <caption className="sr-only">Fiziki ürün referans envanteri ve Logo eşleşmeleri</caption>
+        <caption className="sr-only">{group.label} · Fiziki ürün referans envanteri ve Logo eşleşmeleri</caption>
         <thead className="bg-[var(--paper)] text-left text-[var(--muted)]"><tr>
           {["Ürün kodu", "Ürün adı", "Logo açıklaması", "Holimer", "FW İlaç"].map(label => <th key={label} scope="col" className="px-4 py-3">{label}</th>)}
         </tr></thead>
-        <tbody>{PHYSICAL_PRODUCTS.map(product => <tr key={product.code} className="border-t border-[var(--line)]">
+        <tbody>{group.products.map(product => <tr key={product.code} className="border-t border-[var(--line)]">
           <td className="whitespace-nowrap px-4 py-3">{product.code}</td>
           <th scope="row" className="px-4 py-3 text-left font-medium">{product.name}{product.sourceIds.length > 1 && <span className="block text-xs font-normal text-[var(--muted)]">Tek kodda birleştirildi: {product.sourceIds.join(", ")}</span>}</th>
           <td className="px-4 py-3 text-xs text-[var(--muted)]">{product.logoNames.join(" / ")}</td>
           {["Holimer", "Fw İlaç"].map(company => <td key={company} className="whitespace-nowrap px-4 py-3">{product.observedCompanies.includes(company) ? "Kod eşleşti" : "Kayıt yok"}</td>)}
         </tr>)}</tbody>
       </table></div>
-    </section>
+    </section>)}
     <details className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-5 text-sm">
       <summary className="cursor-pointer font-medium">Hesap dışında tutulan {excluded.length} kayıt</summary>
       <p className="mt-3 text-[var(--muted)]">600.02.017 ve 600.02.018 kodlarında kaynak adı ile Logo&apos;daki bazı açıklamalar farklıdır. Bu kalemlerin tamamı ürün satışlarından çıkarıldı.</p>
