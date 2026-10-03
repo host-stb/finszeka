@@ -1,5 +1,5 @@
 import type { LogoSatisSatiri } from "./logo-api";
-import { PHYSICAL_PRODUCT_MAP } from "./product-inventory";
+import { isSalesRankingEligible, PHYSICAL_PRODUCT_MAP } from "./product-inventory";
 
 export const SALES_WINDOWS = [4, 14, 30, 44] as const;
 export type SalesWindow = (typeof SALES_WINDOWS)[number];
@@ -28,6 +28,7 @@ const INVOICE_TYPES = new Set([
 export function aggregateProductSales(
   rows: LogoSatisSatiri[], company: string, endDate: string,
   inventory: ReadonlyMap<string, { name: string }> = PHYSICAL_PRODUCT_MAP,
+  isEligible: (code: string) => boolean = isSalesRankingEligible,
 ): CompanyProductSales {
   const products = new Map<string, ProductSales>();
   const starts = Object.fromEntries(SALES_WINDOWS.map(days => [days, shiftDate(endDate, 1 - days)])) as Record<SalesWindow, string>;
@@ -35,6 +36,8 @@ export function aggregateProductSales(
     if (row.sirket !== company || !INVOICE_TYPES.has(row.fatura_turu)
       || row.fatura_iptal_durumu === "İptal Edilmiş"
       || !inventory.has(row.hizmet_kodu?.trim())
+      // Kapsam dışı ürünler sıralamadan önce elenir, böylece ilk 50 uygun ürünlerle dolar.
+      || !isEligible(row.hizmet_kodu.trim())
       || row.birim?.trim().toLocaleUpperCase("tr-TR") !== "ADET") continue;
     const code = row.hizmet_kodu.trim();
     const date = row.tarihi.slice(0, 10);
