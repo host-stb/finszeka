@@ -1,3 +1,4 @@
+import { isOwnWebsiteSale } from "./website-sales";
 import type { LogoSatisSatiri } from "./logo-api";
 import { EVALUATED_PRODUCT_MAP } from "./product-inventory";
 
@@ -40,6 +41,7 @@ export function aggregateProductSales(
   for (const row of rows) {
     if (row.sirket !== company || !INVOICE_TYPES.has(row.fatura_turu)
       || row.fatura_iptal_durumu === "İptal Edilmiş"
+      || !isOwnWebsiteSale(row.sirket, row.cari_hesap_kodu)
       || !inventory.has(row.hizmet_kodu?.trim())
       || row.birim?.trim().toLocaleUpperCase("tr-TR") !== "ADET") continue;
     const code = row.hizmet_kodu.trim();

@@ -38,7 +38,7 @@ const readCompanies = unstable_cache(
     void transfer; // Transfer time participates in the cache key.
     return Promise.all(["Holimer", "Fw İlaç"].map(company => readCompany(base, company, endDate, yearEndDate)));
   },
-  ["product-sales-ytd-2026-10-04-v6"], { revalidate: 3600 },
+  ["product-sales-own-websites-2026-10-04-v7"], { revalidate: 3600 },
 );
 
 export async function fetchProductSalesReport() {
