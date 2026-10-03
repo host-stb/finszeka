@@ -50,11 +50,10 @@ export interface CompanyReport {
   /** İkinci sütunun başlığı, ör. "HOLİMER GELİRLER". */
   columnTitle: string;
   rows: ReportRow[];
-  /**
-   * Toplam satırının altında gösterilen iade ve net gelir satırları.
-   * Sadece FastAPI /logo/satislar/ozet yanıtında genel.iade_tutar varsa dolar.
-   */
+  /** Gross returns, after-return gross total and VAT-exclusive net revenue. */
   netRows?: ReportRow[];
+  totalBasis?: "vat-included-after-returns";
+  endDate?: string;
   /** Verinin backend tarafında en son ne zaman üretildiği (ISO 8601). */
   generatedAt: string;
 }

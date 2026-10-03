@@ -31,9 +31,9 @@ const readYear = unstable_cache(async(base:string,endDate:string,transfer:string
   }));parts.push(...batch);
  }
  return mergeRevenueEntries(parts);
-},["revenue-channels-excel-2026-10-03-v1"],{revalidate:3600});
-export async function fetchRevenueChannelReport(){
- const base=process.env.FASTAPI_BASE_URL?.replace(/\/$/,"");if(!base)throw new Error("Logo havuz bağlantısı tanımlı değil");
+},["revenue-channels-returns-gross-2026-10-04-v2"],{revalidate:3600});
+export async function fetchRevenueChannelReport(baseOverride?:string){
+ const base=(baseOverride ?? process.env.FASTAPI_BASE_URL)?.replace(/\/$/,"");if(!base)throw new Error("Logo havuz bağlantısı tanımlı değil");
  const status=await fetchLogoDurum(base);
  if(!status.veri_var||!status.en_yeni_fatura)throw new Error("Ciro verisi yok");
  for(const company of ["Holimer","Fw İlaç"])if(!status.sirketler.some(item=>item.sirket===company))throw new Error("Şirket verisi eksik");

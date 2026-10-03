@@ -325,7 +325,7 @@ export default function ReportTable({
                         : "py-3 text-[13px] font-semibold sm:text-[15px]"
                     }`}
                   >
-                    {row.label}
+                    <span title={row.label}>{row.label}</span>
                   </div>
                   <AmountCell value={sumRowValues(row, months)} className={amountClass} />
                   {months.map((m) => (

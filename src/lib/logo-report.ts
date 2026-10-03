@@ -1,3 +1,5 @@
+import { fetchRevenueChannelReport } from "./revenue-channel-report";
+import { revenueReportTotals } from "./revenue-report-totals";
 import { fetchLogoDurum, fetchSatislarOzet } from "./logo-api";
 import { classifyCari } from "./logo-category";
 import { CompanyReport, CompanySummary, Month, MONTHS, ReportRow } from "./types";
@@ -32,48 +34,29 @@ export async function fetchCompaniesFromLogo(base: string): Promise<CompanySumma
   return durum.sirketler.map((s) => ({ id: s.sirket, name: s.sirket }));
 }
 
-/**
- * Bir şirket için 12 aylık /logo/satislar/ozet verisini paralel çeker,
- * ay bazlı gerçek toplamı (genel.toplam_tutar) ve en çok satış yapılan
- * carilerden türetilmiş bir kategori kırılımını CompanyReport'a dönüştürür.
- *
- * Not: Kategori kırılımı "en iyi çaba" niteliğindedir — her ay için sadece
- * ilk N (varsayılan 40) cari alınır; kalan tutar "Diğer (sınıflandırılmamış)"
- * kalemine yazılır ki kategori toplamları her zaman gerçek aylık toplamla
- * birebir tutsun. Toplam satırı (GİRDİLER TOPLAM) her zaman %100 gerçektir.
- */
+/** Full mirror invoice totals include signed returns; top-customer categories remain indicative. */
 export async function fetchCompanyReportFromLogo(
   base: string,
   sirket: string
 ): Promise<CompanyReport> {
-  const year = new Date().getFullYear();
+  const channelReport = await fetchRevenueChannelReport(base);
+  const year = Number(channelReport.endDate.slice(0,4));
+  const totals = revenueReportTotals(channelReport.entries, sirket, channelReport.endDate);
 
   const ozetResults = await Promise.all(
-    MONTHS.map((m) =>
-      fetchSatislarOzet(base, { ...monthRange(year, MONTH_INDEX[m]), sirket, ilkN: 40 }).catch(
-        () => null
-      )
-    )
+    MONTHS.map((m) => {
+      const range = monthRange(year, MONTH_INDEX[m]);
+      if (range.baslangic > channelReport.endDate) return Promise.resolve(null);
+      return fetchSatislarOzet(base, { ...range, bitis: range.bitis < channelReport.endDate ? range.bitis : channelReport.endDate, sirket, ilkN: 40 });
+    })
   );
 
   const categoryMap = new Map<string, Map<string, Partial<Record<Month, number>>>>();
-  const totalPerMonth: Partial<Record<Month, number>> = {};
-  const iadePerMonth: Partial<Record<Month, number>> = {};
-  const netPerMonth: Partial<Record<Month, number>> = {};
+  const totalPerMonth = totals.sales;
 
   MONTHS.forEach((m, i) => {
     const ozet = ozetResults[i];
     if (!ozet || !ozet.genel || ozet.genel.fatura_adedi === 0) return; // bu ay için veri yok
-
-    totalPerMonth[m] = ozet.genel.toplam_tutar;
-
-    // toplam_tutar iadeleri içermez; iade_tutar gelirse brütten düşülür.
-    // İşareti ne olursa olsun (Logo'da iade satırları eksi) eksi olarak gösterilir.
-    if (typeof ozet.genel.iade_tutar === "number") {
-      const iade = -Math.abs(ozet.genel.iade_tutar);
-      iadePerMonth[m] = iade;
-      netPerMonth[m] = ozet.genel.toplam_tutar + iade;
-    }
 
     let classifiedSum = 0;
     for (const cari of ozet.en_cok_alan_cariler) {
@@ -124,18 +107,18 @@ export async function fetchCompanyReportFromLogo(
     rows.push(...itemRows);
   }
 
-  rows.push({ id: "total", label: "GİRDİLER TOPLAM", kind: "total", values: totalPerMonth });
+  rows.push({ id: "total", label: "SATIŞ TOPLAMI · KDV DAHİL · İADE ÖNCESİ", kind: "total", values: totalPerMonth });
 
-  const netRows: ReportRow[] | undefined =
-    Object.keys(iadePerMonth).length > 0
-      ? [
-          { id: "iade", label: "İADELER", kind: "item", values: iadePerMonth },
-          { id: "net", label: "NET GELİR", kind: "total", values: netPerMonth },
-        ]
-      : undefined;
+  const netRows: ReportRow[] = [
+    { id: "iade", label: "İADELER · KDV DAHİL", kind: "item", values: totals.returns },
+    { id: "net", label: "TOPLAM SATIŞ · KDV DAHİL · İADELER DÜŞÜLMÜŞ", kind: "total", values: totals.gross },
+    { id: "net-ciro", label: "NET CİRO · KDV HARİÇ · İADELER DÜŞÜLMÜŞ", kind: "total", values: totals.net },
+  ];
 
   return {
     netRows,
+    totalBasis: "vat-included-after-returns",
+    endDate: channelReport.endDate,
     companyId: sirket,
     companyName: sirket,
     period: String(year),

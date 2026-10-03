@@ -46,12 +46,12 @@ export function classifyRevenue(company:string, code:string, itemCode:string) {
   return {...base, category:"Eşleme bekleyen / Diğer" as RevenueCategory,
     segment: code.startsWith("120.14.") ? "120.14 · müşteri türü teyidi bekleniyor" : "Diğer hesaplar / gelirler", basis:"Kesin kanal bilgisi yok"};
 }
-export interface RevenueAmount { revenue:number; vat:number; gross:number; sales:number; returns:number }
+export interface RevenueAmount { revenue:number; vat:number; gross:number; sales:number; returns:number; returnsGross:number }
 export interface RevenueEntry {
   company:string;code:string;name:string;category:RevenueCategory;segment:string;basis:string;sourceRow:number|null;
   matched:boolean; periods:Record<string,RevenueAmount>; lines:number;
 }
-export const emptyRevenue = ():RevenueAmount => ({revenue:0,vat:0,gross:0,sales:0,returns:0});
+export const emptyRevenue = ():RevenueAmount => ({revenue:0,vat:0,gross:0,sales:0,returns:0,returnsGross:0});
 const invoiceTypes = new Set(["Perakende Satış Faturası","Toptan Satış Faturası","Perakende Satış İade Faturası","Toptan Satış İade Faturası","Verilen Hizmet Faturası"]);
 export function aggregateRevenueRows(rows:LogoSatisSatiri[], endDate:string):RevenueEntry[] {
  const entries=new Map<string,RevenueEntry>();
@@ -66,7 +66,7 @@ export function aggregateRevenueRows(rows:LogoSatisSatiri[], endDate:string):Rev
   const cents=(value:number) => { if(value==null || !Number.isFinite(Number(value)))throw new Error("Eksik veya geçersiz ciro tutarı");return Math.round(Number(value)*100); };
   const revenue=cents(row.satir_matrahi),vat=cents(row.kdv),gross=cents(row.toplami);
   const periods=["year",date.slice(0,7),...REVENUE_WINDOWS.filter(days=>date>=shiftDate(endDate,1-days)).map(String)];
-  for(const period of periods){const amount=entry.periods[period]??=emptyRevenue();amount.revenue+=revenue;amount.vat+=vat;amount.gross+=gross;amount[row.fatura_turu.includes("İade")?"returns":"sales"]+=revenue;}
+  for(const period of periods){const amount=entry.periods[period]??=emptyRevenue();amount.revenue+=revenue;amount.vat+=vat;amount.gross+=gross;amount[row.fatura_turu.includes("İade")?"returns":"sales"]+=revenue;if(row.fatura_turu.includes("İade"))amount.returnsGross+=gross;}
   entry.lines++;
  }
  for(const entry of entries.values())for(const amount of Object.values(entry.periods))for(const key of Object.keys(amount) as (keyof RevenueAmount)[])amount[key]/=100;

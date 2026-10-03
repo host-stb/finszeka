@@ -1,4 +1,4 @@
-import { Month, MONTHS, ReportRow } from "./types";
+import { CompanyReport, Month, MONTHS, ReportRow } from "./types";
 
 export const MONTH_SHORT: Record<Month, string> = {
   Ocak: "Oca",
@@ -40,4 +40,11 @@ export function sumRowValues(row: ReportRow, months: readonly Month[] = MONTHS):
 export function quarterHasData(row: ReportRow | undefined, months: readonly Month[]): boolean {
   if (!row) return false;
   return months.some((m) => row.values[m as Month] !== null && row.values[m as Month] !== undefined);
+}
+
+/** Cards, monthly trend and quarters must use one consistent after-return total. */
+export function displayTotalRow(report: CompanyReport): ReportRow | undefined {
+ return report.totalBasis === "vat-included-after-returns"
+  ? report.netRows?.find(row => row.id === "net")
+  : report.rows.find(row => row.kind === "total");
 }

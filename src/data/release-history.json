@@ -196,5 +196,11 @@
     "date": "2026-10-04T01:33:13+03:00",
     "version": "1.0.0",
     "summary": "Web Ürün Satışları tabloları ekran genişliğine uyarlanarak yazılar ve boşluklar küçültüldü; adet, ciro ve paylar dönem başına tek sütunda toplandı."
+  },
+  {
+    "revision": "d2e9b46b29c87e69a4bde69a74de843361641f13",
+    "date": "2026-10-04T01:44:59+03:00",
+    "version": "1.0.0",
+    "summary": "Ciro Kanallarına Holimer ve FW toplamları, tüm kanal ve alt kalemlerin ciro/yüzde kartları ve hesap detaylarında toplam ciro payları eklendi."
   }
 ]

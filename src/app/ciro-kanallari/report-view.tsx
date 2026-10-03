@@ -20,7 +20,7 @@ export function RevenueCards({entries,allEntries,period="year",category,segment}
   const companyTotal=sumRevenue(allEntries.filter(entry=>entry.company===company),period).revenue;
   const selected=entries.filter(entry=>entry.company===company);
   return <section key={company} className="rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-4">
-   <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><h2 className="text-lg font-medium">{company==="Fw İlaç"?"FW":company}</h2><div className="text-right text-sm"><p>Tüm şirket cirosu: <strong>{currency(companyTotal)}</strong></p><p className="text-[var(--muted)]">İki şirket toplamındaki payı: {formatRevenueShare(companyTotal,grandTotal)}</p></div></div>
+   <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><h2 className="text-lg font-medium">{company==="Fw İlaç"?"FW":company}</h2><div className="text-right text-sm"><p>Net şirket cirosu: <strong>{currency(companyTotal)}</strong></p><p className="text-[var(--muted)]">İki şirket toplamındaki payı: {formatRevenueShare(companyTotal,grandTotal)}</p></div></div>
    <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">{REVENUE_CATEGORIES.filter(value=>!category||value===category).map(value=>{
     const scoped=selected.filter(entry=>entry.category===value);
     const amount=sumRevenue(scoped,period).revenue;
@@ -45,7 +45,7 @@ export function ReportNotes({report}:{report:ChannelReport}){
  return <div className="space-y-2 rounded-2xl border border-[var(--line)] bg-[var(--paper-card)] p-5 text-sm text-[var(--muted)]">
   <p>Kaynak: {REVENUE_ACCOUNT_SOURCE.sourceFile} · {REVENUE_ACCOUNT_SOURCE.sourceRows} cari kart · {dateLabel(report.startDate)} – {dateLabel(report.endDate)}.</p>
   <p>Son aktarım: {new Intl.DateTimeFormat("tr-TR",{timeZone:"Europe/Istanbul",dateStyle:"short",timeStyle:"short"}).format(new Date(report.lastTransfer))}. {report.stale&&"Dünün verisi henüz yok; son mevcut fatura tarihi esas alındı."}</p>
-  <p>Ciro KDV hariç net matrahtır; satış iadeleri düşülür, iptaller ve satınalma/gider faturaları çıkarılır. Bu rapor tüm gelir kalemlerini tarar; ilk 50 ürün veya envanter filtresi kullanılmaz.</p>
+  <p>Net ciro KDV hariçtir ve iadeler düşülmüştür; satış iadeleri düşülür, iptaller ve satınalma/gider faturaları çıkarılır. Bu rapor tüm gelir kalemlerini tarar; ilk 50 ürün veya envanter filtresi kullanılmaz.</p>
   <p>Excel cari kart listesidir; parasal toplam içermez. Eşleşme şirket + cari koduyla yapılır. Aynı kodun iki şirkette bulunması iki ayrı hesap kabul edilir.</p>
   <p>Bugünkü dağılım: Holimer → holistikmarket.com ve bayi; FW → destekurunleri.com ve cihazlar. Tarihsel faturalar kesildikleri şirkette kalır; şirket değişimi tarihi dosyada yoktur.</p>
   {sumRevenue(fwDealer,"year").revenue!==0&&<p className="text-[var(--brass-strong)]">Dağılım çelişkisi: FW&apos;de yıl içinde bayi cirosu var ({currency(sumRevenue(fwDealer,"year").revenue)}).</p>}

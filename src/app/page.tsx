@@ -192,6 +192,7 @@ export default function Home() {
           <FinanceOverview companyName={report?.companyName ?? "Firma"} />
         ) : report ? (
           <>
+            {report.totalBasis && <p className="rounded-xl border border-[var(--line)] bg-[var(--paper-card)] p-3 text-sm text-[var(--muted)]">Kartlar, grafik ve çeyrek toplamları KDV dahil, iadeler düşülmüş satış tutarıdır. Tabloda satış ve iadeler ayrı gösterilir; net ciro KDV hariçtir. Veri bitişi: {report.endDate?.split("-").reverse().join(".")}.</p>}
             <SummaryCards report={report} />
             <QuarterCompareCards report={report} />
             <RevenueChart report={report} />

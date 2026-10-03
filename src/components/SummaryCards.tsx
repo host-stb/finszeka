@@ -1,11 +1,12 @@
 "use client";
 
+import { displayTotalRow } from "@/lib/report-utils";
 import { CompanyReport, Month, MONTHS } from "@/lib/types";
 import { formatCompactCurrency } from "@/lib/format";
 import { CalendarIcon, CoinsIcon, LayersIcon, TrendingUpIcon } from "./icons";
 
 function computeStats(report: CompanyReport, months: readonly Month[]) {
-  const totalRow = report.rows.find((r) => r.kind === "total");
+  const totalRow = displayTotalRow(report);
   const categoryCount = report.rows.filter(
     (r) => r.kind === "category" && months.some((m) => r.values[m] !== null && r.values[m] !== undefined)
   ).length;
@@ -51,9 +52,9 @@ export default function SummaryCards({
 
   const cards = [
     {
-      label: "Toplam Gelir",
+      label: report.totalBasis ? "Toplam Satış (KDV dahil)" : "Toplam Gelir",
       value: `${formatCompactCurrency(grandTotal)} ₺`,
-      sub: periodLabel ?? `${report.period} dönemi`,
+      sub: `${periodLabel ?? `${report.period} dönemi`}${report.totalBasis ? " · İadeler düşülmüş" : ""}`,
       icon: CoinsIcon,
     },
     {
@@ -65,7 +66,7 @@ export default function SummaryCards({
     {
       label: "Aylık Ortalama",
       value: `${formatCompactCurrency(avgMonthly)} ₺`,
-      sub: `${monthsWithData} ay üzerinden`,
+      sub: `${monthsWithData} ay üzerinden${report.totalBasis ? " · KDV dahil, iadeler düşülmüş" : ""}`,
       icon: CalendarIcon,
     },
     {

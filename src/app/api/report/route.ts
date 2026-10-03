@@ -4,6 +4,7 @@ import { getMockReport } from "@/lib/mock-data";
 import { ApiEnvelope, CompanyReport } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 300;
 
 /**
  * Bir firmanın gelir raporunu döndürür.
@@ -12,8 +13,7 @@ export const dynamic = "force-dynamic";
  *
  * FASTAPI_BASE_URL tanımlıysa gerçek Logo entegrasyonundan (satzeka'nın
  * beslediği FastAPI) /logo/satislar/ozet uç noktası ay ay çekilip
- * CompanyReport'a dönüştürülür (bkz. src/lib/logo-report.ts). Toplam
- * (GİRDİLER TOPLAM) satırı %100 gerçektir; kategori kırılımı en çok satış
+ * CompanyReport'a dönüştürülür (bkz. src/lib/logo-report.ts). Toplamlar tam fatura havuzundan, iadeler dahil hesaplanır; kategori kırılımı en çok satış
  * yapılan carilerden türetilen en iyi çaba (best-effort) bir tahmindir —
  * detay için README.md'deki "Gerçek veri kaynağı" bölümüne bakın.
  *
