@@ -172,5 +172,11 @@
     "date": "2026-08-02T22:48:50+03:00",
     "version": null,
     "summary": "İlk gelir raporu uygulaması oluşturuldu."
+  },
+  {
+    "revision": "496672535d61280391eea58b3fc300148e958b44",
+    "date": "2026-10-04T01:05:30+03:00",
+    "version": "1.0.0",
+    "summary": "Sürüm defteri eklendi; geçmiş değişiklikler tarih ve kısa açıklamalarıyla kaydedildi."
   }
 ]
